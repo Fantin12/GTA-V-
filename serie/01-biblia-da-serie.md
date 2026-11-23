@@ -1,0 +1,82 @@
+# A COROA DE VARNOR — Bíblia da Série
+
+> Série animada em episódios curtos (Reels de 30–60s).
+> Troque **{NOME}** pelo seu nome em todos os arquivos.
+
+---
+
+## 1. Premissa (em uma frase)
+
+Um guarda de portão sem nome, que só sabe **segurar a linha**, jura que vai se tornar **rei e dono de Varnor** — o maior reino do continente.
+
+## 2. O protagonista — {NOME}, o Escudo
+
+| Item | Descrição |
+|---|---|
+| Classe | Tanque humano: armadura pesada, escudo-torre, espada curta de uma mão |
+| Origem | Guarda do portão de Brejo Cinza, vila pobre da fronteira |
+| Personalidade | Teimoso, calado, protetor. Fala pouco, age muito. Nunca recua. |
+| Frase-assinatura | **"Tanque não foge. Tanque segura."** |
+| Defeito | Orgulho. Não aceita ajuda no começo. |
+| Objetivo | Sentar no Trono de Pedra Negra e governar Varnor |
+| Motivo real (revelado aos poucos) | Os nobres abandonaram a vila dele quando ele era criança. Ele quer um reino onde ninguém seja deixado para trás. |
+
+**Visual fixo (nunca mudar):**
+- Seu rosto (use suas fotos como referência).
+- Armadura de placas de aço escuro com detalhes em **dourado gasto**.
+- Capa curta **vermelho-vinho**, rasgada na ponta.
+- Escudo-torre grande, retangular, com um **portão desenhado** no centro (símbolo dele).
+- Sem capacete na maior parte do tempo (para o público ver o rosto).
+
+## 3. O mundo — Reino de Varnor
+
+- O velho rei morreu **sem herdeiro**. O **Trono de Pedra Negra**, na capital **Alta Varnor**, está vazio.
+- A lei antiga diz: *quem dominar a capital na* **Noite das Sete Luas** *é coroado.*
+- Até lá, os **senhores dos castelos** guerreiam entre si por território, com cercos a cada lua.
+- Fora das muralhas: florestas escuras, cavernas cheias de criaturas e ruínas de reis esquecidos.
+
+### Lugares (originais)
+| Lugar | O que é |
+|---|---|
+| **Brejo Cinza** | Vila natal do herói, pobre e esquecida |
+| **Fenda de Ossos** | Caverna próxima, cheia de monstros e tesouros |
+| **Pedravale** | Primeiro castelo que ele vai cercar |
+| **Floresta de Vésper** | Floresta onde a noite nunca acaba |
+| **Alta Varnor** | Capital, onde fica o trono |
+
+## 4. Personagens
+
+| Nome | Papel | Visual |
+|---|---|---|
+| **Lira** | Curandeira, primeira aliada. Doce, mas não aguenta covardes. | Túnica branca e verde, cajado com cristal |
+| **Kael** | Arqueiro, ex-ladrão, piadista | Capuz marrom, arco longo |
+| **Morwen** | Maga anciã, sabe segredos do antigo rei | Manto roxo, chapéu pontudo, olhos brilhantes |
+| **Bram** | Ferreiro velho de Brejo Cinza, mentor | Avental de couro, barba branca |
+| **Lorde Draven** | Vilão: senhor de Pedravale, quer o trono | Armadura negra e prata, capa de pelo |
+| **O Rei Esquecido** | Mistério: dono da armadura que o herói encontra | Só aparece em visões |
+
+## 5. Estilo visual do canal
+
+- **3D estilizado**, meio cartoon e low-poly, com personagens de cabeça um pouco maior.
+- Cenários **escuros** com **um ponto de luz quente** (tocha, fogo, lua).
+- Paleta: azul-noite e verde-musgo nos cenários; **dourado e vermelho** no herói.
+- Formato **9:16** (1080×1920).
+
+## 6. Padrão do texto na tela
+
+- Fonte grossa (CapCut: **Anton**, **Bebas Neue** ou **Montserrat Black**).
+- Texto **branco**, contorno preto, **uma palavra-chave em amarelo `#FFD400`**.
+- No máximo 4–5 palavras por tela.
+- Nos roteiros, a palavra amarela vem marcada assim: **[PALAVRA]**.
+
+## 7. Estrutura de todo episódio
+
+1. **Gancho (0–2s):** frase forte + imagem impactante.
+2. **História (3–5 cenas):** narração curta, uma frase por cena.
+3. **Cliffhanger:** termina no suspense + "PARTE X".
+
+## 8. Regras de ouro
+
+- O herói **apanha muito mas nunca cai** — é o que torna ele um tanque.
+- Toda vitória custa algo.
+- Nunca use nomes, mapas, monstros ou logos de jogos existentes. O mundo de Varnor é **100% seu**.
