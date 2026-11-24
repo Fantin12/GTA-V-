@@ -1,7 +1,7 @@
 // A Coroa de Varnor — EP1 "O Portão" — cena 3D low-poly feita 100% por código.
 // window.renderAt(t) desenha o quadro exato do segundo t (render determinístico).
 import * as THREE from 'three';
-import { makeHero, makeCat, makeMonster, mat, rand } from './personagens.js';
+import { makeHero, makeCat, makeMonster, makeVillager, mat, rand } from './personagens.js';
 
 const W = 1080, H = 1920;
 const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
@@ -123,6 +123,22 @@ for (let i = 0; i < 70; i++) {
   t.position.set(x, (-z - 14) * 0.35, z); t.scale.setScalar(1.2 + R() * 1.2); scene.add(t);
 }
 
+// olhos vermelhos escondidos na floresta
+const eyeMat = new THREE.MeshBasicMaterial({ color: 0xff2020 });
+const forestEyes = [];
+for (let i = 0; i < 40; i++) {
+  const x = (R() - 0.5) * 22, z = -17 - R() * 10, y = (-z - 14) * 0.35 + 0.8 + R() * 1.8;
+  const pair = new THREE.Group();
+  for (const s of [-0.09, 0.09]) { const e = new THREE.Mesh(new THREE.IcosahedronGeometry(0.06, 0), eyeMat); e.position.x = s; pair.add(e); }
+  pair.position.set(x, y, z); pair.userData.ph = R() * 10; scene.add(pair); forestEyes.push(pair);
+}
+// aldeões fugindo pela estrada (do portão para a vila)
+const villagers = [];
+for (let i = 0; i < 12; i++) {
+  const v = makeVillager(R); v.x = (R() - 0.5) * 2.4; v.t0 = R() * 2.2; v.sp = 3 + R() * 1.2;
+  scene.add(v.group); villagers.push(v);
+}
+
 // ---------- personagens ----------
 const hero = makeHero();
 hero.group.position.set(0, 0, -2.2);
@@ -130,16 +146,16 @@ hero.group.rotation.y = Math.PI; // olhando para a floresta (-z)
 scene.add(hero.group);
 
 const cat = makeCat();
-cat.group.position.set(0.55, 0, -1.6);
-cat.group.rotation.y = Math.PI + 0.5;
+cat.group.position.set(-0.62, 0, -1.7);
+cat.group.rotation.y = Math.PI - 0.5;
 scene.add(cat.group);
 
 const monsters = [];
 for (let i = 0; i < 34; i++) {
   const m = makeMonster(R);
   const row = Math.floor(i / 7);
-  m.start = new THREE.Vector3((R() - 0.5) * 12, 0, -14 - row * 3 - R() * 2);
-  m.speed = 2.4 + R() * 1.2; m.ph = R() * 10;
+  m.start = new THREE.Vector3((R() - 0.5) * 12, 0, -17 - row * 2.6 - R() * 2);
+  m.speed = 1.3 + R() * 0.5; m.ph = R() * 10;
   scene.add(m.group); monsters.push(m);
 }
 function groundY(z) { return z < -14 ? (-z - 14) * 0.35 : 0; }
@@ -154,11 +170,13 @@ spkGeo.setAttribute('position', new THREE.Float32BufferAttribute(new Float32Arra
 const sparks = new THREE.Points(spkGeo, new THREE.PointsMaterial({ color: 0xffd060, size: 0.07, transparent: true }));
 scene.add(sparks);
 const slamLight = new THREE.PointLight(0xffb040, 0, 8, 1.5); scene.add(slamLight);
+const hillLight = new THREE.PointLight(0x7f9cff, 0, 26, 1.2); hillLight.position.set(1, 7, -13); scene.add(hillLight); // luar no morro (tomada 2)
 
 // ---------- linha do tempo ----------
-export const DUR = 8.3;
-const SLAM = 2.75;     // "ninguém passava"
-const ORBIT0 = 3.4, ORBIT1 = 6.4;
+export const DUR = 15.0;
+const SLAM = 9.55;     // "ninguém passava"
+// tomadas (segundos da narração)
+const SHOTS = [0, 3.0, 6.0, 8.75, 11.4, 15.0];
 const ease = (x) => x < 0 ? 0 : x > 1 ? 1 : x * x * (3 - 2 * x);
 
 function update(t) {
@@ -184,7 +202,7 @@ function update(t) {
 
   // monstros avançam (param antes do portão)
   for (const m of monsters) {
-    const z = Math.min(m.start.z + Math.max(0, t - 0.5) * m.speed, -6 - Math.abs(m.start.x) * 0.2);
+    const z = Math.min(m.start.z + Math.max(0, t - 2.6) * m.speed, -8.8 - Math.abs(m.start.x) * 0.25);
     m.group.position.set(m.start.x, groundY(z), z);
     m.pose(t + m.ph, z < -6.05);
   }
@@ -202,15 +220,41 @@ function update(t) {
   slamLight.position.set(sx, 0.5, sz);
   slamLight.intensity = st < 0 ? 0 : 60 * Math.exp(-st * 4);
 
-  // câmera: frente (baixa, empurrando) -> órbita 180° -> atrás vendo a horda
-  const center = new THREE.Vector3(0, 1.3, -2.2);
-  const o = ease((t - ORBIT0) / (ORBIT1 - ORBIT0));
-  const ang = -Math.PI / 2 + o * Math.PI * 1.0;         // -90° (frente/-z) .. +90° (trás/+z)
-  const dist = 4.6 - 0.9 * ease(t / ORBIT0) + 2.2 * o;
-  const camY = 1.0 + 1.6 * o;
-  camera.position.set(center.x + Math.cos(ang) * dist, camY, center.z + Math.sin(ang) * dist);
-  const look = center.clone().add(new THREE.Vector3(0, 0.25 * (1 - o) - 0.2 * o, -3.5 * o));
-  // tremor no impacto
+  // aldeões
+  for (const v of villagers) {
+    const z = -1.6 + Math.max(0, t - v.t0) * v.sp;
+    v.group.visible = t < SHOTS[1] && z < 14;
+    v.group.position.set(v.x + Math.sin(z * 0.7 + v.x) * 0.3, 0, z);
+    v.pose(t + v.t0 * 3);
+  }
+  hillLight.intensity = (t >= SHOTS[1] && t < SHOTS[2]) ? 55 : 0;
+  for (const e of forestEyes) e.visible = Math.sin(t * 1.7 + e.userData.ph) > -0.85; // piscam
+
+  // câmera por tomada
+  const V = (x, y, z) => new THREE.Vector3(x, y, z);
+  const lerpV = (a, b, k) => a.clone().lerp(b, ease(k));
+  let pos, look;
+  if (t < SHOTS[1]) {            // 1: todo mundo fugiu — de trás/alto, aldeões vindo na direção da câmera
+    const k = t / SHOTS[1];
+    pos = lerpV(V(1.1, 2.0, 4.6), V(0.9, 1.8, 3.4), k); look = V(0, 1.5, -2.2);
+  } else if (t < SHOTS[2]) {     // 2: criaturas descendo — da estrada olhando pro morro
+    const k = (t - SHOTS[1]) / (SHOTS[2] - SHOTS[1]);
+    pos = lerpV(V(-1.5, 1.6, -7.5), V(-0.8, 1.9, -9.5), k); look = lerpV(V(0, 3.2, -20), V(0, 2.6, -16), k);
+  } else if (t < SHOTS[3]) {     // 3: um guarda... e o gato dele (rosto -> desce pro gato)
+    const k = (t - SHOTS[2]) / (SHOTS[3] - SHOTS[2]);
+    const kk = Math.max(0, (k - 0.5) / 0.5);
+    pos = lerpV(V(-0.35, 2.0, -4.4), V(-0.95, 0.75, -3.4), kk); look = lerpV(V(-0.1, 1.95, -2.2), V(-0.62, 0.3, -1.7), kk);
+  } else if (t < SHOTS[4]) {     // 4: ninguém passa — contra-plongée, batida do escudo
+    const k = (t - SHOTS[3]) / (SHOTS[4] - SHOTS[3]);
+    pos = lerpV(V(1.9, 0.55, -5.6), V(1.5, 0.6, -5.0), k); look = V(-0.2, 1.4, -2.2);
+  } else if (t < 12.9) {         // 5a: ele não fugiu — rosto firme
+    const k = (t - SHOTS[4]) / (12.9 - SHOTS[4]);
+    pos = lerpV(V(0.5, 1.75, -5.2), V(0.4, 1.8, -4.4), k); look = V(0, 1.75, -2.2);
+  } else {                       // 5b: ele ficou — de costas, a horda à frente
+    const k = (t - 12.9) / (SHOTS[5] - 12.9);
+    pos = lerpV(V(0.7, 2.7, 2.4), V(0.5, 2.4, 1.3), k); look = V(0, 1.3, -8);
+  }
+  camera.position.copy(pos);
   const sh = st > 0 ? 0.12 * Math.exp(-st * 5) : 0;
   camera.position.x += sh * Math.sin(t * 90); camera.position.y += sh * Math.cos(t * 77);
   camera.lookAt(look);

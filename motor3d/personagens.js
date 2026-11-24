@@ -208,3 +208,29 @@ export function makeMonster(R) {
   }
   return { group: g, pose };
 }
+
+// ---------------- ALDEÃO (fugindo) ----------------
+export function makeVillager(R) {
+  const tunics = [0x6b5a3a, 0x5a6b4a, 0x7a4a3a, 0x4a5a7a, 0x8a7a5a];
+  const skin = mat([0xe3a98a, 0xc98b6a, 0x9a6a4a][Math.floor(R() * 3)]);
+  const tunic = mat(tunics[Math.floor(R() * tunics.length)]), pants = mat(0x3a3028), hairM = mat([0x2a1a12, 0x6a4a2a, 0x1a1a1a, 0x8a8a8a][Math.floor(R() * 4)]);
+  const g = new THREE.Group(); g.scale.setScalar(0.85 + R() * 0.2);
+  const hips = new THREE.Group(); hips.position.y = 0.8; g.add(hips);
+  const legs = [];
+  for (const s of [-1, 1]) { const l = new THREE.Group(); l.position.x = s * 0.12; hips.add(l); mesh(B(0.16, 0.8, 0.18), pants, 0, -0.4, 0, l); legs.push(l); }
+  const torso = new THREE.Group(); hips.add(torso);
+  mesh(B(0.46, 0.62, 0.3), tunic, 0, 0.3, 0, torso);
+  const head = mesh(new THREE.IcosahedronGeometry(0.2, 1), skin, 0, 0.82, 0.02, torso);
+  mesh(new THREE.IcosahedronGeometry(0.2, 0), hairM, 0, 0.9, -0.03, torso).scale.set(1.05, 0.6, 1.05);
+  const arms = [];
+  for (const s of [-1, 1]) { const a = new THREE.Group(); a.position.set(s * 0.3, 0.55, 0); torso.add(a); mesh(B(0.13, 0.55, 0.14), tunic, 0, -0.27, 0, a); mesh(B(0.11, 0.1, 0.11), skin, 0, -0.58, 0, a); arms.push(a); }
+  if (R() > 0.4) mesh(new THREE.IcosahedronGeometry(0.24, 0), mat(0x9a8a6a), 0, 0.45, -0.3, torso); // trouxa nas costas
+  function pose(t) {
+    const f = 10;
+    legs[0].rotation.x = 0.8 * Math.sin(t * f); legs[1].rotation.x = -0.8 * Math.sin(t * f);
+    arms[0].rotation.x = -0.7 * Math.sin(t * f); arms[1].rotation.x = 0.7 * Math.sin(t * f);
+    hips.position.y = 0.8 + 0.05 * Math.abs(Math.cos(t * f)); torso.rotation.x = 0.25;
+    head.rotation.y = 0.4 * Math.sin(t * 2); // olha pra trás com medo
+  }
+  return { group: g, pose };
+}

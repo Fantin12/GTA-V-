@@ -47,6 +47,13 @@ Vitorioso, um guarda de portão sem fama que só sabe **segurar a linha**, jura 
 - A lei antiga diz: *quem dominar a capital na* **Noite das Sete Luas** *é coroado.*
 - Até lá, os **senhores dos castelos** guerreiam entre si por território, com cercos a cada lua.
 - Fora das muralhas: florestas escuras, cavernas cheias de criaturas e ruínas de reis esquecidos.
+- **Lei do Tributo:** toda vila que não consegue se defender sozinha passa a pagar tributo ao senhor do castelo mais próximo, em troca de "proteção". É dessa regra que nasce o vilão: Lorde Draven **lucra quando Brejo Cinza não se defende**, e por isso nunca manda ajuda. Quando o Vitorioso segura o portão sozinho, ele quebra o negócio do lorde.
+
+### O preço da armadura do Rei Esquecido
+Toda vantagem tem um preço escrito junto:
+- A armadura dourada torna o Vitorioso **quase impossível de derrubar** enquanto ele protege alguém.
+- **Preço:** cada vez que ela acende, ele **esquece uma lembrança** da própria vida. O público vê a lembrança sumindo, em flashes rápidos.
+- Consequência: quanto mais perto do trono, menos ele lembra **por que** queria o trono. Só o Brasa, que não envelhece, "lembra por ele".
 
 ### Lugares (originais)
 | Lugar | O que é |
@@ -84,12 +91,39 @@ Vitorioso, um guarda de portão sem fama que só sabe **segurar a linha**, jura 
 
 ## 7. Estrutura de todo episódio
 
+0. **Para quem chegou agora (0–2s, a partir do EP 2):** uma frase que relembra quem ele é. Ex.: *"Ontem ele segurou o portão sozinho."*
 1. **Gancho (0–2s):** frase forte + imagem impactante.
 2. **História (3–5 cenas):** narração curta, uma frase por cena.
 3. **Cliffhanger:** termina no suspense + "PARTE X".
+4. **Pergunta A ou B (tela final):** uma pergunta com só duas respostas, para o público comentar. Ex.: *"Ele aguenta até o amanhecer? A) SIM  B) NÃO"*.
 
 ## 8. Regras de ouro
 
 - O herói **apanha muito mas nunca cai** — é o que torna ele um tanque.
 - Toda vitória custa algo.
 - Nunca use nomes, mapas, monstros ou logos de jogos existentes. O mundo de Varnor é **100% seu**.
+
+## 9. Regras de direção
+
+Regras para escrever e para revisar cada cena antes de postar.
+
+### História
+- **Vilão nasce de uma regra do mundo.** Draven existe por causa da Lei do Tributo.
+- **Toda vantagem vem com o preço na mesma linha.** Armadura, aliados, itens: sempre dizer o que custa.
+- **Não entregue cedo o que o herói veio buscar.** O trono só aparece em visões até o fim.
+- **Planeje a direção, deixe o caminho aberto.** Sabemos o destino (o trono); o caminho muda com o público.
+- **Uma parte parada dá peso às outras.** De vez em quando, um episódio calmo: o Vitorioso cuidando da ferida, o Brasa dormindo no escudo.
+
+### Olhar (revisão de cada cena 3D)
+- **Todo personagem precisa de onde pisar e de um motivo para estar ali.** Nada flutuando, ninguém parado sem função.
+- **O que não é a ação fica quieto.** Cenário não se mexe sozinho nem disputa atenção com a luta.
+- **Dê ao defeito o nome daquilo com que ele se parece** ("o escudo parece uma tábua", "o monstro parece ovelha"). Fica mais fácil de corrigir.
+- **Antes de consertar uma coisa, olhe o que há em volta dela.** Uma correção não pode estragar o que estava certo.
+- **Coerência convence mais do que realismo.** Tudo no mesmo estilo low-poly.
+- **Na dúvida, peça três opções (A, B, C)** e escolha, em vez de tentar explicar.
+
+### Público
+- **Escreva cada parte para quem chegou agora.**
+- **Termine com uma pergunta de duas respostas.**
+- **O voto do público não é uma ordem**, mas ignorá-lo tem custo: se contrariar, a história precisa justificar.
+- **Leia os comentários como revisão grátis.** O público percebe furos nas regras do mundo antes de você.

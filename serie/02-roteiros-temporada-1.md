@@ -18,23 +18,31 @@ Legenda:
 | 4 | Ele crava o escudo no chão. Faíscas. | …decidiu que ninguém passava. | NINGUÉM **[PASSA]** |
 | 5 | Plano aberto: dezenas de monstros vindo contra ele. Brasa pula para dentro do escudo. Corte para preto. | Ele não fugiu. Ele **ficou**. | ELE **[FICOU]** · PARTE 1 |
 
+**Tela final, pergunta A ou B:** Ele aguenta até o amanhecer? A) SIM  B) NÃO
+
 **Legenda do post:** Todo mundo fugiu. Menos ele. ⚔️ Parte 1 de A Coroa de Varnor.
 
 ---
 
 ## EP 2 — O ESCUDO RACHADO
 
+**Para quem chegou agora (0–2s):** "Ontem ele segurou o portão sozinho."
+
 | # | CENA | NARRAÇÃO | TELA |
 |---|---|---|---|
 | 1 | Amanhecer. Vitorioso de pé, cercado de monstros caídos, escudo rachado ao meio, lábio cortado sangrando. Brasa lambendo a pata, entediado, em cima de um monstro caído. | Quando o sol nasceu, ele ainda estava de pé. | AINDA DE **[PÉ]** |
-| 2 | Moradores saindo das casas, olhando assustados. | A vila inteira saiu pra ver. | A VILA **[VIU]** |
+| 2 | Moradores saindo das casas, olhando assustados. | A vila inteira saiu pra ver. Pela lei do tributo, vila que não se defende paga ao castelo. Naquela noite, Brejo Cinza se defendeu. | A VILA **[VIU]** |
 | 3 | Chega um nobre a cavalo, armadura limpa, olhar de desprezo (Lorde Draven). | Mas quem chegou primeiro foi o lorde que nunca veio ajudar. | O LORDE **[CHEGOU]** |
 | 4 | Draven sorrindo, de cima do cavalo. | "Bom trabalho, guarda. Agora volte pro seu portão." | VOLTE PRO **[PORTÃO]** |
 | 5 | Close em Vitorioso apertando o punho. | Ele olhou pro lorde… e pensou numa coisa só. | PENSOU EM **[UMA COISA]** · PARTE 2 |
 
+**Tela final, pergunta A ou B:** O que ele faz? A) Volta pro portão  B) Enfrenta o lorde
+
 ---
 
 ## EP 3 — A PROMESSA
+
+**Para quem chegou agora (0–2s):** "Um guarda que o lorde mandou voltar pro portão."
 
 | # | CENA | NARRAÇÃO | TELA |
 |---|---|---|---|
@@ -44,9 +52,13 @@ Legenda:
 | 4 | Vitorioso se levanta, sombra gigante na parede da forja. | "Não. Eu vou ser o dono de Varnor." | DONO DE **[VARNOR]** |
 | 5 | Bram martelando metal; faíscas douradas. Revela um escudo-torre novo com um portão desenhado. | E assim nasceu o escudo… | O **[ESCUDO]** · PARTE 3 |
 
+**Tela final, pergunta A ou B:** Ser rei pra quê? A) Pra se vingar do lorde  B) Pra proteger a vila
+
 ---
 
 ## EP 4 — A CURANDEIRA
+
+**Para quem chegou agora (0–2s):** "Ele jurou que vai ser dono de Varnor."
 
 | # | CENA | NARRAÇÃO | TELA |
 |---|---|---|---|
@@ -56,9 +68,13 @@ Legenda:
 | 4 | Luz verde nas mãos de Lira curando o braço dele. | E pela primeira vez… alguém cuidou dele. | ALGUÉM **[CUIDOU]** |
 | 5 | Os dois caminhando juntos. | "Tanque e curandeira. Agora a gente tem chance." | AGORA TEM **[CHANCE]** · PARTE 4 |
 
+**Tela final, pergunta A ou B:** A Lira deve ir junto pra Fenda? A) SIM  B) NÃO
+
 ---
 
 ## EP 5 — A FENDA DE OSSOS
+
+**Para quem chegou agora (0–2s):** "Um tanque e uma curandeira contra o mundo."
 
 | # | CENA | NARRAÇÃO | TELA |
 |---|---|---|---|
@@ -68,9 +84,13 @@ Legenda:
 | 4 | Vitorioso bate a espada no escudo, chamando todos os monstros pra ele. | "Tanque não foge." | TANQUE NÃO **[FOGE]** |
 | 5 | Monstros pulando nele ao mesmo tempo. | "Tanque segura." | TANQUE **[SEGURA]** · PARTE 5 |
 
+**Tela final, pergunta A ou B:** Ele segura todos sozinho? A) SIM  B) Alguém vai ajudar
+
 ---
 
 ## EP 6 — O GRUPO
+
+**Para quem chegou agora (0–2s):** "Eles saíram vivos da Fenda de Ossos. Por pouco."
 
 | # | CENA | NARRAÇÃO | TELA |
 |---|---|---|---|
@@ -80,9 +100,13 @@ Legenda:
 | 4 | Os quatro na mesa, luz de vela. | Tanque. Cura. Arco. Magia. | O **[GRUPO]** |
 | 5 | Mapa aberto, Morwen aponta para o fundo da Fenda. | "Mas pra isso… vocês vão ter que voltar lá." | **[VOLTAR]** LÁ · PARTE 6 |
 
+**Tela final, pergunta A ou B:** Confiar no Kael, um ex-ladrão? A) SIM  B) NÃO
+
 ---
 
 ## EP 7 — O GUARDIÃO DA FENDA
+
+**Para quem chegou agora (0–2s):** "O grupo voltou pro fundo da Fenda."
 
 | # | CENA | NARRAÇÃO | TELA |
 |---|---|---|---|
@@ -92,9 +116,13 @@ Legenda:
 | 4 | Garra batendo no escudo; ele afunda os pés no chão. Kael atira, Morwen lança fogo, Lira cura. | Ele segurou. E segurou. E segurou. | ELE **[SEGUROU]** |
 | 5 | O guardião desmorona. Atrás dele, um baú de pedra brilhando. | Até o guardião cair. | O GUARDIÃO **[CAIU]** · PARTE 7 |
 
+**Tela final, pergunta A ou B:** Quem merece o tesouro? A) O Vitorioso  B) O grupo todo
+
 ---
 
 ## EP 8 — O REI ESQUECIDO
+
+**Para quem chegou agora (0–2s):** "O guardião caiu. Atrás dele, um baú."
 
 | # | CENA | NARRAÇÃO | TELA |
 |---|---|---|---|
@@ -104,9 +132,15 @@ Legenda:
 | 4 | Visão rápida: um rei de costas sentado no Trono de Pedra Negra. | …ele viu o trono. | ELE VIU O **[TRONO]** |
 | 5 | Morwen, séria, olhando para o Brasa — que encara de volta como se a conhecesse. | "Essa armadura escolhe seu dono. E ela escolheu você." | ESCOLHEU **[VOCÊ]** · PARTE 8 |
 
+**Tela final, pergunta A ou B:** Vestir a armadura sabendo do preço? A) SIM  B) NÃO
+
+**Preço da armadura (mostrar em flash):** quando ela acende, uma lembrança do Vitorioso some: a mãe dele na porta de casa, em Brejo Cinza.
+
 ---
 
 ## EP 9 — O CERCO ANUNCIADO
+
+**Para quem chegou agora (0–2s):** "A armadura escolheu ele. E cobra caro."
 
 | # | CENA | NARRAÇÃO | TELA |
 |---|---|---|---|
@@ -116,9 +150,13 @@ Legenda:
 | 4 | Vitorioso arranca o pergaminho e rasga. | "Não. Dessa vez, a gente vai até ele." | A GENTE **[VAI]** |
 | 5 | Plano aberto: castelo de Pedravale no horizonte, ao pôr do sol. | Em sete dias… o cerco começa. | O **[CERCO]** · PARTE 9 |
 
+**Tela final, pergunta A ou B:** Pedir ajuda à vila? A) SIM  B) Só o grupo vai
+
 ---
 
 ## EP 10 — O PRIMEIRO MURO
+
+**Para quem chegou agora (0–2s):** "Sete dias pro cerco de Pedravale."
 
 | # | CENA | NARRAÇÃO | TELA |
 |---|---|---|---|
@@ -127,6 +165,8 @@ Legenda:
 | 3 | Nas muralhas, centenas de soldados de armadura negra. | Do outro lado, um exército. | UM **[EXÉRCITO]** |
 | 4 | Lorde Draven no alto do muro, sorrindo. | "O guarda voltou pro portão. Só que agora é o meu." | AGORA É O **[MEU]** |
 | 5 | Vitorioso levanta o escudo, Brasa no ombro dele; a armadura dourada acende. Corte para preto. | O primeiro muro do caminho até o trono. | O PRIMEIRO **[MURO]** · FIM DA TEMPORADA 1 |
+
+**Tela final, pergunta A ou B:** Atacar agora ou esperar a noite? A) AGORA  B) ESPERAR
 
 ---
 
