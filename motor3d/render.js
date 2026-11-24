@@ -16,9 +16,10 @@ const srv = http.createServer((q, r) => {
   await page.waitForFunction('window.ready === true', null, { timeout: 60000 });
   const dur = await page.evaluate('window.DUR');
   const t0 = +(process.argv[3] || 0), t1 = +(process.argv[4] || dur);
-  const n = Math.round((t1 - t0) * FPS), start = Date.now();
+  const lista = process.env.TEMPOS ? process.env.TEMPOS.split(',').map(Number) : null; // quadros avulsos
+  const n = lista ? lista.length : Math.round((t1 - t0) * FPS), start = Date.now();
   for (let i = 0; i < n; i++) {
-    const url = await page.evaluate((t) => { window.renderAt(t); return document.querySelector('canvas').toDataURL('image/png'); }, t0 + i / FPS);
+    const url = await page.evaluate((t) => { window.renderAt(t); return document.querySelector('canvas').toDataURL('image/png'); }, lista ? lista[i] : t0 + i / FPS);
     fs.writeFileSync(path.join(OUT, `f${String(i).padStart(4, '0')}.png`), Buffer.from(url.split(',')[1], 'base64'));
     if (i % 30 === 0) console.log(`quadro ${i}/${n}  ${((Date.now() - start) / 1000).toFixed(0)}s`);
   }

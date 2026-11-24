@@ -47,7 +47,7 @@ for i in range(len(LEG)): inp += ['-i', f'tmp/leg{i}.png']
 inp += ['-i', '../videos/ep01/narracao.mp3',
         '-f', 'lavfi', '-t', str(DUR + END), '-i', 'anoisesrc=color=brown:amplitude=0.5:seed=7',
         '-f', 'lavfi', '-t', '1.5', '-i', 'sine=frequency=48:sample_rate=44100']
-f, last = ['[0:v]format=yuv420p,fade=in:0:8[b]'], 'b'
+f, last = ['[0:v]scale=1080:1920:flags=lanczos,format=yuv420p,fade=in:0:8[b]'], 'b'  # reduz o supersampling com qualidade
 for i, (a, b, _) in enumerate(LEG):
     f.append(f"[{last}][{i+2}:v]overlay=0:0:enable='between(t,{a},{b})'[v{i}]"); last = f'v{i}'
 f.append('[1:v]format=yuv420p,fade=in:0:12,fps=30[e]')
@@ -59,6 +59,6 @@ ms = int(SLAM * 1000)
 f.append(f'[{n+2}:a]volume=2.2,afade=out:st=0.05:d=1.4,adelay={ms}|{ms}[boom]')
 f.append('[nar][amb][boom]amix=inputs=3:duration=longest:normalize=0,alimiter=limit=0.95[af]')
 subprocess.run(['ffmpeg', '-y', '-v', 'error', *inp, '-filter_complex', ';'.join(f), '-map', '[vf]', '-map', '[af]',
-                '-t', str(DUR + END), '-c:v', 'libx264', '-crf', '19', '-preset', 'medium', '-pix_fmt', 'yuv420p',
+                '-t', str(DUR + END), '-c:v', 'libx264', '-crf', '16', '-preset', 'slow', '-profile:v', 'high', '-tune', 'animation', '-pix_fmt', 'yuv420p',
                 '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', 'EP01_O_Portao_3D.mp4'], check=True)
 print('OK')

@@ -1,5 +1,6 @@
 // Personagens low-poly de A Coroa de Varnor, montados com formas simples.
 import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 
 export function rand(seed) { // gerador determinístico
   let s = seed >>> 0;
@@ -14,7 +15,7 @@ function mesh(geo, m, x = 0, y = 0, z = 0, parent) {
   const o = new THREE.Mesh(geo, m); o.position.set(x, y, z);
   o.castShadow = o.receiveShadow = true; if (parent) parent.add(o); return o;
 }
-const B = (w, h, d) => new THREE.BoxGeometry(w, h, d);
+const B = (w, h, d) => new RoundedBoxGeometry(w, h, d, 2, Math.min(w, h, d) * 0.22); // bordas chanfradas
 
 // ---------------- VITORIOSO ----------------
 export function makeHero() {
@@ -64,7 +65,7 @@ export function makeHero() {
   // cabeça
   const head = new THREE.Group(); head.position.y = 0.93; torso.add(head);
   mesh(B(0.2, 0.14, 0.2), skin, 0, -0.08, 0, head);                     // pescoço
-  const skull = mesh(new THREE.IcosahedronGeometry(0.27, 1), skin, 0, 0.2, 0, head); skull.scale.set(1, 1.05, 0.95);
+  const skull = mesh(new THREE.IcosahedronGeometry(0.27, 2), skin, 0, 0.2, 0, head); skull.scale.set(1, 1.05, 0.95);
   mesh(B(0.22, 0.045, 0.05), beard, 0, -0.03, 0.22, head);                  // barba rala (queixo)
   for (const s of [-1, 1]) mesh(B(0.05, 0.16, 0.14), beard, s * 0.21, 0.08, 0.12, head);
   mesh(B(0.16, 0.025, 0.04), beard, 0, 0.13, 0.25, head);               // bigode fino
@@ -85,7 +86,7 @@ export function makeHero() {
     c.rotation.set(R() * 3, R() * 3, 0);
   }
   for (const s of [-1, 1]) mesh(B(0.06, 0.16, 0.3), hair, s * 0.25, 0.32, -0.02, head); // laterais baixas
-  mesh(new THREE.IcosahedronGeometry(0.25, 1), hair, 0, 0.3, -0.07, head).scale.set(1.02, 0.75, 0.95); // nuca
+  mesh(new THREE.IcosahedronGeometry(0.26, 1), hair, 0, 0.27, -0.09, head).scale.set(1.06, 0.88, 1.0); // nuca
 
   // braços
   const arms = [];
@@ -184,7 +185,7 @@ export function makeCat() {
 // ---------------- MONSTRO ----------------
 export function makeMonster(R) {
   const skin = mat(0x2a2030), skin2 = mat(0x3a2a2a), horn = mat(0xd8ccb0);
-  const eye = new THREE.MeshBasicMaterial({ color: 0xff2222 });
+  const eye = new THREE.MeshBasicMaterial({ color: new THREE.Color(4, 0.35, 0.25) }); // HDR -> brilha
   const g = new THREE.Group(); const sc = 1.0 + R() * 0.5; g.scale.setScalar(sc);
   const body = new THREE.Group(); body.position.y = 1.0; g.add(body);
   mesh(new THREE.IcosahedronGeometry(0.5, 0), R() > 0.5 ? skin : skin2, 0, 0.2, 0, body).scale.set(1.2, 1.0, 0.9);
@@ -221,7 +222,7 @@ export function makeVillager(R) {
   const torso = new THREE.Group(); hips.add(torso);
   mesh(B(0.46, 0.62, 0.3), tunic, 0, 0.3, 0, torso);
   const head = mesh(new THREE.IcosahedronGeometry(0.2, 1), skin, 0, 0.82, 0.02, torso);
-  mesh(new THREE.IcosahedronGeometry(0.2, 0), hairM, 0, 0.9, -0.03, torso).scale.set(1.05, 0.6, 1.05);
+  mesh(new THREE.IcosahedronGeometry(0.21, 1), hairM, 0, 0.87, -0.05, torso).scale.set(1.08, 0.85, 1.08);
   const arms = [];
   for (const s of [-1, 1]) { const a = new THREE.Group(); a.position.set(s * 0.3, 0.55, 0); torso.add(a); mesh(B(0.13, 0.55, 0.14), tunic, 0, -0.27, 0, a); mesh(B(0.11, 0.1, 0.11), skin, 0, -0.58, 0, a); arms.push(a); }
   if (R() > 0.4) mesh(new THREE.IcosahedronGeometry(0.24, 0), mat(0x9a8a6a), 0, 0.45, -0.3, torso); // trouxa nas costas

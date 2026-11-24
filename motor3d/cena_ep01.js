@@ -1,12 +1,19 @@
 // A Coroa de Varnor — EP1 "O Portão" — cena 3D low-poly feita 100% por código.
 // window.renderAt(t) desenha o quadro exato do segundo t (render determinístico).
 import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { makeHero, makeCat, makeMonster, makeVillager, mat, rand } from './personagens.js';
 
 const W = 1080, H = 1920;
 const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
 renderer.setSize(W, H);
-renderer.setPixelRatio(1);
+const SS = 1.5;                  // supersampling: renderiza 1.5x e reduz no ffmpeg
+renderer.setPixelRatio(SS);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -24,7 +31,7 @@ const moon = new THREE.DirectionalLight(0xb0c4ff, 1.6);
 moon.position.set(-7, 12, -16);   // lua na frente do herói (lado da floresta)
 const key = new THREE.PointLight(0xffa050, 14, 9, 1.5); key.position.set(1.6, 2.4, -5.0); scene.add(key); // tocha/fogo no rosto
 moon.castShadow = true;
-moon.shadow.mapSize.set(2048, 2048);
+moon.shadow.mapSize.set(4096, 4096); moon.shadow.bias = -0.0004; moon.shadow.normalBias = 0.02;
 Object.assign(moon.shadow.camera, { left: -12, right: 12, top: 12, bottom: -12 });
 scene.add(moon);
 
@@ -39,17 +46,47 @@ for (let i = 0; i < gp.count; i++) {
   gp.setY(i, road * (R() * 0.25) + (z < -14 ? (-z - 14) * 0.35 : 0));
 }
 groundGeo.computeVertexNormals();
-const ground = new THREE.Mesh(groundGeo, mat(0x23301c));
+// cores variadas por vértice (grama, terra, morro escuro)
+const gcol = [];
+for (let i = 0; i < gp.count; i++) {
+  const z = gp.getZ(i), v = R();
+  const c = new THREE.Color().setHSL(0.24 + v * 0.06, 0.35 + v * 0.15, (z < -14 ? 0.07 : 0.11) + v * 0.05);
+  gcol.push(c.r, c.g, c.b);
+}
+groundGeo.setAttribute('color', new THREE.Float32BufferAttribute(gcol, 3));
+const ground = new THREE.Mesh(groundGeo, new THREE.MeshStandardMaterial({ vertexColors: true, flatShading: true, roughness: 0.95 }));
 ground.receiveShadow = true;
 scene.add(ground);
 const road = new THREE.Mesh(new THREE.PlaneGeometry(3.2, 60), mat(0x4a3a28));
 road.rotation.x = -Math.PI / 2; road.position.set(0, 0.02, 0); road.receiveShadow = true;
 scene.add(road);
 
+// tufos de grama (instanciados) e pedras na beira da estrada
+{
+  const N = 2600, grass = new THREE.InstancedMesh(new THREE.ConeGeometry(0.05, 0.4, 3), new THREE.MeshStandardMaterial({ flatShading: true, roughness: 0.9 }), N);
+  const m4 = new THREE.Matrix4(), q = new THREE.Quaternion(), c = new THREE.Color();
+  let n = 0;
+  while (n < N) {
+    const x = (R() - 0.5) * 30, z = -14 + R() * 30;
+    if (Math.abs(x) < 1.8) continue;
+    q.setFromEuler(new THREE.Euler((R() - 0.5) * 0.5, R() * 3, (R() - 0.5) * 0.5));
+    const sc = 0.6 + R() * 1.0;
+    m4.compose(new THREE.Vector3(x, 0.12, z), q, new THREE.Vector3(sc, sc, sc));
+    grass.setMatrixAt(n, m4); grass.setColorAt(n, c.setHSL(0.22 + R() * 0.08, 0.45, 0.12 + R() * 0.08)); n++;
+  }
+  grass.receiveShadow = true; scene.add(grass);
+  for (let i = 0; i < 90; i++) {
+    const r = new THREE.Mesh(new THREE.IcosahedronGeometry(0.08 + R() * 0.18, 0), mat(0x5a5650));
+    const side = R() > 0.5 ? 1 : -1;
+    r.position.set(side * (1.4 + R() * 1.2), 0.04, -12 + R() * 26); r.rotation.set(R() * 3, R() * 3, R() * 3);
+    r.scale.y = 0.6; r.castShadow = r.receiveShadow = true; scene.add(r);
+  }
+}
+
 // ---------- portão + paliçada (z = 0) ----------
 const wood = mat(0x5b3a22), woodDark = mat(0x3d2716), iron = mat(0x2b2b30);
 function box(w, h, d, m, x, y, z, parent = scene) {
-  const b = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), m);
+  const b = new THREE.Mesh(new RoundedBoxGeometry(w, h, d, 2, Math.min(w, h, d) * 0.15), m);
   b.position.set(x, y, z); b.castShadow = b.receiveShadow = true; parent.add(b); return b;
 }
 box(0.5, 4.2, 0.5, woodDark, -2.1, 2.1, 0);
@@ -78,13 +115,22 @@ for (const s of [-1, 1]) for (let i = 0; i < 16; i++) {
 // o herói está em z=-1.5 olhando para -z (floresta). Câmera inicial em -z olhando o herói => vila aparece atrás dele.
 const fires = [];
 const houseCols = [0x8a6a4a, 0x7a5c40, 0x95764f];
+// textura suave para fumaça e brasas
+function softTex(inner, outer) {
+  const c = document.createElement('canvas'); c.width = c.height = 128;
+  const g = c.getContext('2d'), gr = g.createRadialGradient(64, 64, 0, 64, 64, 64);
+  gr.addColorStop(0, inner); gr.addColorStop(1, outer); g.fillStyle = gr; g.fillRect(0, 0, 128, 128);
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
+}
+const smokeMat = new THREE.SpriteMaterial({ map: softTex('rgba(70,62,60,0.55)', 'rgba(40,36,40,0)'), depthWrite: false, fog: true });
+const glowTex = softTex('rgba(255,255,255,1)', 'rgba(255,255,255,0)');
 function house(x, z, rot, burning) {
   const g = new THREE.Group();
   box(2.4, 1.8, 2.0, mat(houseCols[Math.floor(R() * 3)]), 0, 0.9, 0, g);
   box(0.12, 1.8, 2.05, woodDark, -1.15, 0.9, 0, g); box(0.12, 1.8, 2.05, woodDark, 1.15, 0.9, 0, g);
   const roof = new THREE.Mesh(new THREE.ConeGeometry(1.95, 1.3, 4), mat(0x3a2418));
   roof.position.y = 2.45; roof.rotation.y = Math.PI / 4; roof.scale.set(1.0, 1, 0.85); roof.castShadow = true; g.add(roof);
-  const win = box(0.4, 0.4, 0.05, new THREE.MeshBasicMaterial({ color: 0xffa040 }), 0.5, 1.1, 1.02, g);
+  const win = box(0.4, 0.4, 0.05, new THREE.MeshBasicMaterial({ color: new THREE.Color(2.4, 1.1, 0.3) }), 0.5, 1.1, 1.02, g);
   g.position.set(x, 0, z); g.rotation.y = rot; scene.add(g);
   if (burning) {
     const light = new THREE.PointLight(0xff7a22, 30, 14, 1.6);
@@ -92,12 +138,18 @@ function house(x, z, rot, burning) {
     const flames = [];
     for (let i = 0; i < 6; i++) {
       const f = new THREE.Mesh(new THREE.ConeGeometry(0.35 + R() * 0.3, 1.2 + R() * 1.2, 5),
-        new THREE.MeshBasicMaterial({ color: i % 2 ? 0xffb020 : 0xff5a10, transparent: true, opacity: 0.9 }));
+        new THREE.MeshBasicMaterial({ color: i % 2 ? new THREE.Color(3.2, 1.6, 0.25) : new THREE.Color(3.0, 0.7, 0.1), transparent: true, opacity: 0.85, blending: THREE.AdditiveBlending, depthWrite: false }));
       f.position.set(x + (R() - 0.5) * 1.8, 2.6 + R() * 0.6, z + (R() - 0.5) * 1.4);
       f.userData = { ph: R() * 10, base: f.scale.clone(), y: f.position.y };
       scene.add(f); flames.push(f);
     }
-    fires.push({ light, flames, ph: R() * 10 });
+    const smoke = [];
+    for (let i = 0; i < 9; i++) {
+      const sp = new THREE.Sprite(smokeMat.clone());
+      sp.userData = { x: x + (R() - 0.5) * 1.4, z: z + (R() - 0.5) * 1.2, ph: R(), sp: 0.5 + R() * 0.4 };
+      scene.add(sp); smoke.push(sp);
+    }
+    fires.push({ light, flames, smoke, ph: R() * 10 });
   }
 }
 house(-4.5, 5, 0.3, true); house(4.8, 6, -0.4, true); house(-1.5, 9, 0.1, true);
@@ -107,7 +159,7 @@ house(6.5, 11, 0.6, false); house(-6.8, 10, -0.5, true); house(2.5, 13, 0.2, tru
 const EMB = 260, embGeo = new THREE.BufferGeometry(), embBase = [];
 for (let i = 0; i < EMB; i++) embBase.push([(R() - 0.5) * 18, R() * 8, 3 + R() * 12, 0.4 + R() * 0.8, R() * 10]);
 embGeo.setAttribute('position', new THREE.Float32BufferAttribute(new Float32Array(EMB * 3), 3));
-const embers = new THREE.Points(embGeo, new THREE.PointsMaterial({ color: 0xff9a3a, size: 0.09, transparent: true, opacity: 0.95 }));
+const embers = new THREE.Points(embGeo, new THREE.PointsMaterial({ color: new THREE.Color(3, 1.2, 0.3), size: 0.12, map: glowTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
 scene.add(embers);
 
 // ---------- floresta + morro (z negativo) ----------
@@ -124,7 +176,7 @@ for (let i = 0; i < 70; i++) {
 }
 
 // olhos vermelhos escondidos na floresta
-const eyeMat = new THREE.MeshBasicMaterial({ color: 0xff2020 });
+const eyeMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(4, 0.3, 0.2) });
 const forestEyes = [];
 for (let i = 0; i < 40; i++) {
   const x = (R() - 0.5) * 22, z = -17 - R() * 10, y = (-z - 14) * 0.35 + 0.8 + R() * 1.8;
@@ -135,7 +187,7 @@ for (let i = 0; i < 40; i++) {
 // aldeões fugindo pela estrada (do portão para a vila)
 const villagers = [];
 for (let i = 0; i < 12; i++) {
-  const v = makeVillager(R); v.x = (R() - 0.5) * 2.4; v.t0 = R() * 2.2; v.sp = 3 + R() * 1.2;
+  const v = makeVillager(R); v.x = -0.4 - R() * 2.0; v.t0 = R() * 1.2; v.sp = 1.8 + R() * 0.8; // pela esquerda, longe da câmera
   scene.add(v.group); villagers.push(v);
 }
 
@@ -167,7 +219,7 @@ for (let i = 0; i < SPK; i++) {
   spkDir.push([Math.cos(a) * out, up, Math.sin(a) * out * 0.6]);
 }
 spkGeo.setAttribute('position', new THREE.Float32BufferAttribute(new Float32Array(SPK * 3), 3));
-const sparks = new THREE.Points(spkGeo, new THREE.PointsMaterial({ color: 0xffd060, size: 0.07, transparent: true }));
+const sparks = new THREE.Points(spkGeo, new THREE.PointsMaterial({ color: new THREE.Color(4, 2.6, 0.8), size: 0.1, map: glowTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
 scene.add(sparks);
 const slamLight = new THREE.PointLight(0xffb040, 0, 8, 1.5); scene.add(slamLight);
 const hillLight = new THREE.PointLight(0x7f9cff, 0, 26, 1.2); hillLight.position.set(1, 7, -13); scene.add(hillLight); // luar no morro (tomada 2)
@@ -187,6 +239,12 @@ function update(t) {
       const s = 1 + 0.25 * Math.sin(t * 11 + fl.userData.ph);
       fl.scale.set(s, 1 + 0.35 * Math.sin(t * 9 + fl.userData.ph * 1.7), s);
       fl.rotation.y = t * 1.5 + fl.userData.ph;
+    }
+    for (const sp of f.smoke) {            // fumaça subindo em loop
+      const u = (t * sp.userData.sp * 0.25 + sp.userData.ph) % 1;
+      sp.position.set(sp.userData.x + Math.sin(u * 4 + sp.userData.ph * 9) * 0.5 + u * 1.5, 3.2 + u * 7, sp.userData.z);
+      sp.scale.setScalar(1.2 + u * 4.5);
+      sp.material.opacity = Math.sin(u * Math.PI) * 0.8;
     }
   }
   const ep = embGeo.attributes.position;
@@ -218,11 +276,11 @@ function update(t) {
   sp.needsUpdate = true;
   sparks.material.opacity = st < 0 ? 0 : Math.max(0, 1 - st / 1.2);
   slamLight.position.set(sx, 0.5, sz);
-  slamLight.intensity = st < 0 ? 0 : 60 * Math.exp(-st * 4);
+  slamLight.intensity = st < 0 ? 0 : 22 * Math.exp(-st * 4);
 
   // aldeões
   for (const v of villagers) {
-    const z = -1.6 + Math.max(0, t - v.t0) * v.sp;
+    const z = -3.2 + Math.max(0, t - v.t0) * v.sp;
     v.group.visible = t < SHOTS[1] && z < 14;
     v.group.position.set(v.x + Math.sin(z * 0.7 + v.x) * 0.3, 0, z);
     v.pose(t + v.t0 * 3);
@@ -236,7 +294,7 @@ function update(t) {
   let pos, look;
   if (t < SHOTS[1]) {            // 1: todo mundo fugiu — de trás/alto, aldeões vindo na direção da câmera
     const k = t / SHOTS[1];
-    pos = lerpV(V(1.1, 2.0, 4.6), V(0.9, 1.8, 3.4), k); look = V(0, 1.5, -2.2);
+    pos = lerpV(V(1.4, 2.7, 7.2), V(1.1, 2.3, 5.6), k); look = V(-0.3, 1.3, -2.2);
   } else if (t < SHOTS[2]) {     // 2: criaturas descendo — da estrada olhando pro morro
     const k = (t - SHOTS[1]) / (SHOTS[2] - SHOTS[1]);
     pos = lerpV(V(-1.5, 1.6, -7.5), V(-0.8, 1.9, -9.5), k); look = lerpV(V(0, 3.2, -20), V(0, 2.6, -16), k);
@@ -261,5 +319,29 @@ function update(t) {
 }
 
 window.DUR = DUR;
-window.renderAt = (t) => { update(t); renderer.render(scene, camera); return true; };
+// ---------- pós-processamento: brilho (bloom), cor de cinema, vinheta, grão ----------
+const composer = new EffectComposer(renderer);
+composer.setPixelRatio(SS); composer.setSize(W, H);
+composer.addPass(new RenderPass(scene, camera));
+composer.addPass(new UnrealBloomPass(new THREE.Vector2(W, H), 0.55, 0.55, 0.9));
+composer.addPass(new OutputPass());
+const grade = new ShaderPass({
+  uniforms: { tDiffuse: { value: null }, time: { value: 0 } },
+  vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }',
+  fragmentShader: `uniform sampler2D tDiffuse; uniform float time; varying vec2 vUv;
+    float h(vec2 p){ return fract(sin(dot(p, vec2(12.9898,78.233)) + time) * 43758.5453); }
+    void main(){
+      vec3 c = texture2D(tDiffuse, vUv).rgb;
+      float l = dot(c, vec3(0.299,0.587,0.114));
+      c = mix(c * vec3(0.92,0.98,1.12), c * vec3(1.08,1.0,0.9), smoothstep(0.15,0.7,l)); // sombras frias, luzes quentes
+      c = (c - 0.5) * 1.08 + 0.5;                                                          // contraste
+      vec2 d = (vUv - 0.5) * vec2(1.0, 1.25);
+      c *= mix(1.0, smoothstep(0.85, 0.25, length(d)), 0.75);                              // vinheta
+      c += (h(vUv * 1000.0) - 0.5) * 0.025;                                                // grão de filme
+      gl_FragColor = vec4(clamp(c, 0.0, 1.0), 1.0);
+    }`,
+});
+composer.addPass(grade);
+
+window.renderAt = (t) => { update(t); grade.uniforms.time.value = t; composer.render(); return true; };
 window.ready = true;
