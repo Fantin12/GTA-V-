@@ -15,14 +15,22 @@ stylized 3D cartoon render, low-poly fantasy game cinematic look, slightly overs
 
 ---
 
-## Ficha do personagem — {NOME}
+## Ficha do personagem — Vitorioso
 ```
-character turnaround sheet of a young human tank warrior, [describe your face: hair, beard, skin tone], dark steel plate armor with worn gold trim, short torn wine-red cape, huge rectangular tower shield with a carved castle gate emblem in the center, short one-handed sword, no helmet, determined expression, front view, side view, back view, plain dark background, + bloco de estilo
+character turnaround sheet of a young human tank warrior, strong broad-shouldered muscular build, short dark brown curly hair on top with shorter faded sides, light blue eyes, light stubble beard with thin mustache, wide face, small scar on the left corner of the lower lip, dark steel plate armor with worn gold trim, short torn wine-red cape, huge rectangular tower shield with a carved castle gate emblem in the center, short one-handed sword, no helmet, determined expression, front view, side view, back view, plain dark background, + bloco de estilo
 ```
 
 ### Versão com a armadura do Rei Esquecido (a partir do EP 8)
 ```
 same character wearing ancient golden royal plate armor with a crown engraved on the chest plate, faint golden glowing runes, wine-red cape, tower shield with castle gate emblem, + bloco de estilo
+```
+
+## Brasa, o gato laranja (use fotos do gato real como referência)
+```
+fluffy orange tabby cat with amber eyes and a grumpy bored expression, medium-length fur with darker orange stripes, white chin, sitting on the shoulder of an armored warrior, + bloco de estilo
+```
+```
+fluffy orange tabby cat peeking out from behind a huge tower shield, fur standing up, hissing at the darkness, + bloco de estilo
 ```
 
 ## Personagens secundários
@@ -44,7 +52,7 @@ Lord Draven: arrogant nobleman, black and silver plate armor, fur cape, cold smi
 
 ## Cenários-chave
 ```
-EP1 – a lone armored guard holding a tower shield in front of a small wooden village gate at night, village burning in the background, dozens of red glowing eyes in the dark forest, + bloco de estilo
+EP1 – a lone armored guard with a fluffy orange cat behind his legs, holding a tower shield in front of a small wooden village gate at night, village burning in the background, dozens of red glowing eyes in the dark forest, + bloco de estilo
 ```
 ```
 EP3 – dark medieval forge interior, orange fire, sparks flying, old blacksmith hammering a large tower shield, + bloco de estilo

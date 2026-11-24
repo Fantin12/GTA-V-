@@ -1,15 +1,15 @@
 # A COROA DE VARNOR — Bíblia da Série
 
 > Série animada em episódios curtos (Reels de 30–60s).
-> Troque **{NOME}** pelo seu nome em todos os arquivos.
+> Protagonista: **Vitorioso** e seu gato laranja **Brasa**.
 
 ---
 
 ## 1. Premissa (em uma frase)
 
-Um guarda de portão sem nome, que só sabe **segurar a linha**, jura que vai se tornar **rei e dono de Varnor** — o maior reino do continente.
+Vitorioso, um guarda de portão sem fama que só sabe **segurar a linha**, jura que vai se tornar **rei e dono de Varnor** — o maior reino do continente.
 
-## 2. O protagonista — {NOME}, o Escudo
+## 2. O protagonista — Vitorioso, o Escudo
 
 | Item | Descrição |
 |---|---|
@@ -22,11 +22,24 @@ Um guarda de portão sem nome, que só sabe **segurar a linha**, jura que vai se
 | Motivo real (revelado aos poucos) | Os nobres abandonaram a vila dele quando ele era criança. Ele quer um reino onde ninguém seja deixado para trás. |
 
 **Visual fixo (nunca mudar):**
-- Seu rosto (use suas fotos como referência).
+- Rosto do criador (use as fotos como referência): **cabelo castanho-escuro curto e cacheado** em cima, laterais mais baixas; **olhos azul-claros**; barba rala por fazer com bigode fino; rosto largo; **corpo forte e largo** (ombros e braços grandes — físico de tanque).
+- **Pequena cicatriz no canto esquerdo do lábio inferior** (marca de batalha — ganha no EP 1).
 - Armadura de placas de aço escuro com detalhes em **dourado gasto**.
 - Capa curta **vermelho-vinho**, rasgada na ponta.
 - Escudo-torre grande, retangular, com um **portão desenhado** no centro (símbolo dele).
 - Sem capacete na maior parte do tempo (para o público ver o rosto).
+
+## 2.1 O companheiro — Brasa, o gato laranja
+
+| Item | Descrição |
+|---|---|
+| Espécie | Gato laranja rajado (tabby), pelo médio e fofo, olhos cor de âmbar |
+| Personalidade | Preguiçoso, ranzinza, cara de tédio — mas é o primeiro a sentir o perigo |
+| Papel na história | Alívio cômico + mistério: ele sempre "acha" coisas importantes e parece saber mais do que deveria |
+| Marca registrada | Anda no ombro do Vitorioso ou dentro do escudo; arrepia o pelo antes de todo ataque |
+| Segredo (temporada 2+) | Brasa era o gato do Rei Esquecido. Ele não envelhece. |
+
+**Por que funciona:** o público ama animal de estimação. O Brasa vira o "personagem favorito" dos comentários e dá leveza entre as cenas sombrias. Use o gato real como referência visual.
 
 ## 3. O mundo — Reino de Varnor
 
