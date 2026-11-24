@@ -18,7 +18,7 @@ export function mesh(geo, m, x = 0, y = 0, z = 0, parent) {
 export const B = (w, h, d) => new RoundedBoxGeometry(w, h, d, 2, Math.min(w, h, d) * 0.22); // bordas chanfradas
 
 // ---------------- VITORIOSO ----------------
-export function makeHero() {
+export function makeHero({ cracked = false } = {}) {
   const steel = mat(0x5e6676, { metalness: 0.55, roughness: 0.42 });
   const steelDk = mat(0x434a58, { metalness: 0.5, roughness: 0.48 });
   const gold = mat(0xc9962e, { metalness: 0.8, roughness: 0.35 });
@@ -124,6 +124,11 @@ export function makeHero() {
     mesh(B(w, h, 0.1), gold, x, y, 0.07, shield);
   for (let i = 0; i < 8; i++) for (const [x, y] of [[-0.33, -0.48 + i * 0.137], [0.33, -0.48 + i * 0.137]])
     mesh(new THREE.IcosahedronGeometry(0.02, 0), gold, x, y, 0.13, shield);  // rebites da borda
+  if (cracked) {                                                        // rachadura em zigue-zague
+    const dark = mat(0x0a0a0c);
+    [[-0.3, 0.42, 0.5], [-0.17, 0.3, -0.6], [-0.05, 0.12, 0.7], [0.07, -0.08, -0.5], [0.16, -0.27, 0.6], [0.27, -0.45, -0.4]]
+      .forEach(([x, y, r]) => { const c = mesh(B(0.22, 0.035, 0.03), dark, x, y, 0.125, shield); c.rotation.z = r; });
+  }
   const emb = mat(0x8a8f99, { metalness: 0.6, roughness: 0.4 });
   mesh(B(0.36, 0.26, 0.04), emb, 0, -0.08, 0.12, shield);
   mesh(B(0.12, 0.16, 0.05), mat(0x1c1e22), 0, -0.13, 0.13, shield);   // arco do portão
@@ -248,8 +253,7 @@ export function makeVillager(R) {
   const arms = [];
   for (const s of [-1, 1]) { const a = new THREE.Group(); a.position.set(s * 0.3, 0.55, 0); torso.add(a); mesh(B(0.13, 0.55, 0.14), tunic, 0, -0.27, 0, a); mesh(B(0.11, 0.1, 0.11), skin, 0, -0.58, 0, a); arms.push(a); }
   if (R() > 0.4) mesh(new THREE.IcosahedronGeometry(0.24, 0), mat(0x9a8a6a), 0, 0.45, -0.3, torso); // trouxa nas costas
-  function pose(t) {
-    const f = 10;
+  function pose(t, f = 10) {
     legs[0].rotation.x = 0.8 * Math.sin(t * f); legs[1].rotation.x = -0.8 * Math.sin(t * f);
     arms[0].rotation.x = -0.7 * Math.sin(t * f); arms[1].rotation.x = 0.7 * Math.sin(t * f);
     hips.position.y = 0.8 + 0.05 * Math.abs(Math.cos(t * f)); torso.rotation.x = 0.25;

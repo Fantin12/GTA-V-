@@ -37,7 +37,8 @@ export function makeDraven({ mounted = false } = {}) {
   mesh(B(0.66, 0.66, 0.4), black, 0, 0.45, 0, torso);
   mesh(B(0.68, 0.05, 0.42), silver, 0, 0.14, 0, torso); mesh(B(0.04, 0.55, 0.05), silver, 0, 0.45, 0.2, torso);
   // corvo prateado no peito
-  mesh(B(0.18, 0.08, 0.03), silver, 0, 0.55, 0.215, torso); mesh(B(0.06, 0.12, 0.03), silver, 0, 0.47, 0.215, torso);
+  for (const sd of [-1, 1]) { const w = mesh(B(0.17, 0.045, 0.03), silver, sd * 0.08, 0.56, 0.215, torso); w.rotation.z = sd * 0.45; } // asas abertas
+  mesh(ico(0.035), silver, 0, 0.52, 0.22, torso); mesh(new THREE.ConeGeometry(0.02, 0.06, 3), silver, 0, 0.47, 0.22, torso).rotation.x = Math.PI; // corpo e cauda
   for (const s of [-1, 1]) {
     const p = mesh(ico(0.24), black, s * 0.44, 0.74, 0, torso); p.scale.set(1.1, 0.7, 1.1);
     for (let k = 0; k < 3; k++) mesh(new THREE.ConeGeometry(0.035, 0.16, 4), silver, s * (0.36 + k * 0.08), 0.88, 0, torso); // espinhos
@@ -83,7 +84,12 @@ export function makeHorse() {
   }
   const tail = mesh(B(0.12, 0.8, 0.12), mane, 0, 1.3, -0.95, g); tail.rotation.x = 0.4;
   g.traverse(o => { if (o.isMesh) o.castShadow = true; });
-  return { group: g, pose(t) { body.position.y = 1.45 + Math.sin(t * 1.5) * 0.01; neck.rotation.x = 0.55 + 0.05 * Math.sin(t * 0.8); tail.rotation.z = 0.15 * Math.sin(t * 2); } };
+  return { group: g, pose(t, walk = 0) {
+    body.position.y = 1.45 + Math.sin(t * 1.5) * 0.01 + walk * 0.03 * Math.abs(Math.sin(t * 5));
+    neck.rotation.x = 0.55 + 0.05 * Math.sin(t * 0.8) + walk * 0.06 * Math.sin(t * 5);
+    tail.rotation.z = 0.15 * Math.sin(t * 2);
+    legs.forEach((l, i) => { l.rotation.x = walk * 0.45 * Math.sin(t * 5 + [0, Math.PI, Math.PI, 0][i]); });
+  } };
 }
 
 // ---------------- LIRA (curandeira) ----------------
@@ -214,4 +220,28 @@ export function makeWolf(seed = 3) {
     jaw.rotation.x = 0.25 + 0.15 * Math.sin(t * 3);  // rosnando
     head.rotation.x = 0.15; tail.rotation.y = 0.2 * Math.sin(t * 2);
   } };
+}
+
+// ---------------- ELFO DE CINZA (encapuzado, misterioso) ----------------
+export function makeElfoCinza() {
+  const robe = mat(0x2a2236), robeDk = mat(0x1a1424), skin = mat(0x8a96a8), parch = mat(0xd8c8a0);
+  const g = new THREE.Group();
+  mesh(new THREE.CylinderGeometry(0.2, 0.45, 1.15, 8), robe, 0, 0.58, 0, g);
+  const torso = new THREE.Group(); torso.position.y = 1.1; g.add(torso);
+  mesh(B(0.46, 0.5, 0.3), robe, 0, 0.2, 0, torso);
+  const hood = mesh(ico(0.3, 1), robeDk, 0, 0.62, -0.02, torso); hood.scale.set(1, 1.15, 1.05);
+  mesh(new THREE.ConeGeometry(0.12, 0.3, 6), robeDk, 0, 0.88, -0.12, torso).rotation.x = -0.6;  // ponta do capuz
+  mesh(ico(0.2, 1), mat(0x050508), 0, 0.58, 0.1, torso);                                          // rosto na sombra
+  for (const s of [-1, 1]) mesh(ico(0.025), glow(2.2, 0.8, 4), s * 0.07, 0.6, 0.27, torso);        // olhos violeta
+  const arms = [];
+  for (const s of [-1, 1]) {
+    const a = new THREE.Group(); a.position.set(s * 0.28, 0.4, 0); torso.add(a);
+    mesh(new THREE.CylinderGeometry(0.07, 0.13, 0.55, 6), robe, 0, -0.27, 0, a); mesh(ico(0.055), skin, 0, -0.57, 0, a); arms.push(a);
+  }
+  const scroll = new THREE.Group(); scroll.position.set(0, -0.6, 0.06); arms[1].add(scroll);
+  mesh(new THREE.CylinderGeometry(0.04, 0.04, 0.32, 8), parch, 0, 0, 0, scroll).rotation.z = Math.PI / 2;
+  mesh(B(0.04, 0.04, 0.04), mat(0x8a1010), 0, 0, 0.045, scroll);                                 // lacre
+  arms[1].rotation.x = -1.0;
+  g.traverse(o => { if (o.isMesh) o.castShadow = true; });
+  return { group: g, pose(t, reach = 0) { torso.position.y = 1.1 + Math.sin(t * 1.4) * 0.01; arms[1].rotation.x = -0.4 - 0.9 * reach; torso.rotation.x = 0.1; } };
 }
