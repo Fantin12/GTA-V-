@@ -18,6 +18,8 @@ Legenda:
 | 4 | Ele crava o escudo no chão. Faíscas. | …decidiu que ninguém passava. | NINGUÉM **[PASSA]** |
 | 5 | Plano aberto: dezenas de monstros vindo contra ele. Brasa pula para dentro do escudo. Corte para preto. | Ele não fugiu. Ele **ficou**. | ELE **[FICOU]** · PARTE 1 |
 
+**Gancho para o próximo capítulo (última imagem):** Ao amanhecer, um corvo prateado pousa na paliçada e observa o Vitorioso. (É o estandarte de Draven.)
+
 **Tela final, pergunta A ou B:** Ele aguenta até o amanhecer? A) SIM  B) NÃO
 
 **Legenda do post:** Todo mundo fugiu. Menos ele. ⚔️ Parte 1 de A Coroa de Varnor.
@@ -36,6 +38,8 @@ Legenda:
 | 4 | Draven sorrindo, de cima do cavalo. | "Bom trabalho, guarda. Agora volte pro seu portão." | VOLTE PRO **[PORTÃO]** |
 | 5 | Close em Vitorioso apertando o punho. | Ele olhou pro lorde… e pensou numa coisa só. | PENSOU EM **[UMA COISA]** · PARTE 2 |
 
+**Gancho para o próximo capítulo (última imagem):** Quando Draven vai embora, um elfo de cinza encapuzado entrega ao lorde um mapa da Fenda de Ossos.
+
 **Tela final, pergunta A ou B:** O que ele faz? A) Volta pro portão  B) Enfrenta o lorde
 
 ---
@@ -51,6 +55,8 @@ Legenda:
 | 3 | Bram para, surpreso. | "Você quer ser o quê? Rei?" | QUER SER **[REI]**? |
 | 4 | Vitorioso se levanta, sombra gigante na parede da forja. | "Não. Eu vou ser o dono de Varnor." | DONO DE **[VARNOR]** |
 | 5 | Bram martelando metal; faíscas douradas. Revela um escudo-torre novo com um portão desenhado. | E assim nasceu o escudo… | O **[ESCUDO]** · PARTE 3 |
+
+**Gancho para o próximo capítulo (última imagem):** Bram, sozinho, abre uma gaveta escondida: um desenho antigo da mesma armadura dourada que aparece no EP 8.
 
 **Tela final, pergunta A ou B:** Ser rei pra quê? A) Pra se vingar do lorde  B) Pra proteger a vila
 
@@ -68,6 +74,8 @@ Legenda:
 | 4 | Luz verde nas mãos de Lira curando o braço dele. | E pela primeira vez… alguém cuidou dele. | ALGUÉM **[CUIDOU]** |
 | 5 | Os dois caminhando juntos. | "Tanque e curandeira. Agora a gente tem chance." | AGORA TEM **[CHANCE]** · PARTE 4 |
 
+**Gancho para o próximo capítulo (última imagem):** Lira cura o Vitorioso e se assusta: por um segundo, ela vê uma coroa brilhando na cicatriz do lábio dele.
+
 **Tela final, pergunta A ou B:** A Lira deve ir junto pra Fenda? A) SIM  B) NÃO
 
 ---
@@ -83,6 +91,8 @@ Legenda:
 | 3 | Lira dá um passo pra trás, com medo. | "A gente devia correr." | DEVIA **[CORRER]** |
 | 4 | Vitorioso bate a espada no escudo, chamando todos os monstros pra ele. | "Tanque não foge." | TANQUE NÃO **[FOGE]** |
 | 5 | Monstros pulando nele ao mesmo tempo. | "Tanque segura." | TANQUE **[SEGURA]** · PARTE 5 |
+
+**Gancho para o próximo capítulo (última imagem):** No fundo da Fenda, algo enorme abre um olho: o Guardião de Ossos acordou com o barulho.
 
 **Tela final, pergunta A ou B:** Ele segura todos sozinho? A) SIM  B) Alguém vai ajudar
 
@@ -100,6 +110,8 @@ Legenda:
 | 4 | Os quatro na mesa, luz de vela. | Tanque. Cura. Arco. Magia. | O **[GRUPO]** |
 | 5 | Mapa aberto, Morwen aponta para o fundo da Fenda. | "Mas pra isso… vocês vão ter que voltar lá." | **[VOLTAR]** LÁ · PARTE 6 |
 
+**Gancho para o próximo capítulo (última imagem):** Kael rouba um anel da bolsa de Morwen sem ninguém ver… e o anel tem o brasão dos Corvos de Pedravale.
+
 **Tela final, pergunta A ou B:** Confiar no Kael, um ex-ladrão? A) SIM  B) NÃO
 
 ---
@@ -116,6 +128,8 @@ Legenda:
 | 4 | Garra batendo no escudo; ele afunda os pés no chão. Kael atira, Morwen lança fogo, Lira cura. | Ele segurou. E segurou. E segurou. | ELE **[SEGUROU]** |
 | 5 | O guardião desmorona. Atrás dele, um baú de pedra brilhando. | Até o guardião cair. | O GUARDIÃO **[CAIU]** · PARTE 7 |
 
+**Gancho para o próximo capítulo (última imagem):** Atrás do baú, gravado na pedra: "O próximo rei vai esquecer quem é."
+
 **Tela final, pergunta A ou B:** Quem merece o tesouro? A) O Vitorioso  B) O grupo todo
 
 ---
@@ -131,6 +145,8 @@ Legenda:
 | 3 | Vitorioso veste a armadura. Os olhos dele brilham por um segundo. | Quando ele vestiu… | QUANDO ELE **[VESTIU]** |
 | 4 | Visão rápida: um rei de costas sentado no Trono de Pedra Negra. | …ele viu o trono. | ELE VIU O **[TRONO]** |
 | 5 | Morwen, séria, olhando para o Brasa — que encara de volta como se a conhecesse. | "Essa armadura escolhe seu dono. E ela escolheu você." | ESCOLHEU **[VOCÊ]** · PARTE 8 |
+
+**Gancho para o próximo capítulo (última imagem):** A primeira lembrança some: a mãe do Vitorioso na porta de casa vira um borrão.
 
 **Tela final, pergunta A ou B:** Vestir a armadura sabendo do preço? A) SIM  B) NÃO
 
@@ -150,6 +166,8 @@ Legenda:
 | 4 | Vitorioso arranca o pergaminho e rasga. | "Não. Dessa vez, a gente vai até ele." | A GENTE **[VAI]** |
 | 5 | Plano aberto: castelo de Pedravale no horizonte, ao pôr do sol. | Em sete dias… o cerco começa. | O **[CERCO]** · PARTE 9 |
 
+**Gancho para o próximo capítulo (última imagem):** O arauto vai embora e cruza com um orc de brasa ferido que pergunta: "Onde está o guarda do portão?"
+
 **Tela final, pergunta A ou B:** Pedir ajuda à vila? A) SIM  B) Só o grupo vai
 
 ---
@@ -165,6 +183,8 @@ Legenda:
 | 3 | Nas muralhas, centenas de soldados de armadura negra. | Do outro lado, um exército. | UM **[EXÉRCITO]** |
 | 4 | Lorde Draven no alto do muro, sorrindo. | "O guarda voltou pro portão. Só que agora é o meu." | AGORA É O **[MEU]** |
 | 5 | Vitorioso levanta o escudo, Brasa no ombro dele; a armadura dourada acende. Corte para preto. | O primeiro muro do caminho até o trono. | O PRIMEIRO **[MURO]** · FIM DA TEMPORADA 1 |
+
+**Gancho para o próximo capítulo (última imagem):** Sob Alta Varnor, longe dali, o Dragão de Pedra respira pela primeira vez em cem anos.
 
 **Tela final, pergunta A ou B:** Atacar agora ou esperar a noite? A) AGORA  B) ESPERAR
 

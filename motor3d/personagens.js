@@ -11,16 +11,16 @@ export function mat(color, opts = {}) {
   const k = color + JSON.stringify(opts);
   return cache[k] ||= new THREE.MeshStandardMaterial({ color, flatShading: true, roughness: 0.8, ...opts });
 }
-function mesh(geo, m, x = 0, y = 0, z = 0, parent) {
+export function mesh(geo, m, x = 0, y = 0, z = 0, parent) {
   const o = new THREE.Mesh(geo, m); o.position.set(x, y, z);
   o.castShadow = o.receiveShadow = true; if (parent) parent.add(o); return o;
 }
-const B = (w, h, d) => new RoundedBoxGeometry(w, h, d, 2, Math.min(w, h, d) * 0.22); // bordas chanfradas
+export const B = (w, h, d) => new RoundedBoxGeometry(w, h, d, 2, Math.min(w, h, d) * 0.22); // bordas chanfradas
 
 // ---------------- VITORIOSO ----------------
 export function makeHero() {
-  const steel = mat(0x3c4250, { metalness: 0.6, roughness: 0.45 });
-  const steelDk = mat(0x2a2e38, { metalness: 0.5, roughness: 0.5 });
+  const steel = mat(0x5e6676, { metalness: 0.55, roughness: 0.42 });
+  const steelDk = mat(0x434a58, { metalness: 0.5, roughness: 0.48 });
   const gold = mat(0xc9962e, { metalness: 0.8, roughness: 0.35 });
   const skin = mat(0xe3a98a), hair = mat(0x2a1a12), beard = mat(0x5a3a2a);
   const cape = mat(0x6e1424, { side: THREE.DoubleSide }), leather = mat(0x4a2e1c);
@@ -35,6 +35,10 @@ export function makeHero() {
     mesh(B(0.26, 0.42, 0.28), steelDk, 0, -0.68, 0, leg);
     mesh(B(0.28, 0.12, 0.38), leather, 0, -0.9, 0.05, leg);
     mesh(B(0.27, 0.06, 0.29), gold, 0, -0.47, 0, leg);
+    const knee = mesh(new THREE.IcosahedronGeometry(0.11, 0), steel, 0, -0.47, 0.13, leg); knee.scale.set(1.1, 0.9, 0.7);
+    mesh(new THREE.IcosahedronGeometry(0.035, 0), gold, 0, -0.47, 0.21, leg);
+    mesh(B(0.2, 0.3, 0.06), steel, 0, -0.68, 0.14, leg);                  // placa da canela
+    mesh(B(0.3, 0.06, 0.18), steelDk, 0, -0.86, 0.17, leg);               // bico da bota
     legs.push(leg);
   }
   const torso = new THREE.Group(); torso.position.y = 0.05; hips.add(torso);
@@ -44,10 +48,20 @@ export function makeHero() {
   mesh(B(0.74, 0.06, 0.46), gold, 0, 0.18, 0, torso);
   mesh(B(0.5, 0.06, 0.46), gold, 0, 0.74, 0, torso);
   mesh(new THREE.IcosahedronGeometry(0.06, 0), gold, -0.18, 0.62, 0.23, torso); // broche
+  mesh(B(0.08, 0.5, 0.06), steelDk, 0, 0.45, 0.22, torso);              // nervura central do peitoral
+  for (const [x, y] of [[-0.3, 0.68], [0.3, 0.68], [-0.3, 0.24], [0.3, 0.24]]) mesh(new THREE.IcosahedronGeometry(0.025, 0), gold, x, y, 0.225, torso); // rebites
+  for (let i = 0; i < 3; i++) {                                         // saiote de placas
+    for (const s of [-1, 1]) {
+      const pl = mesh(B(0.3, 0.14, 0.06), i % 2 ? steelDk : steel, s * 0.17, -0.1 - i * 0.11, 0.2 - i * 0.01, torso);
+      pl.rotation.x = 0.12;
+    }
+  }
+  for (const s of [-1, 1]) mesh(B(0.12, 0.14, 0.08), leather, s * 0.31, 0.02, 0.17, torso);   // bolsinhas no cinto
   for (const s of [-1, 1]) {                                            // ombreiras
     const p = mesh(new THREE.IcosahedronGeometry(0.24, 0), steelDk, s * 0.46, 0.72, 0, torso);
     p.scale.set(1.1, 0.75, 1.1);
     mesh(B(0.3, 0.05, 0.42), gold, s * 0.46, 0.62, 0, torso);
+    const p2 = mesh(new THREE.IcosahedronGeometry(0.2, 0), steel, s * 0.5, 0.58, 0, torso); p2.scale.set(1.05, 0.55, 1.05);
   }
   // capa (com dobra) presa nos ombros
   const capeG = new THREE.Group(); capeG.position.set(0, 0.78, -0.24); torso.add(capeG);
@@ -74,12 +88,14 @@ export function makeHero() {
   for (const s of [-1, 1]) {
     mesh(B(0.07, 0.045, 0.02), eyeW, s * 0.09, 0.24, 0.245, head);
     mesh(B(0.035, 0.04, 0.02), eyeM, s * 0.09, 0.24, 0.255, head);
-    const brow = mesh(B(0.11, 0.03, 0.03), hair, s * 0.09, 0.31, 0.24, head); brow.rotation.z = s * -0.25;
+    const brow = mesh(B(0.12, 0.04, 0.035), hair, s * 0.09, 0.315, 0.24, head); brow.rotation.z = s * -0.2;
+    for (let k = 0; k < 3; k++) mesh(B(0.07, 0.06, 0.04), beard, s * (0.08 + k * 0.055), 0.03 + k * 0.035, 0.22 - k * 0.045, head); // barba no maxilar
     mesh(new THREE.IcosahedronGeometry(0.06, 0), skin, s * 0.27, 0.2, 0, head);   // orelhas
   }
-  mesh(new THREE.ConeGeometry(0.045, 0.1, 4), skin, 0, 0.19, 0.27, head).rotation.x = Math.PI / 2; // nariz
+  mesh(B(0.06, 0.13, 0.08), skin, 0, 0.19, 0.265, head);                     // nariz
+  mesh(B(0.09, 0.04, 0.06), skin, 0, 0.13, 0.27, head);                      // ponta do nariz
   const R = rand(7);                                                     // cabelo cacheado
-  for (let i = 0; i < 22; i++) {
+  for (let i = 0; i < 34; i++) {
     const a = R() * Math.PI * 2, r = R() * 0.2;
     const c = mesh(new THREE.IcosahedronGeometry(0.075 + R() * 0.03, 0), hair,
       Math.cos(a) * r, 0.42 + R() * 0.06 - r * 0.3, Math.sin(a) * r * 0.9 - 0.02, head);
@@ -96,7 +112,9 @@ export function makeHero() {
     const fore = new THREE.Group(); fore.position.y = -0.4; arm.add(fore);
     mesh(B(0.2, 0.34, 0.22), steel, 0, -0.17, 0, fore);
     mesh(B(0.21, 0.05, 0.23), gold, 0, -0.02, 0, fore);
-    mesh(B(0.16, 0.14, 0.16), leather, 0, -0.38, 0, fore);
+    mesh(B(0.24, 0.12, 0.25), steelDk, 0, -0.32, 0, fore);               // punho da manopla
+    mesh(B(0.17, 0.15, 0.17), steel, 0, -0.43, 0.01, fore);               // mão fechada
+    mesh(B(0.18, 0.04, 0.05), gold, 0, -0.4, 0.09, fore);                 // nós dos dedos
     arms.push({ arm, fore });
   }
   // escudo-torre com emblema de portão (braço esquerdo = s=-1)
@@ -104,6 +122,8 @@ export function makeHero() {
   mesh(B(0.72, 1.12, 0.08), mat(0x4b4f58, { metalness: 0.5, roughness: 0.5 }), 0, 0, 0.06, shield);
   for (const [w, h, x, y] of [[0.78, 0.06, 0, 0.56], [0.78, 0.06, 0, -0.56], [0.06, 1.16, 0.37, 0], [0.06, 1.16, -0.37, 0]])
     mesh(B(w, h, 0.1), gold, x, y, 0.07, shield);
+  for (let i = 0; i < 8; i++) for (const [x, y] of [[-0.33, -0.48 + i * 0.137], [0.33, -0.48 + i * 0.137]])
+    mesh(new THREE.IcosahedronGeometry(0.02, 0), gold, x, y, 0.13, shield);  // rebites da borda
   const emb = mat(0x8a8f99, { metalness: 0.6, roughness: 0.4 });
   mesh(B(0.36, 0.26, 0.04), emb, 0, -0.08, 0.12, shield);
   mesh(B(0.12, 0.16, 0.05), mat(0x1c1e22), 0, -0.13, 0.13, shield);   // arco do portão
@@ -115,6 +135,8 @@ export function makeHero() {
   const sword = new THREE.Group(); sword.position.set(0, -0.4, 0.05); arms[1].fore.add(sword);
   mesh(B(0.05, 0.62, 0.02), mat(0xc8ccd4, { metalness: 0.9, roughness: 0.2 }), 0, -0.4, 0.06, sword);
   mesh(B(0.22, 0.04, 0.05), gold, 0, -0.08, 0.06, sword);
+  mesh(B(0.045, 0.14, 0.045), leather, 0, 0.01, 0.06, sword);
+  mesh(new THREE.IcosahedronGeometry(0.035, 0), gold, 0, 0.1, 0.06, sword);
   sword.rotation.x = -0.4;
 
   g.traverse((o) => { if (o.isMesh) o.castShadow = true; });

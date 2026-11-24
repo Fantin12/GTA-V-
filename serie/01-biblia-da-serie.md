@@ -35,7 +35,7 @@ Vitorioso, um guarda de portão sem fama que só sabe **segurar a linha**, jura 
 |---|---|
 | Espécie | Gato laranja rajado (tabby), pelo médio e fofo, olhos cor de âmbar |
 | Personalidade | Preguiçoso, ranzinza, cara de tédio — mas é o primeiro a sentir o perigo |
-| Papel na história | Alívio cômico + mistério: ele sempre "acha" coisas importantes e parece saber mais do que deveria |
+| Papel na história | **Coadjuvante.** Alívio cômico + mistério: ele sempre "acha" coisas importantes e parece saber mais do que deveria |
 | Marca registrada | Anda no ombro do Vitorioso ou dentro do escudo; arrepia o pelo antes de todo ataque |
 | Segredo (temporada 2+) | Brasa era o gato do Rei Esquecido. Ele não envelhece. |
 
@@ -64,7 +64,48 @@ Toda vantagem tem um preço escrito junto:
 | **Floresta de Vésper** | Floresta onde a noite nunca acaba |
 | **Alta Varnor** | Capital, onde fica o trono |
 
-## 4. Personagens
+## 3.1 O mundo MMO de Varnor (100% original)
+
+O clima é o de MMO de fantasia clássico: raças, classes, cidades de pedra, NPCs, monstros por região, itens com grau, clãs e cercos de castelo. **Nenhum nome, mapa, monstro, textura ou logo de jogo existente.**
+
+### Raças
+| Raça | Onde vive | Visual | Papel |
+|---|---|---|---|
+| **Humanos** | Planícies e castelos | Aço, couro, capas coloridas | Maioria dos senhores de castelo |
+| **Elfos da Clareira** | Florestas antigas | Armaduras finas de prata e verde, cabelos claros | Arqueiros e curandeiros; desconfiam de humanos |
+| **Elfos de Cinza** | Cavernas e ruínas | Pele azul-acinzentada, armaduras roxas e negras | Magos sombrios; vendem segredos |
+| **Orcs de Brasa** | Desfiladeiros vulcânicos | Pele verde-oliva, presas, pinturas vermelhas | Guerreiros honrados, odeiam covardes |
+| **Anões da Forja** | Montanhas | Barbas trançadas, armaduras de bronze | Ferreiros e mercadores; fazem os melhores escudos |
+
+### Itens com grau
+Toda arma e armadura tem um grau: **Ferro → Bronze → Prata → Ouro → Rúnico → Ancestral**. O escudo do Vitorioso começa em Ferro. A armadura do Rei Esquecido é **Ancestral**, e por isso tem preço.
+
+### NPCs fixos de toda cidade
+| NPC | O que faz na história |
+|---|---|
+| **Guardião do Portal** | Teleporta entre cidades, cobra caro e conta fofocas |
+| **Ferreiro** (Bram, em Brejo Cinza) | Conserta e melhora o grau de itens |
+| **Guarda-volumes** | Anão rabugento que guarda itens; sabe quem anda escondendo o quê |
+| **Sacerdotisa do Templo** | Ressuscita, abençoa, e sempre cobra uma doação |
+| **Mestre de Classe** | Ensina habilidades novas, só a quem passa numa prova |
+| **Arauto do Castelo** | Anuncia cercos, impostos e leis (é ele quem lê o pergaminho do EP 9) |
+
+### Bestiário (monstros por região)
+| Região | Monstros | Chefe da região |
+|---|---|---|
+| Arredores de Brejo Cinza | Lobos cinzentos, javalis de presas, goblins ladrões | **Garra-Velha**, lobo alfa caolho |
+| Fenda de Ossos | Esqueletos, aranhas de caverna, morcegos gigantes | **O Guardião de Ossos** (EP 7) |
+| Floresta de Vésper | Lobisomens, árvores vivas, fadas negras | **A Rainha dos Galhos** |
+| Pântano Podre | Lagartos de pedra, mortos-vivos do lodo | **Mãe-Lama**, sapo colossal |
+| Desfiladeiro de Brasa | Orcs renegados, salamandras | **Chefe Dente-Rachado** |
+| Sob Alta Varnor | ??? | **O Dragão de Pedra adormecido** (o grande mistério da série) |
+
+### Clãs e cercos
+- Para cercar um castelo é preciso ter um **clã registrado** com estandarte próprio.
+- **Clã do Vitorioso:** *Os do Portão*. Estandarte: portão dourado em fundo vinho.
+- **Clã de Draven:** *Corvos de Pedravale*. Estandarte: corvo prateado em fundo negro.
+- O cerco tem regras: começa ao pôr do sol, termina quando alguém toca o **Selo do Castelo**, no salão do trono.
+
 
 | Nome | Papel | Visual |
 |---|---|---|
@@ -95,7 +136,8 @@ Toda vantagem tem um preço escrito junto:
 1. **Gancho (0–2s):** frase forte + imagem impactante.
 2. **História (3–5 cenas):** narração curta, uma frase por cena.
 3. **Cliffhanger:** termina no suspense + "PARTE X".
-4. **Pergunta A ou B (tela final):** uma pergunta com só duas respostas, para o público comentar. Ex.: *"Ele aguenta até o amanhecer? A) SIM  B) NÃO"*.
+4. **Gancho para o próximo capítulo:** a última imagem antes da tela final mostra algo novo e sem explicação (um vulto, um selo, um nome). O público precisa querer a próxima parte.
+5. **Pergunta A ou B (tela final):** uma pergunta com só duas respostas, para o público comentar. Ex.: *"Ele aguenta até o amanhecer? A) SIM  B) NÃO"*.
 
 ## 8. Regras de ouro
 

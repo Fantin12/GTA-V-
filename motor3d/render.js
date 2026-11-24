@@ -12,7 +12,7 @@ const srv = http.createServer((q, r) => {
   const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
   const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
   page.on('console', m => console.log('[pag]', m.text())); page.on('pageerror', e => console.log('[ERRO]', e.message));
-  await page.goto(`http://localhost:${srv.address().port}/`);
+  await page.goto(`http://localhost:${srv.address().port}/?cena=${process.env.CENA || "cena_ep01"}`);
   await page.waitForFunction('window.ready === true', null, { timeout: 60000 });
   const dur = await page.evaluate('window.DUR');
   const t0 = +(process.argv[3] || 0), t1 = +(process.argv[4] || dur);
