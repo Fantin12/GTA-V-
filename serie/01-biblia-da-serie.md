@@ -169,3 +169,23 @@ Regras para escrever e para revisar cada cena antes de postar.
 - **Termine com uma pergunta de duas respostas.**
 - **O voto do público não é uma ordem**, mas ignorá-lo tem custo: se contrariar, a história precisa justificar.
 - **Leia os comentários como revisão grátis.** O público percebe furos nas regras do mundo antes de você.
+
+## 10. Formato de 1 minuto (monetização)
+
+Duração-alvo: **1:05 a 1:15**. Passar de 1 minuto com folga atende a regra do TikTok (programa de recompensas exige mais de 1 minuto) e funciona igual no YouTube Shorts, Reels e Facebook. As regras de cada plataforma mudam; conferir na hora de inscrever o canal.
+
+| Bloco | Tempo | O que acontece |
+|---|---|---|
+| Para quem chegou agora | 0–4s | Uma frase + imagem do episódio anterior (em tom de lembrança) |
+| Gancho do episódio | 4–8s | A imagem mais forte do episódio, antes de explicar |
+| Ato 1 | 8–25s | Situação e conflito |
+| Ato 2 | 25–45s | Virada: diálogo, decisão ou luta |
+| Ato 3 | 45–58s | Consequência / revelação |
+| Gancho do próximo | 58–64s | Imagem sem explicação |
+| Tela final | 64–68s | "PARTE X" + pergunta A ou B |
+
+**Regras do formato longo**
+- Pelo menos **3 vozes** por episódio (narrador + 2 personagens): diálogo segura a atenção mais que narração.
+- **Uma mudança de cenário ou de luz a cada ~15s**, para o vídeo não ficar parado.
+- **Uma cena de ação ou de "momento MMO"** por episódio (luta, item com grau, habilidade nova, NPC).
+- A retenção cai nos primeiros 3 segundos: o gancho do episódio vem **antes** de qualquer explicação.

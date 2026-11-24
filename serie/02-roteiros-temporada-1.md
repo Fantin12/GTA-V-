@@ -194,3 +194,28 @@ Legenda:
 - **Fixe no perfil:** EP 1, EP 5 e EP 8 (os mais fortes para quem chega agora).
 - **Legenda padrão:** gancho curto + "Parte X de A Coroa de Varnor ⚔️👑" + "Comenta 'REI' se quer a próxima parte" ou "Comenta 🐈 pro Brasa".
 - **Hashtags:** `#animacao #historia #fantasia #medieval #serie #reels #animation #storytelling`
+
+
+---
+
+# VERSÕES DE 1 MINUTO
+
+## EP 3 (1 min) — A PROMESSA
+
+Vozes: **Narrador** (Caio), **Vitorioso** (voz jovem, firme), **Bram** (voz velha, rouca).
+
+| Tempo | CENA | FALA | TELA |
+|---|---|---|---|
+| 0–4s | Lembrança do EP2 (tom azulado): Draven no cavalo. | NARRADOR: "Ontem, o lorde mandou ele voltar pro portão." | VOLTAR PRO **[PORTÃO]** |
+| 4–8s | Gancho: um martelo desce em câmera lenta sobre aço em brasa, faíscas explodem. | (som do martelo) | — |
+| 8–13s | Forja à noite. Bram examina o escudo rachado contra a luz do fogo. | BRAM: "Esse escudo não serve mais, garoto." | NÃO **[SERVE]** MAIS |
+| 13–19s | Vitorioso sentado num banco olhando o fogo; Brasa dormindo encostado na bota dele. | NARRADOR: "Naquela noite, ele não conseguiu dormir." | NÃO CONSEGUIU **[DORMIR]** |
+| 19–24s | Close no Vitorioso. | VITORIOSO: "Então faz um que aguente um reino inteiro." | UM **[REINO]** INTEIRO |
+| 24–28s | Bram para o martelo no ar. | BRAM: "Você quer ser o quê? Rei?" | QUER SER **[REI]**? |
+| 28–34s | Vitorioso se levanta; a sombra dele cresce na parede da forja. | VITORIOSO: "Não. Eu vou ser o dono de Varnor." | DONO DE **[VARNOR]** |
+| 34–39s | Bram ri… a câmera mostra os olhos do Vitorioso… Bram para de rir. | NARRADOR: "Bram riu. Depois viu os olhos dele. E parou de rir." | PAROU DE **[RIR]** |
+| 39–47s | Montagem: martelo, faíscas, aço vermelho, vapor da têmpera, noite e dia passando pela janela. | NARRADOR: "Sete dias e sete noites, o martelo não parou." | **[SETE]** DIAS |
+| 47–53s | Revelação: escudo-torre novo com o portão dourado; Vitorioso o ergue. Aparece um selo de item: "ESCUDO DO PORTÃO · GRAU FERRO". | NARRADOR: "E assim nasceu o Escudo do Portão." | ESCUDO DO **[PORTÃO]** |
+| 53–58s | Crianças espiando pela janela; aldeões cochichando na praça. | NARRADOR: "Na vila, já diziam: o guarda do portão quer ser rei." | QUER SER **[REI]** |
+| 58–64s | **Gancho:** Bram sozinho abre uma gaveta escondida: o desenho antigo de uma armadura dourada com uma coroa no peito. | BRAM (sussurro): "Então chegou a hora." | — |
+| 64–68s | Tela final. | — | PARTE 3 · Ser rei pra quê? A) VINGANÇA B) PROTEGER A VILA |
