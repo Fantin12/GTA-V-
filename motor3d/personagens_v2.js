@@ -83,7 +83,7 @@ export function makeHeroV2({ cracked = false } = {}) {
   const cape = makeCape(torso, 0.85, 1.35, capeM, 0.86, -0.24);
   // cabeça
   const head = new THREE.Group(); head.position.y = 1.15; torso.add(head);
-  const face = makeFace({ skin: 0xe3a98a, hair: 0x2a1a12, eyes: 0x3a7ac0, beard: 'stubble', hairStyle: 'curly', jaw: 1.25, scar: true, seed: 7, brow: 0.06 });
+  const face = makeFace({ skin: 0xe3a98a, hair: 0x2a1a12, beardColor: 0x6a4a38, eyes: 0x3a7ac0, beard: 'stubble', hairStyle: 'curly', jaw: 1.25, scar: true, seed: 7, brow: 0.06 });
   head.add(face.group);
   // braços
   const arms = [-1, 1].map((s) => {
@@ -124,17 +124,20 @@ export function makeHeroV2({ cracked = false } = {}) {
     if (a >= 0 && a < 0.45) lift = a / 0.45;
     else if (a >= 0.45) { const k = Math.min(1, (a - 0.45) / 0.12); lift = 1 - k * 1.6; crouch = k * (0.6 + 0.4 * (a > 0.57 ? Math.exp(-(a - 0.57) * 6) : 1)); }
     crouch = Math.max(0, crouch);
+    const sit = extra.sit ?? 0;
     arms[0].root.rotation.set(-0.3 - 0.9 * lift, 0, 0.3); arms[0].joint.rotation.x = -0.9 + 0.25 * lift;
     arms[1].root.rotation.set(-0.25 - 0.3 * lift, 0, -0.12); arms[1].joint.rotation.x = -0.35;
     if (extra.fist) { arms[1].root.rotation.x = -0.5; arms[1].joint.rotation.x = -1.6 * extra.fist; }
-    hips.position.y = 0.98 - 0.22 * crouch;
-    legs[0].root.rotation.x = -0.5 * crouch; legs[0].joint.rotation.x = 0.7 * crouch;
-    legs[1].root.rotation.x = 0.3 * crouch; legs[1].joint.rotation.x = 0.3 * crouch;
+    hips.position.y = 0.98 - 0.22 * crouch - 0.43 * sit;
+    legs[0].root.rotation.x = -0.5 * crouch - 1.45 * sit; legs[0].joint.rotation.x = 0.7 * crouch + 1.45 * sit;
+    legs[1].root.rotation.x = 0.3 * crouch - 1.45 * sit; legs[1].joint.rotation.x = 0.3 * crouch + 1.45 * sit;
+    legs[0].root.rotation.z = -0.12 * sit; legs[1].root.rotation.z = 0.12 * sit;
+    if (sit > 0) { for (const A of arms) { A.root.rotation.x = -0.75 * sit; A.joint.rotation.x = -0.7 * sit; } }
     torso.rotation.x = 0.22 * crouch; head.rotation.x = -0.15 * crouch;
     shield.rotation.x = -(arms[0].root.rotation.x + arms[0].joint.rotation.x + torso.rotation.x);
   }
   pose(0);
-  return { group: g, pose, face };
+  return { group: g, pose, face, shield, sword };
 }
 
 // ================= LORDE DRAVEN v2 =================

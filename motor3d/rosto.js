@@ -46,7 +46,7 @@ export function makeFace(o = {}) {
     const sm = (a, b, v) => { const k = Math.max(0, Math.min(1, (v - a) / (b - a))); return k * k * (3 - 2 * k); };
     const lowerK = sm(-0.02, -0.09, y) * sm(0.1, 0.45, front), lower = lowerK > 0.5;
     const chin = y < -0.1 && Math.abs(x) < 0.09 && front > 0.6, lip = y > -0.07 && y < -0.045 && Math.abs(x) < 0.06 && front > 0.85;
-    if (o.beard === 'stubble') c.lerp(beardC, Math.max(lowerK * 0.5, lip ? 0.4 : 0));
+    if (o.beard === 'stubble') c.lerp(beardC, Math.max(lowerK * 0.28, lip ? 0.25 : 0));
     if (o.beard === 'goatee') c.lerp(beardC, Math.max(sm(0.11, 0.06, Math.abs(x)) * sm(-0.08, -0.13, y) * sm(0.4, 0.7, front) * 0.9, lip ? 0.8 : 0));
     // volume pintado: órbitas, sombra do nariz, bochechas rosadas, nariz, sob o queixo
     const red = new THREE.Color(0xd06060), dark = skinC.clone().multiplyScalar(0.62);
@@ -126,7 +126,7 @@ export function makeFace(o = {}) {
     const m = add(g, new THREE.CapsuleGeometry(0.008, 0.07, 4, 8), smat(beardC.getHex(), { roughness: 0.9 }), 0, -0.088, 0.244); m.rotation.z = Math.PI / 2; // bigode fino
   }
 
-  g.traverse((x) => { if (x.isMesh) x.castShadow = true; });
+  g.traverse((x) => { if (x.isMesh) { x.castShadow = true; x.receiveShadow = false; } }); // rosto não recebe sombra (evita manchas)
   for (const l of lids) l.children[0].rotation.x = -1.55;
   return {
     group: g,

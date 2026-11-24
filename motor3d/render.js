@@ -3,7 +3,7 @@ const http = require('http'), fs = require('fs'), path = require('path');
 const { chromium } = require('playwright');
 const ROOT = __dirname, OUT = path.join(ROOT, 'frames');
 const FPS = +(process.argv[2] || 30);
-const types = { '.html': 'text/html', '.js': 'text/javascript' };
+const types = { '.html': 'text/html', '.js': 'text/javascript', '.json': 'application/json' };
 const srv = http.createServer((q, r) => {
   const f = path.join(ROOT, decodeURIComponent(q.url.split('?')[0]) === '/' ? 'index.html' : decodeURIComponent(q.url.split('?')[0]));
   fs.readFile(f, (e, d) => { if (e) { r.writeHead(404); return r.end(); } r.writeHead(200, { 'Content-Type': types[path.extname(f)] || 'application/octet-stream' }); r.end(d); });
@@ -20,7 +20,8 @@ const srv = http.createServer((q, r) => {
   const n = lista ? lista.length : Math.round((t1 - t0) * FPS), start = Date.now();
   for (let i = 0; i < n; i++) {
     const url = await page.evaluate((t) => { window.renderAt(t); return document.querySelector('canvas').toDataURL('image/png'); }, lista ? lista[i] : t0 + i / FPS);
-    fs.writeFileSync(path.join(OUT, `f${String(i).padStart(4, '0')}.png`), Buffer.from(url.split(',')[1], 'base64'));
+    const idx = process.env.ABSIDX ? Math.round(t0 * FPS) + i : i;  // ABSIDX: numera pelo tempo (para re-renderizar trechos)
+    fs.writeFileSync(path.join(OUT, `f${String(idx).padStart(4, '0')}.png`), Buffer.from(url.split(',')[1], 'base64'));
     if (i % 30 === 0) console.log(`quadro ${i}/${n}  ${((Date.now() - start) / 1000).toFixed(0)}s`);
   }
   await browser.close(); srv.close(); console.log('fim', n, 'quadros');
