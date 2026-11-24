@@ -1,25 +1,25 @@
 # HORAS EXTRAS — Temporada 2: O PREÇO
 
-> Quem está lucrando com o tempo de todo mundo? · Nível 15 → 35 · **Morte = 2 anos** · **Câmbio: 1 dia = R$ 70** (desvalorizado)
-> Relógio no caminho padrão: **≈ 53a 08m → ≈ 42a 04m**
+> Quem está lucrando com o tempo de todo mundo? · Nível 15 → 35 · **Morte = 2 anos** · Pagamentos ×3 · **Taxa Morfeu: 20%** · **Banco de Horas: 1 ano = R$ 25.000** (desvalorizado)
+> Caminho padrão: 💰 **R$ 5.188,40 → R$ 36.568,40** · ⏳ **53a 01m 10d → 40a 07m 03d**
 
-Legenda: ⏳ Relógio · 💰 dinheiro real · ⚡ flash (2–4s) · 🗳️ votação (padrão em caso de empate)
-Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e câmbio · 2:20 gancho e votação**
+Legenda: ⏳ Relógio (vida) · 💰 saldo em reais · 🧾 Extrato da Noite (+ganhos, −perdas) · ⚡ flash (2–4s) · 🗳️ votação (padrão em caso de empate)
+Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e extrato · 2:20 gancho e votação**
 
 *Se a Plateia escolheu "arrancar o chip" no T1E12:* o EP 1 abre com a cirurgia de remoção dando errado. O chip "está integrado ao tecido" e ele precisa continuar jogando. Daí em diante tudo segue igual.
 
 ---
 
 ## EP 1 — Atualização 2.0 · `SOLO` · Nível 15 → 16
-**0:05 Gancho:** a lápide da Dona Morena na chuva e a notificação gigante no HUD: **"ATUALIZAÇÃO 2.0 — MORTE: 2 ANOS · CÂMBIO: 1 DIA = R$ 70"**.
+**0:05 Gancho:** a lápide da Dona Morena na chuva e a notificação gigante no HUD: **"ATUALIZAÇÃO 2.0 — MORTE: 2 ANOS · PAGAMENTOS ×3 · 1 ANO DE VIDA = R$ 25.000"**.
 **0:15 Hora de dormir:** depois do enterro, ele deita com o caderno da Morwen no peito, no lugar onde o Brasa costuma ficar. O gato deita do lado, olhando.
 **0:35 No jogo:**
 1. Uma missão solo aparece sozinha no diário: **"Cripta Sem Nome — entregue o caderno de Morwen ao Coveiro."**
 2. Na cripta, os túmulos têm **nomes de jogadores reais** e datas. Alguns são recentes.
 3. **O Coveiro**, um chefe que enterra o jogador vivo em areia de ampulheta. Ele segura a pá com o escudo e **finca os pés** até a areia parar.
-4. O Coveiro entrega uma chave: "Ela pagou para você receber isto." Loot: **+12 dias**.
+4. O Coveiro entrega uma chave: "Ela pagou para você receber isto." Loot: **R$ 1.200**.
    - ⚡ **Flash (3s), na areia:** "O cérebro gasta **20%** da energia do corpo."
-**2:05 Acordar e câmbio:** ele guarda os 12 dias. **⏳ 53a 09m 09d**. A Morfeu oferece um "presente de fidelidade": **+1 mês**.
+**2:05 Acordar e extrato:** 🧾 +R$ 1.200 (cripta) · −R$ 240 (taxa) · +R$ 500 ("presente de fidelidade" da Morfeu) · **💰 R$ 6.648,40** · **⏳ 53a 01m 10d**. O presente vem com um aviso: "Morte agora custa 2 anos."
 **2:20 Gancho:** o presente vem com um termo: "Ao aceitar, você concorda com a Cláusula 22."
 **🗳️ Aceitar o mês de presente?** A) Sim B) Não *(padrão: B)*
 
@@ -34,7 +34,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. Ele luta encurralado entre as barracas até usar o escudo como aríete: **Investida**. A multidão abre caminho.
 4. Numa barraca ele acha uma ficha de venda assinada **"M. — beta 007"**: a Dona Morena vendia tempo antes de morrer.
    - ⚡ **Flash (3s), nas ampulhetas à venda:** "Um cristal de relógio vibra **32.768** vezes por segundo."
-**2:05 Acordar e câmbio:** recolheu **+5 dias** de saque na briga. **⏳ 53a 09m 14d**.
+**2:05 Acordar e extrato:** 🧾 +R$ 600 (saque na briga) · −R$ 120 (taxa) · **💰 R$ 7.128,40** · **⏳ 53a 01m 10d**
 **2:20 Gancho:** os anos do Kauã estão à venda numa vitrine, com o nome dele na etiqueta.
 **🗳️ Comprar de volta os anos do Kauã?** A) Sim, com 6 meses do próprio Relógio B) Não *(padrão: A)*
 
@@ -47,9 +47,9 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 1. Os do Portão (Vitorioso, Kael e um curandeiro contratado) entram no **Desfiladeiro de Brasa**.
 2. Há pontes de pedra que caem a cada passo. O Kael marca o caminho com flechas.
 3. O **Chefe Dente-Rachado** quebra a ponte. O Vitorioso fica pendurado pelo escudo cravado na rocha, segurando o Kael com a outra mão.
-4. Ele joga o Kael para cima e despenca na lava. **Morte: −2 anos.** O Kael derruba o chefe. Loot: **+20 dias**.
+4. Ele joga o Kael para cima e despenca na lava. **Morte: −2 anos**, e o loot dele derrete. O Kael derruba o chefe: **R$ 6.000**.
    - ⚡ **Flash (3s), na lava:** "A lava pode passar de **1.000 °C**."
-**2:05 Acordar e câmbio:** recebe a parte dele, **5 dias**, e vende para pagar o aluguel: **R$ 350**. **⏳ 51a 03m 14d** (já com os 6 meses do Kauã, se a Plateia comprou).
+**2:05 Acordar e extrato:** o Kael manda a parte dele por Pix: "Tu morreu por mim." 🧾 +R$ 1.500 (parte do Kael) · −R$ 300 (taxa) · −R$ 900 (aluguel) · **💰 R$ 7.428,40** · **⏳ 50a 07m 10d** (−2 anos, e −6 meses dados ao Kauã se a Plateia comprou)
 **2:20 Gancho:** um e-mail anônimo: "Quem mudou seu turno se chama Otávio."
 **🗳️ Aceitar o turno da noite?** A) Sim, e larga o jogo B) Pedir demissão e viver do jogo *(padrão: B)*
 
@@ -62,9 +62,9 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 1. A conta da Lira foi **resetada**. Vitorioso e Kael levam a nova Lira pela **Toca dos Lobos**, a primeira missão dele.
 2. É uma escolta divertida: ela erra todas as curas, e o Vitorioso apanha por dois.
 3. Na frente da Garra-Velha (que renasceu), a Lira lança, sem saber como, uma **cura de nível alto**. O corpo lembra.
-4. Ela trava: "Eu já fiz isso antes." Loot: **+3 dias**.
+4. Ela trava: "Eu já fiz isso antes." Loot: **R$ 900**.
    - ⚡ **Flash (3s), na cura que ela lembrou:** "É **dormindo** que o cérebro guarda memórias."
-**2:05 Acordar e câmbio:** sem o salário da fábrica, ele vende **3 dias = R$ 210**. **⏳ 51a 03m 14d**.
+**2:05 Acordar e extrato:** sem o salário da fábrica, só o jogo paga. 🧾 +R$ 900 · −R$ 180 (taxa) · −R$ 600 (luz e mercado) · **💰 R$ 7.548,40** · **⏳ 50a 07m 10d**
 **2:20 Gancho:** a Lívia acha no celular um vídeo gravado por ela mesma: "Se eu esquecer, procura o Vitor. É sobre o Jogador 001."
 **🗳️ Contar para a Lívia quem ela era no jogo?** A) Sim B) Esperar ela lembrar sozinha *(padrão: A)*
 
@@ -79,7 +79,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. **O Bibliotecário**, um chefe que lança "multas", prende o Vitorioso em parágrafos de letras miúdas. Ele bloqueia as letras com o escudo.
 4. Acha a **Cláusula 22**: *o tempo de jogadores mortos é revertido para a conta "T.D."*
    - ⚡ **Flash (3s), na pilha de papel:** "Ler todos os termos de uso levaria **76 dias** por ano."
-**2:05 Acordar e câmbio:** pegou **+8 dias** em baús e guardou. **⏳ 51a 03m 22d**.
+**2:05 Acordar e extrato:** 🧾 +R$ 2.400 (baús do Arquivo) · −R$ 480 (taxa) · **💰 R$ 9.468,40** · **⏳ 50a 07m 10d**
 **2:20 Gancho:** no extrato da conta "T.D.", a última entrada: **"Morena — 9 dias."**
 **🗳️ Vazar a cláusula para a imprensa agora?** A) Sim B) Juntar mais provas *(padrão: B)*
 
@@ -94,7 +94,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. O **Golem de Bronze** tem padrão de ataque de máquina: 3 batidas e uma pausa. Os operadores reconhecem o ritmo da prensa da Eletromotores.
 4. Na pausa, todos atacam. O golem cai e entrega o **minério de prata**. O Bram forja o **ESCUDO DO PORTÃO · GRAU PRATA · Defesa +30**.
    - ⚡ **Flash (3s), no golem:** "1 cavalo-vapor = **735 watts**."
-**2:05 Acordar e câmbio:** a parte dele: **+1 mês**. Vende 10 dias para as contas: **R$ 700**. **⏳ 51a 04m 12d**.
+**2:05 Acordar e extrato:** 🧾 +R$ 4.500 (parte dele no golem) · −R$ 900 (taxa) · −R$ 1.000 (aluguel e luz) · **💰 R$ 12.068,40** · **⏳ 50a 07m 10d**
 **2:20 Gancho:** um mensageiro dos Corvos entrega um pergaminho: **"Cerco em 7 dias."**
 **🗳️ Quem lidera o clã?** A) Vitor B) Lívia *(padrão: A)*
 
@@ -109,7 +109,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. Em plena luta, a **Rainha dos Galhos** acorda e ataca os dois clãs. O Vitorioso segura as raízes para o clã fugir.
 4. É engolido pela árvore. **Morte: −2 anos.** O clã escapa por causa dele.
    - ⚡ **Flash (3s), nas raízes:** "As raízes de uma árvore podem passar de **20 metros**."
-**2:05 Acordar e câmbio:** acorda às 2h com o nariz sangrando. Ganhou só **+4 dias**. **⏳ 49a 04m 16d**.
+**2:05 Acordar e extrato:** acorda às 2h com o nariz sangrando. Só depositou o que pegou antes de morrer. 🧾 +R$ 1.200 · −R$ 240 (taxa) · **💰 R$ 13.028,40** · **⏳ 48a 07m 10d**
 **2:20 Gancho:** o Kauã é pego mexendo no celular do Vitor. Chora: "O Draven paga minhas dívidas em tempo."
 **🗳️ Perdoar o Kauã?** A) Sim, e usar ele como agente duplo B) Expulsar do clã *(padrão: A)*
 
@@ -119,12 +119,12 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 **0:05 Gancho:** o coração dele no flash, batendo fora do ritmo.
 **0:15 Hora de dormir:** o aluguel está atrasado. Ele deita às 19h para jogar dobrado, com dois despertadores e café frio na mesa.
 **0:35 No jogo:**
-1. Uma **maratona solo**: missão atrás de missão, e o contador de tempo subindo: +2h, +5h, +1 dia...
+1. Uma **maratona solo**: missão atrás de missão, e o contador da noite subindo em verde: +R$ 80, +R$ 300, +R$ 1.000...
 2. A barra de fadiga fica vermelha. Ele erra um bloqueio, depois outro.
 3. O jogo mostra um alerta: **"SINAIS VITAIS INSTÁVEIS"**. A Plateia se divide: *"PARA"*, *"MAIS UMA!"*
-4. Ele termina a última missão: **+12 dias** na noite.
+4. Ele termina a última missão: **R$ 6.000** na noite, o recorde dele.
    - ⚡ **Flash (3s), no alerta:** "**19 horas** sem dormir afetam como álcool."
-**2:05 Acordar e câmbio:** **arritmia** na fila do mercado. A Lívia o atende: "Teu corpo está cobrando a conta." Ele vende 10 dias: **R$ 700**. **⏳ 49a 04m 18d**.
+**2:05 Acordar e extrato:** **arritmia** na fila do mercado. A Lívia o atende: "Teu corpo está cobrando a conta." 🧾 +R$ 6.000 · −R$ 1.200 (taxa) · −R$ 2.500 (pronto-socorro) · −R$ 1.800 (aluguel atrasado) · **💰 R$ 13.528,40** · **⏳ 48a 07m 03d** (−1 semana de fadiga). O recorde virou quase nada.
 **2:20 Gancho:** a mãe aparece na porta: "Filho... o que é isso atrás da tua orelha?"
 **🗳️ Contar a verdade para a mãe?** A) Sim B) Mentir mais uma vez *(padrão: B; a verdade explode no T3E5)*
 
@@ -139,9 +139,9 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. **Morre três vezes** segurando o aríete inimigo: **−6 anos**. Volta, finca, morre de novo...
 4. O clã **toma o castelo**. O Draven foge rindo: "Agora vocês vão ver de onde vem o tempo."
    - ⚡ **Flash (3s), no trabuco:** "Um trabuco atirava pedras de **90 quilos**."
-**2:05 Acordar e câmbio:** a conquista vale **+6 meses**. Ele guarda tudo. **⏳ 43a 10m 18d**.
-**2:20 Gancho:** o castelo cobra **imposto de tempo** dos vilarejos NPC, e agora esse tempo vai para o clã.
-**🗳️ Cobrar o imposto de tempo dos vilarejos?** A) Sim, o clã precisa B) Não, libertar os vilarejos *(padrão: B)*
+**2:05 Acordar e extrato:** 🧾 +R$ 15.000 (conquista do castelo) · −R$ 3.000 (taxa) · **💰 R$ 25.528,40** · **⏳ 42a 07m 03d** (três mortes: −6 anos)
+**2:20 Gancho:** o castelo cobra **imposto** dos vilarejos NPC, **R$ 3.000 por noite**, e agora esse dinheiro iria para o clã.
+**🗳️ Cobrar o imposto dos vilarejos?** A) Sim, o clã precisa B) Não, libertar os vilarejos *(padrão: B)*
 
 ---
 
@@ -154,7 +154,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. O túnel é feito de lembranças: o quitinete, a fábrica, o ponto de ônibus. **O jogo é construído com as memórias dos jogadores.** Por isso o Bráulio virou o Bram.
 4. No fim do túnel, um vilarejo novo, igual à **rua onde ele cresceu**.
    - ⚡ **Flash (3s), no gato:** "Gatos dormem até **16 horas** por dia."
-**2:05 Acordar e câmbio:** ganhou **+6 dias** em baús do túnel e guardou. **⏳ 43a 10m 24d**.
+**2:05 Acordar e extrato:** 🧾 +R$ 1.800 (baús do túnel) · −R$ 360 (taxa) · **💰 R$ 26.968,40** · **⏳ 42a 07m 03d**
 **2:20 Gancho:** na rua da infância, uma mulher varrendo a calçada se vira. É a **mãe dele**.
 **🗳️ Entrar na rua da infância?** A) Sim B) Não *(padrão: A)*
 
@@ -167,9 +167,9 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 1. Na rua da infância tudo é perfeito: a mãe NPC repete frases da mãe real, e os vizinhos de quando ele tinha 9 anos estão ali.
 2. Chegam os **Corvos** para "colher" o vilarejo, arrancando casas inteiras e guardando em cristais.
 3. Ele defende a rua sozinho. **Morre: −2 anos.** Renasce e volta correndo.
-4. Salva só a casa da mãe. Loot: **+10 dias**.
+4. Salva só a casa da mãe. Loot: **R$ 3.000**.
    - ⚡ **Flash (3s), nos cristais:** "Os sonhos mais vívidos vêm no **REM**."
-**2:05 Acordar e câmbio:** guarda os 10 dias. **⏳ 41a 11m 04d**.
+**2:05 Acordar e extrato:** 🧾 +R$ 3.000 · −R$ 600 (taxa) · **💰 R$ 29.368,40** · **⏳ 40a 07m 03d** (−2 anos)
 **2:20 Gancho:** a mãe NPC sussurra: "**O 001 quer acordar.**"
 **🗳️ Contar para a Plateia o que descobriram?** A) Sim, ao vivo B) Não, a Morfeu vai apagar *(padrão: A)*
 
@@ -182,8 +182,8 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 1. Ao vivo, o clã entra no **Salão do Trono Esquecido**. A transmissão é derrubada no meio, e só sobra o chat: *"???"*
 2. Os guardas são cavaleiros de ouro sem rosto. O Vitorioso usa a última habilidade da temporada: **Último de Pé**, 5 segundos sem morrer.
 3. Na sala do trono, a **armadura dourada do Rei Esquecido**, com uma coroa gravada no peito.
-4. A conta "T.D." pertence a **Theo Draven**. O tempo dos mortos mantém o filho do Draven vivo dentro do jogo. Loot: **+1 mês**.
+4. A conta "T.D." pertence a **Theo Draven**. O tempo dos mortos mantém o filho do Draven vivo dentro do jogo. Loot: **R$ 9.000**.
    - ⚡ **Flash (3s), no trono:** "O coma é medido de **3 a 15** pontos."
-**2:05 Acordar e câmbio:** guarda o mês. **⏳ 42a 00m 04d**.
+**2:05 Acordar e extrato:** 🧾 +R$ 9.000 · −R$ 1.800 (taxa) · **💰 R$ 36.568,40** · **⏳ 40a 07m 03d**. O maior saldo da vida dele. E nenhum ano de volta.
 **2:20 Gancho:** o Dr. Otávio Draven liga, na vida real: "Você salvaria seu filho? Então me escuta."
 **🗳️ Ouvir a proposta do Draven?** A) Sim, encontrar com ele B) Não, derrubar a Morfeu *(padrão: A; a T3 abre com o encontro)*

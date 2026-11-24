@@ -1,10 +1,10 @@
 # HORAS EXTRAS — Temporada 3: O DESPERTAR
 
-> Vale destruir o jogo que paga as contas de todo mundo? · Nível 35 → 50 · **Morte = 5 anos** (a partir do EP 6)
-> Relógio no caminho padrão: **≈ 42a → ≈ 17a** · o final decide se o Relógio continua existindo
+> Vale destruir o jogo que paga as contas de todo mundo? · Nível 35 → 50 · **Morte = 5 anos** (a partir do EP 6) · Pagamentos ×10 · **Taxa Morfeu: 20%**
+> Caminho padrão: 💰 **R$ 36.568,40 → R$ 77.668,40** antes do final · ⏳ **40a 07m 03d → 15a 08m** · o final decide se o Relógio e o dinheiro continuam existindo
 
-Legenda: ⏳ Relógio · 💰 dinheiro real · ⚡ flash (2–4s) · 🗳️ votação (padrão em caso de empate)
-Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e câmbio · 2:20 gancho e votação**
+Legenda: ⏳ Relógio (vida) · 💰 saldo em reais · 🧾 Extrato da Noite (+ganhos, −perdas) · ⚡ flash (2–4s) · 🗳️ votação (padrão em caso de empate)
+Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e extrato · 2:20 gancho e votação**
 
 *Se a Plateia escolheu "não ouvir o Draven" no T2E12:* o EP 1 vira uma invasão da clínica que dá errado, e o Draven faz a proposta mesmo assim, por um alto-falante. A partir do EP 2 tudo segue igual.
 
@@ -19,7 +19,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. Ele atravessa com o escudo erguido contra a tempestade. Os números vermelhos caem: −1h, −3h, −9h...
 4. No meio do deserto, uma pegada pequena de pés descalços. Some quando a tempestade para.
    - ⚡ **Flash (3s), na areia:** "O cérebro **não sente dor**."
-**2:05 Acordar e câmbio:** perdeu **−2 dias** na tempestade. **⏳ 42a 00m 02d**. Quando ele sai da clínica, o Theo, em coma, **mexe um dedo**.
+**2:05 Acordar e extrato:** 🧾 −R$ 1.500 (contas do mês) · **💰 R$ 35.068,40** · **⏳ 40a 07m 01d** (−2 dias na tempestade). Quando ele sai da clínica, o Theo, em coma, **mexe um dedo**.
 **2:20 Gancho:** a mensagem do Draven: "Tic-tac, operador."
 **🗳️ Dar 10 anos para o Theo?** A) Sim B) Não *(padrão: B)*
 
@@ -34,7 +34,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. O chefe, **O Bug**, é uma criatura feita de pedaços de outros monstros, que copia o último ataque recebido.
 4. O Vitorioso não ataca: **só defende**, então o Bug copia a defesa e trava. A Lira o finaliza. Loot: **+1 mês**.
    - ⚡ **Flash (3s), no Bug:** "Em **1947**, um \"bug\" era uma mariposa de verdade."
-**2:05 Acordar e câmbio:** a parte dele: 1 semana. Vende para as contas: **R$ 490**. **⏳ 42a 00m 02d**.
+**2:05 Acordar e extrato:** 🧾 +R$ 7.000 (parte dele) · −R$ 1.400 (taxa) · −R$ 1.500 (contas) · **💰 R$ 39.168,40** · **⏳ 40a 07m 01d**
 **2:20 Gancho:** a planta do data center mostra a refrigeração: **240 motores da Eletromotores Sul**.
 **🗳️ Quem investiga o data center?** A) O Vitor, pessoalmente B) O Kauã, o agente duplo *(padrão: B)*
 
@@ -49,7 +49,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. Luta contra os Corvos de elite, um a um, na escadaria do castelo.
 4. Chega ao Kael e **não consegue soltar as correntes**: são feitas do Relógio do próprio Kauã. O Draven ri.
    - ⚡ **Flash (3s), nos servidores:** "Data centers gastam **1 a 2%** da eletricidade do mundo."
-**2:05 Acordar e câmbio:** ganhou **+5 dias**, mas perdeu o bônus de audiência por desobedecer. **⏳ 42a 00m 07d**.
+**2:05 Acordar e extrato:** perdeu o bônus de audiência por desobedecer. 🧾 +R$ 5.000 · −R$ 1.000 (taxa) · R$ 0 de bônus · **💰 R$ 43.168,40** · **⏳ 40a 07m 01d**
 **2:20 Gancho:** na vida real, o Kauã não atende. O carro dele está parado na frente do data center.
 **🗳️ Resgatar o Kael com o clã inteiro?** A) Sim, amanhã B) Negociar com o Draven *(padrão: A)*
 
@@ -62,9 +62,9 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 1. O resgate na **Prisão de Pedravale**, uma dungeon vertical de celas penduradas sobre um abismo.
 2. O **Carcereiro** gira as celas como engrenagens. É uma luta com o chão se mexendo o tempo todo.
 3. O Bram, o NPC com o rosto do Bráulio, aparece **sem ter sido chamado** e quebra a engrenagem com o martelo. A Plateia grita.
-4. O Kael é libertado e todos sobrevivem. Loot: **+2 meses** para o clã.
+4. O Kael é libertado e todos sobrevivem. Loot: **R$ 60.000** para o clã.
    - ⚡ **Flash (3s), na fábrica parada:** "O 1º de maio nasceu de greves em **1886**."
-**2:05 Acordar e câmbio:** a parte dele: **+15 dias**, guardados. **⏳ 42a 00m 22d**.
+**2:05 Acordar e extrato:** 🧾 +R$ 15.000 (parte dele) · −R$ 3.000 (taxa) · **💰 R$ 55.168,40** · **⏳ 40a 07m 01d**
 **2:20 Gancho:** uma nota da Morfeu: "Jogadores grevistas terão as contas encerradas." **Encerrar a conta significa zerar o Relógio.**
 **🗳️ Continuar a greve?** A) Sim B) Negociar *(padrão: A)*
 
@@ -79,7 +79,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. No porão da casa, um baú com um macacão da **Eletromotores Sul** e um crachá: **"Operador nº 003"**.
 4. É o pai dele, que morreu "de cansaço" quando o Vitor tinha 9 anos. **Também tinha o chip.**
    - ⚡ **Flash (3s), na foto antiga:** "O cabelo cresce **1 cm** por mês."
-**2:05 Acordar e câmbio:** sem loot nesta noite. **⏳ 42a 00m 21d**. A mãe mostra uma foto: "Teu pai chegou um dia com um curativo atrás da orelha."
+**2:05 Acordar e extrato:** sem loot nesta noite. 🧾 −R$ 1.500 (contas) · **💰 R$ 53.668,40** · **⏳ 40a 07m 01d**. A mãe mostra uma foto: "Teu pai chegou um dia com um curativo atrás da orelha."
 **2:20 Gancho:** o crachá abre uma área nova no mapa: **"Memória do Pai"**.
 **🗳️ Entrar na Memória do Pai?** A) Sim B) Não, focar na Morfeu *(padrão: A)*
 
@@ -94,7 +94,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. O Vitorioso não luta. **Desliga as máquinas uma por uma** enquanto apanha, segurando com o escudo.
 4. Na última máquina, o pai para, olha o filho e diz uma única frase: "Tanque segura, né?" E some.
    - ⚡ **Flash (3s), na bobinadeira antiga:** "Tesla patenteou esse motor em **1888**."
-**2:05 Acordar e câmbio:** o pai deixou **+3 meses** guardados numa conta antiga, e agora são dele. **⏳ 42a 03m 21d**.
+**2:05 Acordar e extrato:** o pai deixou **3 meses de vida** guardados numa conta antiga, e o sistema transfere para o filho. É a única vez na série que o Relógio **sobe**. **💰 R$ 53.668,40** · **⏳ 40a 10m 01d**.
 **2:20 Gancho:** no céu de Varnor aparecem **sete luas**. O Theo vai acordar na **Noite das Sete Luas**, e para isso o sistema vai drenar todos os jogadores ao mesmo tempo.
 **🗳️ Avisar todos os jogadores para saírem do jogo?** A) Sim, mesmo perdendo o exército B) Não, precisa deles na batalha *(padrão: A)*
 
@@ -109,7 +109,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. Diante do Guardião de Ossos renascido, o Kael pula na frente da Lira. **Morre.**
 4. Antes de sumir, **transfere o que sobrou** para a Lira: 1 ano e 9 meses. Fica com 3 meses. "Pela primeira vez eu não vendi. Eu dei."
    - ⚡ **Flash (3s), no último baú:** "Respiramos de **12 a 20** vezes por minuto."
-**2:05 Acordar e câmbio:** a parte dele: **+20 dias**, guardados. **⏳ 42a 04m 11d**.
+**2:05 Acordar e extrato:** 🧾 +R$ 20.000 (parte dele) · −R$ 4.000 (taxa) · **💰 R$ 69.668,40** · **⏳ 40a 10m 01d**
 **2:20 Gancho:** um carro preto para na frente da casa do Kauã.
 **🗳️ Esconder o Kauã?** A) Na casa do Vitor B) Na casa do Bráulio *(padrão: B)*
 
@@ -124,7 +124,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. Na primeira batalha com a armadura, ele derruba uma tropa inteira sozinho. A Plateia enlouquece.
 4. A primeira lembrança apagada é **a primeira bicicleta**. Ele não lembra mais dela.
    - ⚡ **Flash (3s), na lembrança sumindo:** "Sem o **hipocampo**, criar memórias fica difícil."
-**2:05 Acordar e câmbio:** **+1 mês**, guardado. **⏳ 42a 05m 11d**. Ele olha uma foto antiga e não reconhece a bicicleta.
+**2:05 Acordar e extrato:** 🧾 +R$ 10.000 · −R$ 2.000 (taxa) · **💰 R$ 77.668,40** · **⏳ 40a 10m 01d**. Ele olha uma foto antiga e não reconhece a bicicleta.
 **2:20 Gancho:** uma voz de garoto no vento: "Você também está cansado, né?"
 **🗳️ Continuar usando a armadura?** A) Sim B) Não, tirar agora *(padrão: A, porque a Plateia quer ver)*
 
@@ -139,7 +139,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. Ele revela o ponto fraco: na Noite das Sete Luas, o servidor 001 fica **exposto por 3 minutos**.
 4. O Lorde Draven entra, sem armadura, só o pai: "Theo... sou eu."
    - ⚡ **Flash (3s), no trono:** "Acordar de um coma costuma levar **meses**."
-**2:05 Acordar e câmbio:** sem loot. **⏳ 42a 05m 10d**.
+**2:05 Acordar e extrato:** sem loot. **💰 R$ 77.668,40** · **⏳ 40a 10m 00d**.
 **2:20 Gancho:** pai e filho, frente a frente, depois de 6 anos.
 **🗳️ Deixar pai e filho conversarem?** A) Sim B) Atacar o Draven agora *(padrão: A)*
 
@@ -154,7 +154,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 3. **Intercalado com a vida real:** a Lívia e o Bráulio desligam, motor por motor, a refrigeração dos servidores. **Os motores que eles fabricaram.**
 4. O portão de Alta Varnor começa a fechar. Só um tanque consegue segurar aberto.
    - ⚡ **Flash (3s), nas luas alinhadas:** "Um eclipse total dura **no máximo 7 minutos e meio**."
-**2:05 Ainda dormindo:** o Relógio desce ao vivo, sem câmbio nesta noite. **⏳ 42a → 41a 10m**.
+**2:05 Ainda dormindo:** o Relógio desce ao vivo, sem extrato nesta noite. **⏳ 40a 10m → 40a 08m**.
 **2:20 Gancho:** o portão fechando e o escudo de Prata erguido.
 **🗳️ Quem segura o portão?** A) Vitorioso sozinho B) O clã inteiro *(padrão: A; é a frase da série)*
 
@@ -165,11 +165,11 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 **0:15 Hora de dormir (lembrança):** um flashback rápido das noites da série: o Brasa no peito, o despertador das 4h40, a mãe no hospital, a Dona Morena no corredor.
 **0:35 No jogo:**
 1. Última habilidade: **Portão Vivo**. O escudo cresce e vira o próprio portão.
-2. Vitorioso segura sozinho enquanto o clã passa. **Morre e renasce.** Cada morte, **−5 anos**: 41, 36, 31, 26, 21...
+2. Vitorioso segura sozinho enquanto o clã passa. **Morre e renasce.** Cada morte, **−5 anos**: 40, 35, 30, 25, 20...
 3. A armadura do Rei apaga as lembranças, uma por batalha: a escola, o primeiro dia na fábrica, o rosto do pai...
 4. Só não apaga **a mãe** e **o Brasa**, que está no ombro dele o tempo todo, eriçado.
    - ⚡ **Flash (3s), no escudo cravado:** "Um tanque de guerra pesa **mais de 50 toneladas**."
-**2:05 Ainda dormindo:** **⏳ 41a 10m → 16a 10m** em uma noite. No data center, a temperatura sobe e os servidores começam a cair.
+**2:05 Ainda dormindo:** **⏳ 40a 08m → 15a 08m** em uma noite. No data center, a temperatura sobe e os servidores começam a cair.
 **2:20 Gancho:** o clã chega ao servidor 001. O Theo, de mão estendida. Contagem: **3:00**.
 **🗳️ O final da série é decidido aqui. O que o Vitor faz?**
 **A) Destruir o servidor:** liberta todo mundo e acaba com o jogo. Ninguém nunca mais vai ver o próprio Relógio.
@@ -185,7 +185,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 ### Final A — "Ninguém mais sabe quanto tempo tem"
 1. O Vitorioso quebra o servidor com o escudo. Varnor se desfaz em luz dourada, e o Theo sorri: "Obrigado, tanque."
 2. Os jogadores do mundo todo acordam ao mesmo tempo, em quartos, ônibus, hospitais.
-3. O Vitor acorda. O Relógio no canto da visão **some**. Pela primeira vez em 3 temporadas, ele não sabe quanto tempo tem.
+3. O Vitor acorda. O Relógio no canto da visão **some**. Pela primeira vez em 3 temporadas, ele não sabe quanto tempo tem. O celular vibra uma última vez: **"Morfeu Pay encerrado. Saldo final: R$ 77.668,40."** O dinheiro fica. A renda extra acabou.
 4. No hospital da Morfeu, **o Theo abre os olhos**, e o Draven chora.
 5. Última cena: a fábrica religada, o Vitor de volta na bobinadeira, o Bráulio trazendo café, a mãe saudável, o Brasa na janela. À noite, ele deita e simplesmente **dorme**.
    - 🎬 **Imagem final:** uma ampulheta sem números. *"Ninguém sabe quanto tempo tem. Por isso o tempo é o que a gente tem de mais valioso."*
@@ -193,7 +193,7 @@ Blocos: **0:05 gancho · 0:15 hora de dormir · 0:35 no jogo · 2:05 acordar e c
 ### Final B — "O Administrador"
 1. O Vitorioso senta no trono. O tempo de todos os jogadores volta, os Relógios sobem ao vivo e a Plateia chora no chat.
 2. O Theo acorda. Mas **o Vitor não acorda**. Na cama, o chip pisca devagar.
-3. No trono de Varnor, o Vitor agora vê o tempo de todo mundo e decide o preço das coisas. A primeira regra dele: **"Morrer não custa mais nada."**
+3. No trono de Varnor, o Vitor agora vê o tempo de todo mundo e decide o preço das coisas. A primeira regra dele: **"Morrer não custa mais nada."** A segunda: **"Taxa: zero."** Na conta dele, o saldo continua subindo, mas ele nunca mais acorda para gastar.
 4. Última cena: a mãe ao lado da cama, e o Brasa deitado no peito dele, ronronando, enquanto o chip pisca no ritmo do ronronar.
    - 🎬 **Imagem final:** um cérebro e um ponto de interrogação. *"O sono ainda é um dos grandes mistérios da ciência."*
 

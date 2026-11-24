@@ -5,7 +5,7 @@
 Série animada em episódios de **2:30** (estilo 2D: personagem + flash de curiosidade).
 3 temporadas × 12 episódios = 36 episódios. **Os comentários decidem o que ele faz.**
 
-O nome tem duplo sentido: **horas extras** na fábrica e **horas extras de vida** que ele ganha, vende e perde.
+O nome tem duplo sentido: **horas extras** na fábrica e **horas extras de vida** que ele arrisca a cada noite para ganhar dinheiro.
 
 ---
 
@@ -13,11 +13,13 @@ O nome tem duplo sentido: **horas extras** na fábrica e **horas extras de vida*
 
 **Vitor**, 24 anos, é operador de bobinadeira numa fábrica de motores elétricos. O dia é pesado: ônibus às 5h, bobinadeira das 6h às 15h, hora extra até as 18h. A mãe precisa de uma cirurgia de **R$ 38 mil**.
 
-A **Morfeu Labs** oferece um chip no cérebro para **jogar dormindo** em **Varnor**, um MMO de fantasia. Lá dentro, **tudo vale tempo**: matar monstros, abrir baús, terminar dungeons e cumprir missões rende **horas, dias e meses de vida**. Esse tempo pode ser **guardado**, e aí o Relógio de vida dele sobe, ou **vendido** na Casa de Câmbio da Morfeu, e aí vira dinheiro de verdade.
+A **Morfeu Labs** oferece um chip no cérebro para **jogar dormindo** em **Varnor**, um MMO de fantasia. Lá dentro, **tudo vira dinheiro de verdade**: cada monstro, cada baú, cada dungeon e cada missão paga **reais**, depositados pelo **Morfeu Pay** na conta dele quando ele acorda.
+
+O preço está no **Relógio**, a contagem do **tempo de vida** que ele ainda tem, sempre no canto da visão. O Relógio é a **saúde** dele: não se compra nada com ele, mas ele cai.
 
 O que ele não leu foi a **Cláusula 14**: *"Mortes no ambiente Varnor serão debitadas do Tempo de Vida do usuário."*
 
-**O dilema de todo episódio:** guardar o tempo para viver mais, ou vender para pagar as contas. E quanto arriscar numa dungeon, sabendo que morrer custa anos.
+**O dilema de todo episódio:** quanto dinheiro vale arriscar? Uma dungeon paga o aluguel do mês, mas morrer lá dentro custa anos de vida.
 
 ## 2. Divisão do episódio (2:30)
 
@@ -29,24 +31,70 @@ O que ele não leu foi a **Cláusula 14**: *"Mortes no ambiente Varnor serão de
 | 0:05–0:15 | **Gancho** | A imagem mais forte do episódio: o chefe, a armadilha, o Relógio caindo |
 | 0:15–0:35 | **Hora de dormir** | O ritual: o Relógio no canto da visão, o Brasa subindo na cama, o despertador para as 4h40, o cansaço da fábrica. Os olhos fecham e a tela vira pixels. |
 | 0:35–2:05 | **No jogo** | A missão ou dungeon do dia em 3 ou 4 momentos de ação, com **um flash de curiosidade de 3s** no meio |
-| 2:05–2:20 | **Acordar e câmbio** | O que rendeu em tempo, quanto ele vende, quanto vira em reais, o Relógio subindo ou descendo |
+| 2:05–2:20 | **Acordar e extrato** | O celular vibra com o Morfeu Pay: o **Extrato da Noite** com ganhos (+R$) e perdas (−R$), o saldo novo e o Relógio, se caiu |
 | 2:20–2:30 | **Gancho e votação** | "A Plateia decide. Comenta aí." |
 
 **Proporção:** cerca de **70% no jogo e 30% na vida real**.
 
-## 3. Economia do tempo (nunca quebrar)
+## 3. Economia: dinheiro e vida (nunca quebrar)
 
+Dois placares aparecem o tempo todo na tela, um do lado do outro:
+
+| Placar | O que é | Cor |
+|---|---|---|
+| **💰 SALDO** | Dinheiro de verdade na conta do Vitor, em **reais**. Sobe com o que ele ganha no jogo e desce com as contas da vida real e as compras no jogo. | Verde (sobe) / vermelho (desce) |
+| **⏳ RELÓGIO** | **Tempo de vida** que resta, a saúde dele. Começa em **56 anos, 4 meses e 12 dias**. Só cai: morte, taxa escondida, fadiga e venda de vida. (Única exceção: quando alguém **transfere** vida para ele, como o pai no T3E6.) | Turquesa na vida real, dourado no jogo |
+
+### Como ele ganha dinheiro no jogo
+Tudo que ele conquista em Varnor é convertido em reais pelo **Morfeu Pay** e cai na conta **às 4h40, quando ele acorda**. Durante a noite, cada ganho aparece na tela como **número verde "+R$"**.
+
+| Fonte | Quanto paga (T1) | Exemplo |
+|---|---|---|
+| **Monstro comum** | R$ 5 a R$ 30 | Rato gigante = R$ 5 · lobo = R$ 25 |
+| **Baú** | R$ 50 a R$ 300 | Baú de madeira R$ 50, de ferro R$ 300 |
+| **Missão solo** (mural da vila) | R$ 100 a R$ 800 | "Limpe a Toca dos Lobos" = R$ 400 |
+| **Dungeon em squad** | R$ 1.000 a R$ 5.000, dividido pelo squad | Guardião de Ossos = R$ 6.000 (R$ 2.000 cada) |
+| **Chefe** | R$ 3.000 a R$ 15.000 | Rei Goblin Ferrugem = R$ 1.200 |
+| **Item raro** | Vendido na Feira para outros jogadores | Escudo Bronze vale R$ 1.800 |
+| **Bônus da Plateia** | Gorjeta quando ele obedece à votação | +10% do que ganhou na noite |
+
+**Valores sobem por temporada:** T2 paga cerca de **3x** a T1, T3 cerca de **10x**. Os riscos sobem junto.
+
+### Como ele perde dinheiro
+| Perda | Quanto |
+|---|---|
+| **Contas da vida real** | Aluguel R$ 900, remédio da mãe R$ 180, conta de luz, comida do Brasa |
+| **Gastos no jogo** (cobrados em reais no Morfeu Pay) | Poção R$ 20, reparo do escudo R$ 150, melhoria de grau R$ 1.000 a R$ 8.000 |
+| **Taxa da Morfeu** | 20% de tudo que ele ganha, aparece no extrato como "taxa de serviço" |
+| **Morte** | Perde tudo que ainda não foi depositado naquela noite (o loot cai no chão) |
+| **Calote e roubo** | Jogadores podem roubar loot (o Kael no EP7) |
+
+### Como ele perde vida (o Relógio)
+| Perda | Quanto |
+|---|---|
+| **Morte no jogo** | **1 ano** na T1, **2 anos** na T2, **5 anos** na T3. Ele acorda com o nariz sangrando e o coração disparado. |
+| **Taxa escondida** | O chip consome **1 hora de vida por noite**. Descoberta no T1E8. |
+| **Vender vida** | O **Banco de Horas da Morfeu** compra tempo de vida: **1 ano = R$ 36.500** na T1, R$ 25.000 na T2. É a tentação da série: no T1E8 ele vende **1 ano** para pagar a cirurgia da mãe. |
+| **Fadiga** | A barra de fadiga no jogo; se encher, ele desmaia na fábrica e perde **1 semana** de vida. |
+
+### O Extrato da Noite (todo episódio)
+No bloco "acordar", o celular vibra e aparece o extrato, sempre no mesmo formato, para o público acompanhar a série como uma planilha:
+
+```
+MORFEU PAY · EXTRATO DA NOITE
++ R$ 45,00   9 ratos gigantes
+− R$ 9,00    taxa de serviço (20%)
+= SALDO  R$ 348,40   (antes R$ 312,40)
+⏳ 56a 04m 12d  (sem perdas)
+```
+
+E a cada episódio termina com o **placar fixo**: SALDO e RELÓGIO, para o público comentar "ele está ganhando ou perdendo?".
+
+### Outras regras
 | Regra | Como funciona |
 |---|---|
-| **O Relógio** | Fica no canto da visão, acordado e dormindo. Começa em **56 anos, 4 meses e 12 dias**. |
-| **Ganhar tempo** | Monstro comum dá **minutos**. Baú dá **horas**. Dungeon completa dá **dias**. Chefe dá **semanas ou meses**. Itens raros podem ser vendidos por tempo na Feira. |
-| **Guardar ou vender** | Tempo guardado **soma no Relógio**. Tempo vendido na **Casa de Câmbio** vira reais. |
-| **Câmbio** | T1: **1 dia = R$ 100**. Na T2 a Morfeu desvaloriza para **1 dia = R$ 70**, e o golpe fica mais claro. |
-| **Morrer** | Desconta tempo do Relógio: **1 ano** na T1, **2 anos** na T2, **5 anos** na T3. Ele acorda com o nariz sangrando e o coração disparado. |
-| **Gastar** | No jogo, as coisas são pagas com tempo: poção = 6 horas, reparo do escudo = 2 dias, melhoria de grau = 1 a 3 meses. |
-| **Transferir** | Tempo passa de um jogador para outro, por presente ou venda. Isso abre um mercado negro. |
-| **Taxa escondida** | O chip consome **1 hora por noite**. Descoberta no T1E8. |
-| **A Plateia** | O público vota nas decisões dele. Ele pode desobedecer, mas perde o **bônus de audiência**, que também é pago em tempo. |
+| **A Plateia** | O público vota nas decisões dele. Ele pode desobedecer, mas perde o **bônus de audiência**. |
+| **Mercado negro** | Jogadores compram e vendem **tempo de vida** entre si, por fora da Morfeu. Abre na T2. |
 | **Fadiga** | Jogando, o cérebro não descansa direito. No jogo aparece a barra de **fadiga**; na vida real, o corpo cobra. |
 
 ## 4. Progressão no jogo
@@ -61,7 +109,7 @@ O que ele não leu foi a **Cláusula 14**: *"Mortes no ambiente Varnor serão de
 
 **Graus dos itens:** Ferro → Bronze → Prata → Ouro → Rúnico → Ancestral. O Escudo do Portão começa em Ferro.
 
-**Janela de item** (estilo MMO, aparece quando ele pega algo importante): nome, grau, atributos e **valor em tempo**.
+**Janela de item** (estilo MMO, aparece quando ele pega algo importante): nome, grau, atributos e **valor em reais**.
 
 ## 5. O squad e os tipos de missão
 
@@ -90,7 +138,7 @@ O chip constrói Varnor com as **memórias dos jogadores**. Por isso gente da vi
 | **Dona Cida**, a mãe | NPC no T2E11 | Precisa da cirurgia; descobre o chip no T3E5 |
 | **Seu Bráulio**, supervisor | **Bram**, ferreiro NPC | Não tem chip; o jogo copiou o rosto dele |
 | **Lívia**, técnica de enfermagem | **Lira** | É hospitalizada no T1E11 e perde a memória de 4 meses |
-| **Kauã**, colega de turno | **Kael** | Também tem chip; vende tempo para pagar agiota |
+| **Kauã**, colega de turno | **Kael** | Também tem chip; vende vida no Banco de Horas para pagar agiota |
 | **Dona Morena**, vizinha idosa | **Morwen** | Beta tester nº 007; sabe a verdade e tem pouco tempo |
 | **Dr. Otávio Draven**, diretor da Morfeu Labs | **Lorde Draven** | Joga como vilão dentro do próprio jogo |
 | **Theo Draven**, 19 anos, em coma | **O Rei Esquecido**, Jogador nº 001 | Mantido vivo em Varnor com o tempo dos jogadores mortos |
@@ -121,10 +169,10 @@ O chip constrói Varnor com as **memórias dos jogadores**. Por isso gente da vi
 
 - **Vida real:** cores frias e cinzentas, luz fluorescente na fábrica, quarto escuro na hora de dormir. O Relógio fica no canto superior direito, em verde-água.
 - **Jogo:** cores quentes e saturadas, o HUD com barra de vida, barra de fadiga e o Relógio em dourado.
-- **Ganho de tempo:** números dourados subindo ("+2h", "+3 dias") quando ele mata monstros ou abre baús.
+- **Ganho de dinheiro:** números verdes subindo ("+R$ 25", "+R$ 300") quando ele mata monstros ou abre baús. Perdas em vermelho ("−R$ 150"). Perda de vida em vermelho no Relógio ("−1 ANO").
 - **Morte:** a tela racha como vidro, ouve-se o bipe de monitor cardíaco e ele acorda ofegante. O desconto aparece em vermelho.
 - **Transição entre os mundos:** os olhos fecham, ouve-se um zumbido e a tela se dissolve em pixels.
-- **Câmbio:** uma tela de "extrato" com o tempo entrando, o tempo vendido e os reais na conta.
+- **Extrato:** a tela do Morfeu Pay no celular, com +R$ verde, −R$ vermelho, saldo e Relógio. Ganhos no jogo aparecem como números verdes "+R$" subindo.
 - **Plateia:** balões de comentários com nomes de usuário inventados e o contador de espectadores.
 - **Flash de curiosidade:** um corte rápido (**2 a 4 segundos**) para o quadro azul-petróleo com grade, com **um número grande** e **uma frase de até 10 palavras**.
 
@@ -135,7 +183,7 @@ O chip constrói Varnor com as **memórias dos jogadores**. Por isso gente da vi
 - **Toda vantagem tem preço**, e o preço é literal: tempo de vida.
 - **A hora de dormir é sagrada:** um ritual curto e reconhecível, que muda conforme a história (o Brasa, o despertador, as olheiras, o Relógio).
 - **A Plateia também é personagem**, às vezes cruel, às vezes heroica.
-- **Os números precisam fechar:** quanto ganhou, quanto vendeu, quanto o Relógio subiu ou caiu.
+- **Os números precisam fechar:** quanto ganhou, quanto gastou, o saldo novo e quanto o Relógio caiu. O saldo de um episódio é o saldo inicial do próximo.
 - **Terminar sempre com uma pergunta de duas respostas.** A mais votada vale; em caso de empate, o **caminho padrão**.
 
 **Curiosidades (flash)**
@@ -153,15 +201,15 @@ O chip constrói Varnor com as **memórias dos jogadores**. Por isso gente da vi
 
 | Temporada | Nome | Nível | Pergunta central | Relógio (caminho padrão) |
 |---|---|---|---|---|
-| 1 | **O CHIP** | 1 → 15 | Até onde ele vai por dinheiro? | 56a 04m → **≈ 53a 08m** |
-| 2 | **O PREÇO** | 15 → 35 | Quem está lucrando com o tempo de todo mundo? | ≈ 53a 08m → **≈ 42a** |
-| 3 | **O DESPERTAR** | 35 → 50 | Vale destruir o jogo que paga as contas de todos? | ≈ 42a → **≈ 17a**, e o final decide se o Relógio continua existindo |
+| 1 | **O CHIP** | 1 → 15 | Até onde ele vai por dinheiro? | 56a 04m → **53a 01m** · 💰 R$ 312 → R$ 5.188 |
+| 2 | **O PREÇO** | 15 → 35 | Quem está lucrando com o tempo de todo mundo? | 53a 01m → **40a 07m** · 💰 R$ 5.188 → R$ 36.568 |
+| 3 | **O DESPERTAR** | 35 → 50 | Vale destruir o jogo que paga as contas de todos? | 40a 07m → **15a 08m** · 💰 até R$ 77.668, e o final decide se o Relógio e o Morfeu Pay continuam existindo |
 
 ## 11. Produção
 
 - **Vozes por episódio:** o narrador, o Vitor ou Vitorioso, e 1 ou 2 personagens. Pelo ElevenLabs, custa **cerca de 3 a 4 mil créditos por episódio de 2:30**. O plano atual tem 40 mil por mês, o que dá uns 10 episódios.
 - **Render 2D:** cerca de **15 minutos por episódio** (4.500 quadros), sem custo.
-- **Elementos que ainda faltam criar:** a fábrica, o quarto, o hospital, a clínica, o HUD do jogo e da vida real, a tela de câmbio, os balões da Plateia, os monstros por região, os números de tempo subindo e o Vitor de macacão.
+- **Elementos que ainda faltam criar:** a fábrica, o quarto, o hospital, a clínica, o HUD do jogo e da vida real, a tela do extrato, os balões da Plateia, os monstros por região, os números de dinheiro subindo e o Vitor de macacão.
 
 ## 12. Arquivos
 

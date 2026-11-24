@@ -7,7 +7,7 @@ spec = importlib.util.spec_from_file_location('tl', os.path.join(pasta, 'timelin
 KILLS = [96.8, 102.2, 103.2, 104.2, 105.2, 106.2, 107.2, 108.2, 109.2]
 EFEITOS = {'ep01': {'impacto': [41.6], 'suspense': [53.2], 'fogo': (4, 10)},
            'he01': {'impacto': [3.5, 77.8] + KILLS, 'suspense': [3.6, 52.3, 131.5], 'chuva': [(37.5, 45)],
-                    'fogo': (81, 88.9), 'fabrica': [(14, 25)], 'moeda': KILLS + [126.2]}}.get(ep, {})
+                    'fogo': (81, 88.9), 'fabrica': [(14, 25)], 'moeda': KILLS + [126.5, 129.4]}}.get(ep, {})
 DUR = tl.DUR
 inp = ['-framerate', '30', '-i', 'frames/f%04d.png']
 for nome, _, _ in tl.FALAS: inp += ['-i', f'{pasta}/{nome}.mp3']

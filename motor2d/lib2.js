@@ -114,8 +114,8 @@ export function pontoOnibus(parent) {
   el('circle', { cx: 0, cy: -280, r: 130, fill: grad([[0, '#7ae0e8'], [1, '#2a8ab0']], { radial: true, cx: 0.5, cy: 0.5, r: 0.6 }) }, placa);
   el('path', { d: 'M-60 -320 q60 -60 120 0 q-20 80 -60 100 q-40 -20 -60 -100 Z', fill: '#f4f8fc', opacity: 0.85 }, placa);            // lua/sono
   const t1 = el('text', { x: 0, y: -60, 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': 92, fill: '#1a2a44' }, placa); t1.textContent = 'MORFEU LABS';
-  const t2 = el('text', { x: 0, y: 30, 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': 46, fill: '#2a8ab0' }, placa); t2.textContent = 'DURMA. JOGUE. GANHE TEMPO.';
-  const t3 = el('text', { x: 0, y: 140, 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': 70, fill: '#e8a030' }, placa); t3.textContent = 'TEMPO = DINHEIRO';
+  const t2 = el('text', { x: 0, y: 30, 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': 46, fill: '#2a8ab0' }, placa); t2.textContent = 'JOGUE DORMINDO. GANHE DE VERDADE.';
+  const t3 = el('text', { x: 0, y: 140, 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': 70, fill: '#e8a030' }, placa); t3.textContent = 'LOOT = DINHEIRO';
   el('rect', { x: -340, y: 300, width: 680, height: 100, fill: '#1a2a44' }, placa);
   const t4 = el('text', { x: 0, y: 368, 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': 44, fill: '#fff' }, placa); t4.textContent = 'INSCREVA-SE HOJE';
   const brilho = el('rect', { x: -340, y: -520, width: 680, height: 920, rx: 20, fill: 'rgba(160,230,255,0.08)' }, placa);
@@ -192,8 +192,8 @@ export function plateia(parent, msgs, seed = 9) {                   // balões d
   el('rect', { width: 330, height: 64, rx: 32, fill: '#e83a3a' }, cont); const cn = el('text', { x: 165, y: 45, 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': 34, fill: '#fff' }, cont);
   return { g: gg, set: (t, viewers = 312) => { cn.textContent = `● AO VIVO · ${viewers}`; bs.forEach((s) => { const k = t - s.ph; s.b.style.display = k > 0 && k < 4 ? '' : 'none'; s.b.setAttribute('transform', `translate(${s.x} ${1300 - k * 160})`); s.b.setAttribute('opacity', clamp(Math.min(k * 3, (4 - k) * 2))); }); } };
 }
-export function numerosTempo(parent) {                              // "+20 min" dourado subindo
-  const gg = g({}, parent), pool = Array.from({ length: 8 }, () => { const t = el('text', { 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': 80, fill: '#ffd400', 'paint-order': 'stroke', stroke: '#5a3a00', 'stroke-width': 10 }, gg); return t; });
+export function numerosTempo(parent, cor = '#ffd400', borda = '#5a3a00') {   // números subindo (+R$ verde, +tempo dourado)
+  const gg = g({}, parent), pool = Array.from({ length: 10 }, () => { const t = el('text', { 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': 80, fill: cor, 'paint-order': 'stroke', stroke: borda, 'stroke-width': 10 }, gg); return t; });
   return { set: (t, eventos) => { pool.forEach((p) => (p.style.display = 'none')); eventos.forEach(([t0, x, y, txt], i) => { const k = t - t0; if (k < 0 || k > 1.4 || i >= pool.length) return; const p = pool[i]; p.style.display = ''; p.textContent = txt; p.setAttribute('x', x); p.setAttribute('y', y - k * 180); p.setAttribute('opacity', clamp((1.4 - k) * 2)); p.setAttribute('font-size', 80 + 20 * Math.max(0, 0.2 - k) * 5); }); } };
 }
 export function pixels(parent, seed = 4) {                          // transição: tela se desfaz em pixels
@@ -246,4 +246,40 @@ export function contrato(parent) {                                  // página c
   const tl = lines.map((s, i) => { const t = el('text', { x: -360, y: -70 + i * 60, 'font-family': 'Anton', 'font-size': 52, fill: '#8a1010' }, pg); t.textContent = s; return t; });
   const marca = el('rect', { x: -370, y: -120, width: 720, height: 0, fill: 'rgba(255,220,0,0.35)' }, pg);
   return { g: root, pg, set: (k) => marca.setAttribute('height', 200 * clamp(k)) };
+}
+
+// placar de dinheiro (abaixo do Relógio): saldo em reais, verde quando sobe, vermelho quando desce
+export const reais = (v) => 'R$ ' + v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+export function saldoHUD(parent, { rotulo = 'SALDO', y = 210 } = {}) {
+  const gg = g({ transform: `translate(1050 ${y})` }, parent);
+  const bg = el('rect', { x: -470, y: -10, width: 470, height: 120, rx: 18, fill: 'rgba(0,0,0,0.55)', stroke: '#3fd26a', 'stroke-width': 4 }, gg);
+  const lb = el('text', { x: -450, y: 30, 'font-family': 'Anton', 'font-size': 30, fill: '#3fd26a' }, gg); lb.textContent = rotulo;
+  const tx = el('text', { x: -450, y: 92, 'font-family': 'Anton', 'font-size': 58, fill: '#fff' }, gg);
+  const delta = el('text', { x: -20, y: 160, 'text-anchor': 'end', 'font-family': 'Anton', 'font-size': 54, fill: '#3fd26a', opacity: 0, 'paint-order': 'stroke', stroke: '#000', 'stroke-width': 8 }, gg);
+  return { g: gg, set: ({ valor, show = 1, deltaTxt = '', deltaK = 0, neg = false }) => {
+    gg.setAttribute('opacity', show); tx.textContent = reais(valor);
+    delta.textContent = deltaTxt; delta.setAttribute('fill', neg ? '#ff5050' : '#3fd26a'); delta.setAttribute('opacity', deltaK); delta.setAttribute('transform', `translate(0 ${-30 * deltaK})`);
+  } };
+}
+// celular com o Extrato da Noite do Morfeu Pay
+export function extrato(parent, linhas, saldoAntes, saldoDepois, relogio) {
+  const gg = g({ transform: 'translate(540 980)' }, parent);
+  el('rect', { x: -330, y: -620, width: 660, height: 1240, rx: 70, fill: '#14161c', stroke: '#3a3e48', 'stroke-width': 10 }, gg);
+  el('rect', { x: -300, y: -560, width: 600, height: 1120, rx: 40, fill: '#f4f6f8' }, gg);
+  el('rect', { x: -300, y: -560, width: 600, height: 170, rx: 40, fill: '#1a2a44' }, gg);
+  const t1 = el('text', { x: 0, y: -480, 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': 54, fill: '#7ae0e8' }, gg); t1.textContent = 'MORFEU PAY';
+  const t2 = el('text', { x: 0, y: -420, 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': 34, fill: '#fff' }, gg); t2.textContent = 'EXTRATO DA NOITE';
+  const itens = linhas.map(([v, desc], i) => {
+    const r = g({ transform: `translate(0 ${-300 + i * 120})` }, gg);
+    const a = el('text', { x: -260, y: 0, 'font-family': 'Anton', 'font-size': 58, fill: v >= 0 ? '#1e9a4a' : '#d02a2a' }, r); a.textContent = (v >= 0 ? '+ ' : '− ') + reais(Math.abs(v));
+    const b = el('text', { x: -260, y: 46, 'font-family': 'Anton', 'font-size': 32, fill: '#5a6070' }, r); b.textContent = desc;
+    return r;
+  });
+  el('line', { x1: -260, y1: -300 + linhas.length * 120 - 20, x2: 260, y2: -300 + linhas.length * 120 - 20, stroke: '#c8ccd4', 'stroke-width': 4 }, gg);
+  const sy = -300 + linhas.length * 120 + 60;
+  const s1 = el('text', { x: -260, y: sy, 'font-family': 'Anton', 'font-size': 36, fill: '#5a6070' }, gg); s1.textContent = 'SALDO';
+  const s2 = el('text', { x: -260, y: sy + 80, 'font-family': 'Anton', 'font-size': 86, fill: '#1a2a44' }, gg);
+  const s3 = el('text', { x: -260, y: sy + 130, 'font-family': 'Anton', 'font-size': 32, fill: '#8a90a0' }, gg); s3.textContent = 'antes ' + reais(saldoAntes);
+  const rl = el('text', { x: -260, y: sy + 230, 'font-family': 'Anton', 'font-size': 40, fill: '#2a8ab0' }, gg); rl.textContent = '⏳ ' + relogio;
+  return { g: gg, set: (k) => { itens.forEach((r, i) => r.setAttribute('opacity', clamp((k * (linhas.length + 2) - i)))); const ks = clamp(k * (linhas.length + 2) - linhas.length); s2.textContent = reais(saldoAntes + (saldoDepois - saldoAntes) * ease(ks)); [s1, s2, s3, rl].forEach((e) => e.setAttribute('opacity', ks > 0 ? 1 : 0)); } };
 }

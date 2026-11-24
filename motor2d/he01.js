@@ -12,7 +12,8 @@ const texto = (parent, x, y, s, cor, txt, extra = {}) => { const e = el('text', 
 const vinheta = (parent, op = 0.7) => el('rect', { width: 1080, height: 1920, fill: grad([[0, 'rgba(0,0,0,0)'], [0.6, 'rgba(0,0,0,0)'], [1, `rgba(0,0,0,${op})`]], { radial: true, cx: 0.5, cy: 0.5, r: 0.75 }) }, parent);
 const KILLS = [96.8, 102.2, 103.2, 104.2, 105.2, 106.2, 107.2, 108.2, 109.2];
 const minGanhos = (t) => KILLS.filter((k) => t >= k).length * 20;
-const relogioJogo = (t) => { const m = minGanhos(t); return m ? `56a 04m 12d +${Math.floor(m / 60)}h${String(m % 60).padStart(2, '0')}` : '56a 04m 12d'; };
+const ganhoNoite = (t) => KILLS.filter((k) => t >= k).length * 5;
+const SALDO0 = 312.40, SALDO1 = 348.40;
 
 // ---------- S1 gancho: Vitor dormindo, relógio perde 1 ano ----------
 const S1 = cena([0, 6.8]);
@@ -22,7 +23,7 @@ const v1g = g({}, S1), v1 = H.vitorBusto(v1g, { macacao: true });
 const ondas1 = g({ fill: 'none', stroke: '#5ef0d8', 'stroke-width': 4 }, S1), on1 = [0, 1, 2].map(() => el('circle', { cx: 540, cy: 700 }, ondas1));
 vinheta(S1, 0.8);
 const red1 = el('rect', { width: 1080, height: 1920, fill: '#c01010', opacity: 0 }, S1);
-const hud1 = H.relogioHUD(S1);
+const hud1 = H.relogioHUD(S1), sal1 = H.saldoHUD(S1);
 
 // ---------- S2 título ----------
 const S2 = cena([6.8, 10.5]);
@@ -63,10 +64,11 @@ const hosp = H.hospital(S5);
 const mae = H.maeNaCama(S5);
 const v5g = g({}, S5), v5 = H.vitorBusto(v5g);
 const conta5 = g({}, S5);
-el('rect', { x: 90, y: 560, width: 900, height: 520, rx: 30, fill: 'rgba(6,10,16,0.88)', stroke: '#ffd400', 'stroke-width': 6 }, conta5);
-texto(conta5, 540, 680, 60, '#ffffff', 'CIRURGIA');
-const conta5n = texto(conta5, 540, 860, 170, '#ffd400', 'R$ 0');
-const conta5b = texto(conta5, 540, 1000, 60, '#ff8a8a', '= 9 ANOS DE HORA EXTRA');
+el('rect', { x: 90, y: 540, width: 900, height: 600, rx: 30, fill: 'rgba(6,10,16,0.88)', stroke: '#ffd400', 'stroke-width': 6 }, conta5);
+texto(conta5, 540, 640, 60, '#ffffff', 'CIRURGIA');
+const conta5n = texto(conta5, 540, 810, 170, '#ffd400', 'R$ 0');
+const conta5s = texto(conta5, 540, 930, 62, '#3fd26a', 'SALDO DELE: R$ 312,40');
+const conta5b = texto(conta5, 540, 1060, 60, '#ff8a8a', '= 9 ANOS DE HORA EXTRA');
 vinheta(S5, 0.55);
 
 // ---------- S6 ponto de ônibus / anúncio ----------
@@ -122,7 +124,7 @@ const cards = ['MAGO', 'TANQUE', 'ARQUEIRO'].map((nm, i) => {
 const cls9 = texto(S9, 540, 520, 76, '#fff', 'ESCOLHA SUA CLASSE', { 'paint-order': 'stroke', stroke: '#000', 'stroke-width': 10 });
 const heroi9g = g({}, S9), heroi9 = L.vitoriosoCorpo(heroi9g);
 const luz9 = el('circle', { cx: 540, cy: 1250, r: 600, fill: L.P.brilho, opacity: 0 }, S9);
-const hudJ9 = H.hudJogo(S9), hud9 = H.relogioHUD(S9, { modo: 'jogo' });
+const hudJ9 = H.hudJogo(S9), hud9 = H.relogioHUD(S9, { modo: 'jogo' }), sal9 = H.saldoHUD(S9, { rotulo: 'GANHO DA NOITE' });
 const pix9 = H.pixels(S9, 5);
 
 // ---------- S10 ferreiro Bram ----------
@@ -150,32 +152,34 @@ const ratos = KILLS.map((k, i) => { const r = H.rato(g({}, S11), i); r.k = k; r.
 const olhos11 = g({}, S11), ol11 = [[200, 1380], [860, 1400], [520, 1330]].map(([x, y]) => { const gg = g({ transform: `translate(${x} ${y})` }, olhos11); for (const s of [-1, 1]) el('circle', { cx: s * 16, r: 9, fill: '#ff3030' }, gg); return gg; });
 const heroi11g = g({}, S11), heroi11 = L.vitoriosoCorpo(heroi11g);
 const flash11 = el('rect', { width: 1080, height: 1920, fill: '#ffe8a0', opacity: 0 }, S11);
-const nums11 = H.numerosTempo(S11);
+const nums11 = H.numerosTempo(S11, '#3fd26a', '#0a3a1a');
 const painel = g({ opacity: 0 }, S11);
 el('rect', { x: 140, y: 420, width: 800, height: 220, rx: 24, fill: 'rgba(10,14,30,0.9)', stroke: '#5ef0d8', 'stroke-width': 6 }, painel);
 texto(painel, 540, 510, 60, '#5ef0d8', 'PAINEL DA PLATEIA');
 const painelN = texto(painel, 540, 600, 64, '#fff', '312 ESPECTADORES');
 const plat = H.plateia(S11, [['joao_47', 'tanque de primeira viagem kkk'], ['mari.gamer', 'vai pra floresta!'], ['dudu_tank', 'fica na vila, noob'], ['lu_streams', 'segura o escudo!!'], ['ana.b', 'ele vai morrer kkkk'], ['rafa_09', 'deixa ele farmar']], 3);
 vinheta(S11, 0.5);
-const hudJ11 = H.hudJogo(S11), hud11 = H.relogioHUD(S11, { modo: 'jogo' });
+const hudJ11 = H.hudJogo(S11), hud11 = H.relogioHUD(S11, { modo: 'jogo' }), sal11 = H.saldoHUD(S11, { rotulo: 'GANHO DA NOITE' });
 const S11b = cena([98, 101.6]);
 el('rect', { width: 1080, height: 1920, fill: grad([[0, '#2a1a12'], [1, '#120a06']]) }, S11b);
 const vit11g = g({}, S11b), vit11 = L.vitoriosoBusto(vit11g);
-const big11 = texto(S11b, 540, 420, 150, '#ffd400', '+20 MIN', { 'paint-order': 'stroke', stroke: '#5a3a00', 'stroke-width': 14 });
-const hud11b = H.relogioHUD(S11b, { modo: 'jogo' });
+const big11 = texto(S11b, 540, 470, 170, '#3fd26a', '+R$ 5', { 'paint-order': 'stroke', stroke: '#0a3a1a', 'stroke-width': 14 });
+const hud11b = H.relogioHUD(S11b, { modo: 'jogo' }), sal11b = H.saldoHUD(S11b, { rotulo: 'GANHO DA NOITE' });
 
 // ---------- S13 acordar ----------
-const S13 = cena([124, 131]);
+const S13 = cena([124, 131.3]);
 el('rect', { width: 1080, height: 1920, fill: grad([[0, '#2a2a40'], [1, '#0e0e18']]) }, S13);
 const desp13 = g({ transform: 'translate(260 520)' }, S13);
 el('rect', { x: -170, y: -90, width: 340, height: 180, rx: 30, fill: '#1a1a1e' }, desp13);
 texto(desp13, 0, 45, 120, '#e83a3a', '04:40');
 const v13g = g({}, S13), v13 = H.vitorBusto(v13g, { macacao: false, curativo: true });
-const hud13 = H.relogioHUD(S13);
 vinheta(S13, 0.6);
+const cel13 = g({}, S13); el('rect', { width: 1080, height: 1920, fill: 'rgba(5,8,14,0.85)' }, cel13);
+const ext13 = H.extrato(cel13, [[45, '9 RATOS GIGANTES'], [-9, 'TAXA DE SERVIÇO (20%)']], SALDO0, SALDO1, '56a 04m 12d · sem perdas');
+const hud13 = H.relogioHUD(S13), sal13 = H.saldoHUD(S13);
 
 // ---------- S14 contrato ----------
-const S14 = cena([131, 139]);
+const S14 = cena([131.3, 139]);
 const ctr = H.contrato(S14);
 const ctrRed = el('rect', { width: 1080, height: 1920, fill: 'rgba(160,0,0,0)' }, S14);
 vinheta(S14, 0.8);
@@ -189,7 +193,7 @@ texto(FIM, 540, 870, 92, '#fff', 'INTEIRO ANTES DE');
 texto(FIM, 540, 980, 92, '#ffd400', 'DORMIR DE NOVO?');
 const opc = [['A) SIM', 1180, '#ffd400'], ['B) NÃO, ESTÁ CANSADO DEMAIS', 1340, '#fff']].map(([t, y, c]) => { const gg = g({}, FIM); el('rect', { x: 90, y: y - 90, width: 900, height: 120, rx: 22, fill: 'none', stroke: '#ffd400', 'stroke-width': 6 }, gg); texto(gg, 540, y, t.length > 10 ? 58 : 80, c, t); return gg; });
 texto(FIM, 540, 1530, 60, '#b4b4b4', 'A PLATEIA DECIDE · COMENTA AÍ');
-const hudF = H.relogioHUD(FIM, { modo: 'jogo' });
+const hudF = H.relogioHUD(FIM), salF = H.saldoHUD(FIM);
 
 // ---------- legendas ----------
 const leg = L.legendas(L.svg, [
@@ -198,15 +202,16 @@ const leg = L.legendas(L.svg, [
   [18.0, 20.8, [['HORA EXTRA', 1], ['DE NOVO, VITOR!', 0]]], [21.2, 23.3, [['TÔ DENTRO,', 0], ['SEU BRÁULIO.', 1]]],
   [25.6, 28.0, [['FILHO...', 0]]], [28.1, 30.8, [['NÃO DÁ PRA', 0], ['ESPERAR MUITO.', 1]]],
   [34.6, 37.2, [['NOVE ANOS', 1], ['DE HORA EXTRA...', 0]]],
-  [38.0, 40.6, [['MORFEU', 1], ['LABS!', 0]]], [40.7, 44.7, [['TEMPO', 1], ['VALE DINHEIRO.', 0]]],
+  [38.0, 40.4, [['MORFEU LABS!', 1], ['JOGUE DORMINDO.', 0]]], [40.5, 44.4, [['VIRA DINHEIRO', 1], ['DE VERDADE.', 0]]],
   [45.4, 49.2, [['40 PÁGINAS.', 1], ['SEM LER NENHUMA.', 0]]],
   [52.5, 55.6, [['UM RELÓGIO NO', 0], ['CANTO DA VISÃO.', 1]]], [55.7, 58.0, [['56 ANOS.', 1]]], [58.1, 60.8, [['A VIDA QUE', 0], ['RESTAVA.', 1]]],
   [61.4, 64.0, [['O BRASA SUBIU', 0], ['NO PEITO DELE.', 1]]], [64.1, 67.0, [['DESPERTADOR:', 0], ['4:40.', 1]]], [67.3, 69.7, [['SÓ UMAS', 0], ['HORINHAS.', 1]]],
   [72.0, 75.4, [['BEM-VINDO A', 0], ['VARNOR.', 1]]], [75.7, 77.5, [['A QUE', 0], ['AGUENTA MAIS.', 1]]], [77.8, 80.4, [['CLASSE:', 0], ['TANQUE.', 1]]],
   [81.3, 84.9, [['O FERREIRO TINHA UM', 0], ['ROSTO CONHECIDO.', 1]]], [85.2, 88.8, [['UM ESCUDO', 0], ['DE FERRO.', 1]]], [89.0, 91.4, [['SEU...', 0], ['BRÁULIO?', 1]]],
-  [92.0, 94.9, [['RATOS', 1], ['GIGANTES.', 0]]], [95.0, 97.9, [['CADA UM:', 0], ['20 MINUTOS.', 1]]], [98.2, 101.6, [['POR UM', 0], ['RATO?!', 1]]],
+  [92.0, 94.7, [['RATOS', 1], ['GIGANTES.', 0]]], [94.8, 97.9, [['R$ 5', 1], ['POR RATO.', 0]]], [98.2, 101.6, [['R$ 5...', 1], ['POR UM RATO?!', 0]]],
+  [102.0, 104.4, [['CADA MONSTRO,', 0], ['CADA BAÚ...', 1]]], [104.5, 106.4, [['VIRA', 0], ['DINHEIRO.', 1]]], [106.5, 109.3, [['DEPÓSITO QUANDO', 0], ['ACORDAR.', 1]]],
   [110.5, 115.0, [['312', 1], ['ESPECTADORES.', 0]]], [115.5, 119.7, [['E A PLATEIA TINHA', 0], ['OPINIÃO.', 1]]],
-  [124.5, 128.9, [['3 HORAS', 1], ['A MAIS DE VIDA.', 0]]], [131.5, 135.2, [['ELE NÃO LEU A', 0], ['CLÁUSULA 14.', 1]]],
+  [124.5, 126.6, [['4:40.', 1], ['O CELULAR VIBROU.', 0]]], [126.7, 128.6, [['R$ 45', 1], ['NA CONTA.', 0]]], [128.7, 131.2, [['MAIS QUE 2', 0], ['HORAS EXTRAS.', 1]]], [131.5, 135.2, [['ELE NÃO LEU A', 0], ['CLÁUSULA 14.', 1]]],
 ]);
 
 // =====================================================================
@@ -223,6 +228,7 @@ window.renderAt = (t) => {
     red1.setAttribute('opacity', d > 0 ? 0.55 * Math.exp(-d * 2.5) : 0);
     S1.setAttribute('transform', d > 0 && d < 0.6 ? `translate(${16 * Math.sin(t * 90)} 0)` : '');
     hud1.set({ texto: d > 0 ? '55a 04m 12d' : '56a 04m 12d', show: ease(u / 0.5), deltaTxt: '-1 ANO', deltaK: d > 0 && d < 2.5 ? 1 : 0, falha: d > 0 && d < 0.8, cor2: d > 0 ? '#ff4040' : null });
+    sal1.set({ valor: SALDO0, show: ease((u - 0.3) / 0.5) * (d > 0 && d < 2.5 ? 0 : 1) });
   }
   // S2
   if (t >= 6.8 && t < 10.5) { const u = t - 6.8, k = ease(u / 0.5); tit2.setAttribute('transform', `translate(540 960) scale(${0.85 + 0.15 * k + 0.01 * u}) translate(-540 -960)`); tit2.setAttribute('opacity', k); pont2.setAttribute('transform', `rotate(${u * 360})`); pont2b.setAttribute('transform', `rotate(${u * 30 - 90})`); dig2.setAttribute('transform', `translate(0 ${-u * 40})`); }
@@ -245,7 +251,7 @@ window.renderAt = (t) => {
     mae.g.setAttribute('transform', `translate(540 1200) scale(${1 + u * 0.015}) translate(-540 -1200)`);
     conta5.style.display = t >= 31 && t < 34.5 ? '' : 'none';
     conta5n.textContent = 'R$ ' + Math.round(38000 * ease((t - 31) / 1.6)).toLocaleString('pt-BR');
-    conta5b.setAttribute('opacity', ease((t - 33.2) / 0.3));
+    conta5s.setAttribute('opacity', ease((t - 32.4) / 0.3)); conta5b.setAttribute('opacity', ease((t - 33.4) / 0.3));
     v5g.style.display = t >= 34.5 ? '' : 'none'; busto(v5g, 0.95 + 0.02 * (t - 34.5)); v5.set({ boca: boca('V', t), expr: 'triste', piscar: pisca(t) });
   }
   // S6
@@ -277,7 +283,7 @@ window.renderAt = (t) => {
     heroi9g.setAttribute('transform', `translate(540 1830) scale(${0.95 * h})`); heroi9.set({ expr: 'serio', piscar: pisca(t) });
     luz9.setAttribute('opacity', t >= 77.8 ? 0.9 * Math.exp(-(t - 77.8) * 2) : 0);
     hudJ9.g.setAttribute('opacity', ease((t - 78) / 0.5)); hudJ9.set({});
-    hud9.set({ texto: '56a 04m 12d', show: ease((t - 78) / 0.5) });
+    hud9.set({ texto: '56a 04m 12d', show: ease((t - 78) / 0.5) }); sal9.set({ valor: 0, show: ease((t - 78.3) / 0.5) });
   }
   // S10
   if (t >= 81 && t < 88.9) {
@@ -304,30 +310,32 @@ window.renderAt = (t) => {
     const ult = KILLS.filter((k) => t >= k).pop(), dk = ult ? t - ult : 9;
     flash11.setAttribute('opacity', dk < 0.3 ? 0.35 * (1 - dk / 0.3) : 0);
     S11.setAttribute('transform', dk < 0.25 ? `translate(${10 * Math.sin(t * 95)} ${8 * Math.cos(t * 80)})` : '');
-    nums11.set(t, KILLS.map((k, i) => [k, 540 + (i % 2 ? 1 : -1) * 260, 1350, '+20 MIN']));
+    nums11.set(t, KILLS.map((k, i) => [k, 540 + (i % 2 ? 1 : -1) * 260, 1350, '+R$ 5']));
     const viewers = t < 110.5 ? 0 : Math.round(312 + Math.max(0, t - 115) * 23);
     painel.setAttribute('opacity', t > 110.5 && t < 115.2 ? ease((t - 110.5) / 0.3) : 0); painelN.textContent = '312 ESPECTADORES';
     plat.g.style.display = t > 114.6 ? '' : 'none'; plat.set(t - 115, viewers);
     const nivel = minGanhos(t) >= 120 ? 2 : 1;
     hudJ11.set({ nivel, hp: 1 - 0.04 * KILLS.filter((k) => t >= k).length, fadiga: 0.15 + 0.03 * KILLS.filter((k) => t >= k).length });
     const g0 = ult ? Math.max(0, 1 - dk / 1.2) : 0;
-    hud11.set({ texto: relogioJogo(t), show: 1, deltaTxt: '+20 MIN', deltaK: g0 });
+    hud11.set({ texto: '56a 04m 12d', show: 1 }); sal11.set({ valor: ganhoNoite(t), show: 1, deltaTxt: '+R$ 5', deltaK: g0 });
   }
-  if (t >= 98 && t < 101.6) { const u = t - 98; busto(vit11g, 1.02 + 0.015 * u); vit11.set({ expr: 'riso', boca: boca('V', t), piscar: pisca(t) }); big11.setAttribute('transform', `translate(540 420) scale(${1 + 0.1 * Math.sin(t * 6)}) translate(-540 -420)`); hud11b.set({ texto: relogioJogo(t), show: 1 }); }
+  if (t >= 98 && t < 101.6) { const u = t - 98; busto(vit11g, 1.02 + 0.015 * u); vit11.set({ expr: 'riso', boca: boca('V', t), piscar: pisca(t) }); big11.setAttribute('transform', `translate(540 420) scale(${1 + 0.1 * Math.sin(t * 6)}) translate(-540 -420)`); hud11b.set({ texto: '56a 04m 12d', show: 1 }); sal11b.set({ valor: ganhoNoite(t), show: 1 }); }
   // S13
-  if (t >= 124 && t < 131) {
+  if (t >= 124 && t < 131.3) {
     const u = t - 124; desp13.setAttribute('transform', `translate(${260 + (u < 1.5 ? 8 * Math.sin(t * 70) : 0)} 520)`);
     busto(v13g, 0.95 + 0.01 * u); v13.set({ piscar: u < 0.8 ? 1 : pisca(t), expr: u > 2.5 ? 'riso' : 'neutro' });
-    const k = ease((u - 2.2) / 0.4); hud13.set({ texto: u < 2.2 ? '56a 04m 12d' : '56a 04m 12d +3h00', show: 1, deltaTxt: '+3 HORAS', deltaK: u > 2.2 && u < 5.5 ? k : 0 });
+    cel13.style.display = t >= 126.4 ? '' : 'none'; const ke = rel(t, 126.6, 130.4); ext13.set(ke);
+    ext13.g.setAttribute('transform', `translate(540 ${980 + 900 * (1 - ease((t - 126.4) / 0.4))})`);
+    hud13.set({ texto: '56a 04m 12d', show: 1 }); const kd = ease(rel(t, 129.4, 130.4)); sal13.set({ valor: SALDO0 + (SALDO1 - SALDO0) * kd, show: 1, deltaTxt: '+R$ 36,00', deltaK: t > 129.4 ? 1 : 0 });
   }
   // S14
-  if (t >= 131 && t < 139) {
-    const u = t - 131, z = 1 + 0.25 * ease(u / 6);
+  if (t >= 131.3 && t < 139) {
+    const u = t - 131.3, z = 1 + 0.25 * ease(u / 6);
     ctr.g.setAttribute('transform', `translate(540 860) scale(${z}) translate(-540 -860)`); ctr.set((u - 2.2) / 0.8);
     ctrRed.setAttribute('fill', `rgba(160,0,0,${0.25 * ease((u - 4) / 1.5) * (0.7 + 0.3 * Math.sin(t * 5))})`);
   }
   // FIM
-  if (t >= 139) { opc.forEach((o, i) => o.setAttribute('opacity', ease((t - 140 - i * 0.4) / 0.4))); hudF.set({ texto: '56a 04m 12d +3h00', show: 1 }); }
+  if (t >= 139) { opc.forEach((o, i) => o.setAttribute('opacity', ease((t - 140 - i * 0.4) / 0.4))); hudF.set({ texto: '56a 04m 12d', show: 1 }); salF.set({ valor: SALDO1, show: 1 }); }
   leg.set(t);
   return true;
 };
