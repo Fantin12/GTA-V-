@@ -68,7 +68,7 @@ O chip constrói Varnor a partir das **memórias dos jogadores**. Por isso, gent
 - **Vida real:** cores frias e cinzentas, luz fluorescente da fábrica, chuva na janela. O Relógio fica sempre no canto superior direito, em verde-água.
 - **Jogo:** cores quentes e saturadas, o elenco 2D atual e o HUD de jogo, com barra de vida e o Relógio em dourado.
 - **Transição entre os dois mundos:** os olhos fecham, ouve-se um zumbido e a tela se dissolve em pixels.
-- **Quadro técnico:** o mesmo padrão azul-petróleo com grade, com uma **curiosidade real por episódio** sobre motores elétricos, sono, cérebro ou tempo.
+- **Flash de curiosidade:** um corte rápido (**2 a 4 segundos**) para o quadro azul-petróleo com grade, com **um número grande na tela** e **uma frase de até 10 palavras**. Entra no meio da ação e volta direto para a história.
 - **Comentários da Plateia:** balões que passam pela tela com nomes de usuário inventados.
 - **Morte:** a tela racha como vidro, ouve-se um bipe de monitor cardíaco e ele acorda ofegante. O Relógio mostra o desconto em vermelho.
 
@@ -78,7 +78,7 @@ O chip constrói Varnor a partir das **memórias dos jogadores**. Por isso, gent
 |---|---|
 | 0–4s | **Resultado da votação anterior**, mostrando o que a Plateia escolheu |
 | 4–8s | Gancho do episódio, com a imagem mais forte |
-| 8–50s | História alternando **vida real e jogo**, com **um quadro técnico** no meio |
+| 8–50s | História alternando **vida real e jogo**, com **um flash de curiosidade** (2–4s) no meio |
 | 50–60s | Clímax, com o **Relógio mudando** |
 | 60–65s | Gancho do próximo episódio |
 | 65–70s | **Pergunta A ou B**: "A Plateia decide. Comenta aí." |
@@ -92,7 +92,11 @@ O chip constrói Varnor a partir das **memórias dos jogadores**. Por isso, gent
 - **Quem chegou agora precisa entender** nos primeiros 4 segundos.
 - **Terminar sempre com uma pergunta de duas respostas.**
 
-**Curiosidades**
+**Curiosidades (flash)**
+- **A história vem primeiro.** A curiosidade só serve para segurar a atenção e dar ritmo, nunca para explicar.
+- **No máximo 4 segundos** e **uma frase de até 10 palavras**. O número aparece grande, em amarelo.
+- **Sempre ligada à cena:** o motor quando ele está na fábrica, o sono quando ele vai dormir, o coração quando ele morre.
+- **A narração não para:** o fato pode aparecer só como texto na tela, por cima de um som de "zap", enquanto a voz segue contando a história.
 - **Só fatos verificáveis.** Se houver dúvida, fica de fora ou leva "cerca de".
 - **Tudo é ficção:** o chip, o jogo e a empresa são inventados. Nada de medicina ou tecnologia real apresentada como possível.
 

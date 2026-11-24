@@ -4,7 +4,7 @@
 > Relógio no caminho padrão: **52a 03m 27d → 41a 01m 03d**
 > **Mudança de regra (EP 1):** a "Atualização 2.0" da Morfeu aumenta o custo de cada morte para **2 anos**.
 
-Legenda: 🏭 vida real · 🎮 jogo · 📐 quadro técnico · ⏳ Relógio · 🗳️ votação (padrão em caso de empate)
+Legenda: 🏭 vida real · 🎮 jogo · ⚡ flash de curiosidade (2–4s) · ⏳ Relógio · 🗳️ votação (padrão em caso de empate)
 
 *Se a Plateia escolheu "arrancar o chip" no S1E12:* a T2 abre com a cirurgia de remoção dando errado. O chip não sai, porque "está integrado ao tecido". Ele volta a jogar obrigado. A temporada segue igual a partir do EP 2.
 
@@ -16,7 +16,7 @@ Legenda: 🏭 vida real · 🎮 jogo · 📐 quadro técnico · ⏳ Relógio · 
 - 🏭 Enterro com poucas pessoas. Vitor segura o caderno dela.
 - 🏭 No celular, chega uma notificação: **"Atualização 2.0: morte agora custa 2 anos. Bônus de audiência em dobro!"**
 - 🏭 Junto vem um "presente de fidelidade" da Morfeu: **+1 mês de vida**.
-- 📐 **O cérebro tem cerca de 2% do peso do corpo, mas consome cerca de 20% da energia.** Quadro com o corpo e uma barra de bateria.
+- ⚡ **Flash (3s):** O cérebro gasta **20%** da energia do corpo.
 
 **⏳** 52a 03m 27d
 **Gancho final:** o presente vem com um termo: "Ao aceitar, você concorda com a Cláusula 22."
@@ -30,7 +30,7 @@ Legenda: 🏭 vida real · 🎮 jogo · 📐 quadro técnico · ⏳ Relógio · 
 - 🎮 Kael leva Vitorioso à **Feira das Horas**, o mercado negro onde jogadores vendem tempo.
 - 🎮 Um jogador com cara de criança vende 10 anos. Vitor tenta impedir e a multidão vaia.
 - 🏭 Kauã confessa: "Já vendi 9 anos. O agiota não aceita desculpa."
-- 📐 **Um cristal de quartzo de relógio vibra 32.768 vezes por segundo.** Quadro com o cristal, a vibração e o ponteiro.
+- ⚡ **Flash (3s):** Um cristal de relógio vibra **32.768** vezes por segundo.
 
 **⏳** 52a 03m 20d (taxa)
 **Gancho final:** numa barraca, uma ficha de venda assinada **"M. — beta 007"**. A Dona Morena vendia tempo antes de morrer.
@@ -44,7 +44,7 @@ Legenda: 🏭 vida real · 🎮 jogo · 📐 quadro técnico · ⏳ Relógio · 
 - 🏭 O turno novo bate exatamente com o horário do jogo. Bráulio: "Ordem de cima. Não sei de quem."
 - 🎮 Nesta noite ele joga cansado, erra o bloqueio e **morre: −2 anos**.
 - 🏭 Ele descobre que a Eletromotores Sul **fabrica os motores de refrigeração** dos servidores da Morfeu.
-- 📐 **Um motor elétrico pode transformar mais de 90% da energia em movimento; um motor a combustão de carro fica bem abaixo disso.** Quadro comparando os dois motores.
+- ⚡ **Flash (3s):** Um motor elétrico aproveita **mais de 90%** da energia.
 
 **⏳** 52a 03m 13d → **50a 03m 12d**
 **Gancho final:** um e-mail anônimo: "Quem trocou seu turno se chama Otávio."
@@ -58,7 +58,7 @@ Legenda: 🏭 vida real · 🎮 jogo · 📐 quadro técnico · ⏳ Relógio · 
 - 🏭 Lívia acordou, mas **perdeu a memória dos últimos 4 meses**: os meses do jogo.
 - 🏭 Ela tem o Relógio também, e não lembra de ter assinado nada.
 - 🎮 À noite, Lira está no jogo, mas não reconhece ninguém. A conta foi "resetada".
-- 📐 **Durante o sono, o cérebro reforça e organiza as memórias do dia.** Quadro com o hipocampo e as setas indo para o córtex.
+- ⚡ **Flash (3s):** É **dormindo** que o cérebro guarda memórias.
 
 **⏳** 50a 03m 05d
 **Gancho final:** Lívia acha no celular um vídeo gravado por ela mesma: "Se eu esquecer, procura o Vitor. É sobre o Jogador 001."
@@ -72,7 +72,7 @@ Legenda: 🏭 vida real · 🎮 jogo · 📐 quadro técnico · ⏳ Relógio · 
 - 🏭 Lívia e Vitor leem o contrato inteiro. Ela é técnica de enfermagem e entende os termos médicos.
 - 🏭 Descobrem a **Cláusula 22**: tempo "não utilizado" de jogadores falecidos é **revertido para a empresa**.
 - 🎮 A Plateia se divide: metade pede guerra contra a Morfeu, metade quer o entretenimento.
-- 📐 **Um estudo de 2008 calculou que ler todos os termos de privacidade que uma pessoa aceita levaria cerca de 76 dias de trabalho por ano.** Quadro com uma pilha de papéis e um calendário.
+- ⚡ **Flash (3s):** Ler todos os termos de uso levaria **76 dias** por ano.
 
 **⏳** 50a 02m 28d
 **Gancho final:** o tempo da Dona Morena não sumiu. Ele foi para uma conta chamada **"T.D."**
@@ -86,7 +86,7 @@ Legenda: 🏭 vida real · 🎮 jogo · 📐 quadro técnico · ⏳ Relógio · 
 - 🏭 Vitor descobre **outros operadores com chip** na Eletromotores Sul. São todos pobres, todos cansados.
 - 🎮 Eles fundam o clã **"Os do Portão"**, com estandarte de portão dourado em fundo vinho.
 - 🎮 A regra do clã: **ninguém joga sozinho, ninguém vende tempo.**
-- 📐 **Um cavalo-vapor equivale a cerca de 735 watts.** Quadro com um cavalo puxando e uma lâmpada.
+- ⚡ **Flash (3s):** 1 cavalo-vapor = **735 watts**.
 
 **⏳** 50a 02m 21d
 **Gancho final:** um mensageiro dos Corvos de Pedravale entrega um pergaminho: **"Cerco em 7 dias."**
@@ -100,7 +100,7 @@ Legenda: 🏭 vida real · 🎮 jogo · 📐 quadro técnico · ⏳ Relógio · 
 - 🎮 O mapa vazou. Só três pessoas o tinham.
 - 🏭 Kauã é pego mexendo no celular do Vitor. Ele chora: "O Draven paga minhas dívidas em tempo."
 - 🎮 Uma emboscada no bosque, e Vitorioso **morre: −2 anos**.
-- 📐 **Um curto-circuito acontece quando a corrente encontra um caminho com quase nenhuma resistência**, e é por isso que os motores têm proteção. Quadro com o circuito e uma faísca.
+- ⚡ **Flash (3s):** Curto-circuito: a corrente acha o **caminho mais fácil**.
 
 **⏳** 50a 02m 14d → **48a 02m 13d**
 **Gancho final:** Kauã oferece ser **agente duplo**.
@@ -114,7 +114,7 @@ Legenda: 🏭 vida real · 🎮 jogo · 📐 quadro técnico · ⏳ Relógio · 
 - 🏭 Sem a fábrica, Vitor joga dobrado para pagar o aluguel e a recuperação da mãe.
 - 🏭 Tem uma **arritmia** na fila do mercado. Lívia o atende: "Teu corpo está cobrando a conta."
 - 🎮 Mesmo assim, ele faz missões de madrugada, porque o bônus de audiência é maior.
-- 📐 **Ficar acordado de 17 a 19 horas seguidas pode piorar o desempenho tanto quanto uma dose de álcool**, segundo estudos sobre fadiga. Quadro com o relógio e um copo.
+- ⚡ **Flash (3s):** **19 horas** sem dormir afetam como álcool.
 
 **⏳** 48a 02m 06d
 **Gancho final:** a mãe, Dona Cida, aparece na porta: "Filho... o que é isso atrás da tua orelha?"
@@ -128,7 +128,7 @@ Legenda: 🏭 vida real · 🎮 jogo · 📐 quadro técnico · ⏳ Relógio · 
 - 🎮 Os do Portão cercam o castelo de Draven. A Plateia vota a tática ao vivo e bate o **recorde: 40 mil espectadores**.
 - 🎮 Vitorioso segura o portão para o clã passar. **Morre três vezes: −6 anos.**
 - 🎮 Eles **tomam o castelo**. Draven foge rindo: "Agora vocês vão ver de onde vem o tempo."
-- 📐 **Uma catapulta medieval de contrapeso, o trabuco, podia arremessar pedras de cerca de 90 kg a mais de 200 metros.** Quadro com a trajetória e o contrapeso.
+- ⚡ **Flash (3s):** Um trabuco atirava pedras de **90 quilos**.
 
 **⏳** 48a 01m 30d → **42a 01m 29d**
 **Gancho final:** o castelo cobra **imposto de tempo** dos vilarejos NPC, e agora o clã recebe esse tempo.
@@ -142,7 +142,7 @@ Legenda: 🏭 vida real · 🎮 jogo · 📐 quadro técnico · ⏳ Relógio · 
 - 🎮 **O Brasa aparece no jogo** pela primeira vez. Ninguém o programou.
 - 🎮 Lívia entende o mistério: **o jogo é construído com as memórias dos jogadores.** Por isso o Bráulio virou o Bram.
 - 🏭 Em casa, o Brasa dorme no peito do Vitor, e o chip pisca quando o gato ronrona.
-- 📐 **Os gatos dormem em média de 12 a 16 horas por dia.** Quadro com o gato e um relógio de 24 horas.
+- ⚡ **Flash (3s):** Gatos dormem até **16 horas** por dia.
 
 **⏳** 42a 01m 22d
 **Gancho final:** um vilarejo NPC novo surge no mapa. As casas são iguais à **rua onde o Vitor cresceu**.
@@ -156,7 +156,7 @@ Legenda: 🏭 vida real · 🎮 jogo · 📐 quadro técnico · ⏳ Relógio · 
 - 🎮 Na rua da infância, tudo é perfeito. A mãe NPC repete frases que a mãe dele falava.
 - 🏭 Lívia descobre que a Morfeu **vende "pacotes de memória"** de jogadores para outros mundos e outras empresas.
 - 🎮 Vitorioso tenta proteger o vilarejo de um saque dos Corvos. **Morre: −2 anos.**
-- 📐 **Sonhamos em várias fases do sono, mas os sonhos mais longos e vívidos acontecem no REM.** Quadro com o gráfico da noite e as nuvens de sonho.
+- ⚡ **Flash (3s):** Os sonhos mais vívidos vêm no **REM**.
 
 **⏳** 42a 01m 15d → **40a 01m 14d**
 **Gancho final:** a mãe NPC olha direto para a câmera e diz uma frase que a mãe de verdade **nunca disse**: "O 001 quer acordar."
@@ -171,7 +171,7 @@ Legenda: 🏭 vida real · 🎮 jogo · 📐 quadro técnico · ⏳ Relógio · 
 - 🏭 Lívia descobre no sistema do hospital: **Theo Draven**, 19 anos, em **coma há 6 anos**, internado numa ala da Morfeu Labs.
 - 🎮 A conta "T.D." do EP 5 é dele. **O tempo de todos os jogadores mortos vai para manter o filho do Draven vivo dentro do jogo.**
 - 🎮 Na sala do trono aparece a **armadura dourada do Rei Esquecido**, que liga com a série anterior.
-- 📐 **A escala de Glasgow mede a consciência de 3 a 15 pontos; 3 é o coma mais profundo.** Quadro com a escala colorida.
+- ⚡ **Flash (3s):** O coma é medido de **3 a 15** pontos.
 
 **⏳** 40a 01m 07d (+1 mês de bônus se aceitou o presente no EP 1)
 **Gancho final:** o Dr. Otávio Draven, na vida real, liga para o Vitor: "Você salvaria seu filho? Então me escuta."
