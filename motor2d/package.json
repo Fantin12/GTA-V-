@@ -1,0 +1,11 @@
+{
+  "name": "coroa-de-varnor-2d",
+  "version": "1.0.0",
+  "description": "Motor de animação 2D vetorial de A Coroa de Varnor",
+  "private": true,
+  "scripts": {
+    "instalar-navegador": "playwright install chromium",
+    "gerar": "node gerar.js"
+  },
+  "dependencies": { "playwright": "^1.48.0" }
+}
