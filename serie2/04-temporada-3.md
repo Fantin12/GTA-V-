@@ -176,14 +176,14 @@ Legenda: 🏭 vida real · 🎮 jogo · ⚡ flash de curiosidade (2–4s) · ⏳
 - 🏭 Vitor acorda no próprio quarto. O Relógio no canto da visão **some**. Pela primeira vez em 3 temporadas, ele não sabe quanto tempo tem.
 - 🏭 No hospital da Morfeu, **Theo abre os olhos**. Draven chora.
 - 🏭 Final: a fábrica religada, Vitor de volta na bobinadeira, Bráulio dando café para ele, a mãe saudável, o Brasa na janela.
-- 🎬 **Imagem final:** *Ninguém sabe quanto tempo tem. Por isso o tempo é o que a gente tem de mais valioso.** O último quadro é só uma ampulheta sem números.
+- 🎬 **Imagem final:** *Ninguém sabe quanto tempo tem. Por isso o tempo é o que a gente tem de mais valioso.* O último quadro é só uma ampulheta sem números.
 
 ### Final B — "O Administrador"
 - 🎮 Vitorioso senta no trono. O tempo de todos os jogadores volta: os Relógios sobem ao vivo e a Plateia chora no chat.
 - 🏭 O Theo acorda. Mas o Vitor **não acorda**. Na cama, o chip pisca devagar.
 - 🎮 No trono de Varnor, o Vitor agora vê o tempo de todo mundo e decide o preço das coisas.
 - 🏭 Última cena: a mãe ao lado da cama, e o Brasa deitado no peito dele, ronronando, enquanto o chip pisca no ritmo do ronronar.
-- 🎬 **Imagem final:** *O sono ainda é um dos grandes mistérios da ciência.** Último quadro: um cérebro e um ponto de interrogação.
+- 🎬 **Imagem final:** *O sono ainda é um dos grandes mistérios da ciência.* Último quadro: um cérebro e um ponto de interrogação.
 
 **Frase final (nos dois finais):** *"Tanque não foge. Tanque segura."*
 **Tela final:** "FIM — obrigado, Plateia. Vocês decidiram tudo."
