@@ -323,7 +323,8 @@ export function loboSilhueta(parent, x, y, s = 1) {
 export function legendas(parent, lista, y = 1560) {
   const gg = g({}, parent);
   const items = lista.map(([a, b, parts, yy]) => {
-    const t = el('text', { x: 540, y: yy || y, 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': 96, 'paint-order': 'stroke', stroke: '#000', 'stroke-width': 16, 'stroke-linejoin': 'round' }, gg);
+    const n = parts.reduce((a, [txt]) => a + txt.length + 1, 0), fs = Math.min(96, Math.floor(1000 / (n * 0.5)));
+    const t = el('text', { x: 540, y: yy || y, 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': fs, 'paint-order': 'stroke', stroke: '#000', 'stroke-width': 16, 'stroke-linejoin': 'round' }, gg);
     parts.forEach(([txt, yel], i) => { const s = el('tspan', { fill: yel ? '#ffd400' : '#fff' }, t); s.textContent = (i ? ' ' : '') + txt; });
     return { t, a, b };
   });
