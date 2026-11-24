@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plano do Canal GTA 6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE everyday: a creator's working kit, energetic but tidy
+   IDEA the production board a small studio pins on the wall, painted in Vice City sunset
+   PICTURE the 30-day posting calendar, each day coloured by its series, clickable, ticks persist
+   COLOUR warm sand ground, coral sunset band, sea teal support, hot pink accent; night is teal-black
+   TYPE Anton (the condensed caption lettering of Reels) + Figtree
+   LAYOUT laptop: calendar left, day detail sticky right; phone: title, calendar, detail, then sections */
+:root{color-scheme:light dark;--bg:light-dark(#fff8ef,#0f2629);--ink:light-dark(#1d1915,#fbefe2);--mut:light-dark(#6d5f52,#a9bfbd);--card:light-dark(#ffffff,#163639);--line:light-dark(#ecdcc8,#2a4d51);--sun:light-dark(#f2552f,#ff7656);--sea:light-dark(#0a8582,#3cc7c1);--pink:light-dark(#d81b63,#ff5c93)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Figtree,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;line-height:1.05;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,5.4vw,52px);margin-bottom:14px}
+h2{font-size:clamp(28px,3.6vw,38px);margin-bottom:6px}
+h3{font-size:22px}
+p{margin:0 0 10px}
+.band{padding:clamp(28px,4vw,56px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+.hero{background:linear-gradient(180deg,#ff8a3d,#f2552f 70%,#d81b63);color:#fff;position:relative;padding-bottom:84px}
+.hero p{max-width:60ch;font-size:17px;opacity:.95}
+.sunset{position:absolute;left:0;right:0;bottom:0;height:70px;width:100%}
+.prog{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;margin-top:18px}
+.meter{flex:1 1 220px;max-width:420px;height:14px;border-radius:7px;background:rgba(255,255,255,.3);overflow:hidden}
+.meter i{display:block;height:100%;background:#fff;width:0;transition:width .4s}
+.big{font-family:Anton,Impact,sans-serif;font-size:28px;white-space:nowrap}
+nav.scroll{display:flex;gap:8px;overflow-x:auto;padding:10px max(5vw,16px);background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+nav a{flex:none;color:var(--ink);text-decoration:none;font-weight:600;padding:8px 14px;border-radius:20px;border:1px solid var(--line)}
+nav a:hover,nav a:focus-visible{border-color:var(--sun);outline:none}
+.cal{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px;align-items:start}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.wk{grid-column:1/-1;font-weight:800;color:var(--mut);margin-top:8px;font-size:14px}
+.d{position:relative;min-height:88px;border:0;border-radius:10px;padding:8px;text-align:left;color:#fff;cursor:pointer;font:inherit;display:flex;flex-direction:column;justify-content:space-between;box-shadow:inset 0 -4px 0 rgba(0,0,0,.18)}
+.d b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:24px;line-height:1}
+.d small{font-size:13px;line-height:1.2;font-weight:600}
+.d.done::after{content:"";position:absolute;top:8px;right:8px;width:18px;height:18px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10l3 3 7-7' fill='none' stroke='%230a8582' stroke-width='3'/%3E%3C/svg%3E") center/14px no-repeat}
+.d[aria-pressed=true]{outline:3px solid var(--ink);outline-offset:2px}
+.d:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:14px 0 0;padding:0;list-style:none;font-size:14px}
+.legend li{display:flex;align-items:center;gap:6px}
+.legend i{width:14px;height:14px;border-radius:4px;display:inline-block}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;position:sticky;top:76px}
+.tag{display:inline-block;color:#fff;font-weight:800;font-size:13px;padding:4px 10px;border-radius:12px;margin-bottom:10px}
+.hook{font-family:Anton,Impact,sans-serif;font-size:24px;line-height:1.15;background:#111;color:#ffd84a;padding:14px 16px;border-radius:10px;margin:12px 0;text-transform:uppercase}
+.btn{font:inherit;font-weight:700;min-height:44px;padding:8px 16px;border-radius:10px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.btn.fill{background:var(--sea);border-color:var(--sea);color:#fff}
+.btn:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.alt{background:light-dark(#fff1e0,#122e31)}
+.lead{color:var(--mut);max-width:65ch;margin-bottom:20px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tabs button{font:inherit;font-weight:700;min-height:44px;padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.sc{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:24px;align-items:start}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:14px;color:var(--mut)}
+td:first-child{white-space:nowrap;font-weight:800;color:var(--sun)}
+.cap{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.cap pre{white-space:pre-wrap;font:15px/1.5 Figtree,sans-serif;margin:0 0 10px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.names{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.nm{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;cursor:pointer;text-align:left;font:inherit;color:var(--ink)}
+.nm b{font-size:18px;display:block}
+.nm span{font-size:14px;color:var(--mut)}
+.star{flex:none;width:26px;height:26px}
+.star path{fill:none;stroke:var(--mut);stroke-width:2}
+.nm[aria-pressed=true]{border-color:var(--pink);box-shadow:0 0 0 2px var(--pink) inset}
+.nm[aria-pressed=true] .star path{fill:var(--pink);stroke:var(--pink)}
+.hl{display:flex;flex-wrap:wrap;gap:16px}
+.hl div{width:96px;text-align:center;font-size:13px;font-weight:600}
+.hl i{display:grid;place-items:center;width:76px;height:76px;margin:0 auto 6px;border-radius:50%;border:3px solid var(--pink);background:#16363a;color:#ffd84a;font:400 13px Anton,Impact,sans-serif;font-style:normal;padding:6px;line-height:1.1}
+ul.hooks{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px}
+ul.hooks button{width:100%;text-align:left;font:600 15px/1.35 Figtree,sans-serif;padding:12px 14px;min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+ul.hooks button:hover{border-color:var(--sun)}
+.chk{list-style:none;padding:0;margin:0;max-width:720px}
+.chk label{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.chk input{width:22px;height:22px;accent-color:var(--sea);flex:none}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:10px;font-weight:700;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.on{opacity:1}
+footer{color:var(--mut);font-size:14px}
+@media(max-width:900px){.cal,.sc{grid-template-columns:minmax(0,1fr)}.panel{position:static}}
+@media(max-width:600px){.d{min-height:56px;padding:6px}.d small{display:none}.d b{font-size:19px}.d.done::after{width:14px;height:14px;top:4px;right:4px;background-size:10px}table{font-size:14px}.stack thead{display:none}.stack tr{display:grid;padding-block:8px;border-bottom:1px solid var(--line)}.stack td{border:0;padding:3px 12px}.stack td:first-child{padding-top:8px}}
+@media(prefers-reduced-motion:reduce){.meter i{transition:none}}
+</style>
+</head>
+<body>
+<header class="band hero">
+  <div class="wrap">
+    <h1>Seu canal de GTA 6,<br>do zero ao primeiro mês</h1>
+    <p>Calendário de 30 dias, roteiros prontos, nomes, bio e checklist. Toque num dia para ver o que gravar e marque como postado quando publicar.</p>
+    <div class="prog"><span class="big" id="pc">0 de 30 postados</span><div class="meter" aria-hidden="true"><i id="pm"></i></div></div>
+  </div>
+  <svg class="sunset" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true">
+    <rect y="0" width="1200" height="6" fill="#ffd84a" opacity=".55"/><rect y="14" width="1200" height="6" fill="#ffd84a" opacity=".4"/><rect y="28" width="1200" height="6" fill="#ffd84a" opacity=".28"/>
+    <path d="M0 70V50Q150 38 300 50T600 48T900 52T1200 46V70Z" fill="var(--bg)"/>
+  </svg>
+</header>
+<nav class="scroll" aria-label="Seções">
+  <a href="#calendario">Calendário</a><a href="#roteiros">Roteiros</a><a href="#ganchos">Ganchos</a><a href="#nomes">Nomes</a><a href="#perfil">Bio e destaques</a><a href="#checklist">Checklist</a>
+</nav>
+
+<section class="band" id="calendario">
+  <div class="wrap cal">
+    <div>
+      <h2>Calendário de 30 dias</h2>
+      <div class="days" id="days"></div>
+      <ul class="legend" id="legend"></ul>
+    </div>
+    <aside class="panel" id="panel" aria-live="polite"></aside>
+  </div>
+</section>
+
+<section class="band alt" id="roteiros">
+  <div class="wrap">
+    <h2>Roteiros dos 5 primeiros vídeos</h2>
+    <p class="lead">Todos na vertical (1080x1920), de 15 a 40 segundos, com legenda grande no centro. O gancho aparece em texto e em voz ao mesmo tempo.</p>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="sc">
+      <div class="scroll"><table class="stack"><thead><tr><th>Tempo</th><th>Na tela</th><th>Fala ou texto</th></tr></thead><tbody id="sbody"></tbody></table></div>
+      <div class="cap"><h3>Legenda do post</h3><pre id="scap"></pre><button class="btn" id="copycap">Copiar legenda</button><p style="margin-top:14px;color:var(--mut);font-size:14px" id="snote"></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="ganchos">
+  <div class="wrap">
+    <h2>Banco de ganchos</h2>
+    <p class="lead">Os primeiros 2 segundos decidem se a pessoa fica. Toque num gancho para copiar e troque a parte entre parênteses.</p>
+    <ul class="hooks" id="hooks"></ul>
+  </div>
+</section>
+
+<section class="band alt" id="nomes">
+  <div class="wrap">
+    <h2>Sugestões de nome</h2>
+    <p class="lead">Marque com a estrela os favoritos e confira se o @ está livre no Instagram, TikTok e YouTube antes de decidir. Um nome com o seu apelido continua servindo se você mudar de jogo.</p>
+    <div class="names" id="names"></div>
+  </div>
+</section>
+
+<section class="band" id="perfil">
+  <div class="wrap grid3">
+    <div>
+      <h2>Bio pronta</h2>
+      <p class="lead">Até 150 caracteres. Escolha uma e ajuste.</p>
+      <div id="bios"></div>
+    </div>
+    <div>
+      <h2>Destaques</h2>
+      <p class="lead">Mesma capa em todos: fundo escuro, texto amarelo, borda rosa.</p>
+      <div class="hl" id="hl"></div>
+    </div>
+    <div>
+      <h2>Hashtags</h2>
+      <p class="lead">Use de 3 a 5 por post, não 30.</p>
+      <div id="tags"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="checklist">
+  <div class="wrap grid3">
+    <div>
+      <h2>Antes de cada post</h2>
+      <ul class="chk" id="chk"></ul>
+      <div class="row"><button class="btn" id="reset">Limpar checklist</button></div>
+    </div>
+    <div>
+      <h2>Edição no CapCut</h2>
+      <ul class="chk" id="edit"></ul>
+    </div>
+    <div>
+      <h2>Olhe toda semana</h2>
+      <ul class="chk" id="week"></ul>
+    </div>
+  </div>
+</section>
+
+<footer class="band"><div class="wrap">Use só gameplay gravado por você, música livre de direitos e nada de material vazado. Os vídeos de GTA 6 mudam rápido: quando sair notícia grande da Rockstar, ela passa na frente do calendário.</div></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+{
+const S={det:["Detalhe Inútil","#d81b63"],real:["GTA x Vida Real","#0a8582"],gar:["Garagem","#f2552f"],dica:["Dica Rápida","#b88400"],mom:["Momento Aleatório","#4256d6"],yt:["YouTube longo","#a3161b"],com:["Comunidade","#5d5248"]};
+const D=[
+["com","Apresentação do perfil","Você não viu isso no GTA 6","Três cortes rápidos dos melhores detalhes e você dizendo o que o perfil vai mostrar.",1],
+["det","Chuva, poças e reflexos","A Rockstar fez isso só pra essa cena","Close na poça, carro passando, marca de pneu molhado.",2],
+["real","Praia de Vice City x Miami","Isso existe de verdade","Tela dividida: jogo em cima, lugar real embaixo, mesmo ângulo.",3],
+["gar","O carro mais bonito até agora","Bem bonitinho","Volta 360°, som do motor alto, onde achar.",4],
+["mom","A reação mais estranha de NPC","Eu só queria atravessar a rua","Comece no meio da ação, sem introdução.",5],
+["det","Embalagens e lojas","Ninguém lê isso, mas a Rockstar escreveu","Zoom nos rótulos, marcas falsas e piadas escondidas."],
+["yt","20 detalhes que você não viu no GTA 6","20 detalhes que ninguém reparou","Vídeo de 10 a 15 minutos. Corte 3 Reels dele para a semana seguinte."],
+["dica","Dinheiro no começo do jogo","Faz isso antes de tudo no GTA 6","Passo a passo em 3 etapas, com o resultado na tela."],
+["real","Prédio famoso inspirado em lugar real","Eles copiaram esse prédio inteiro","Mostre o real primeiro e o do jogo depois para gerar surpresa."],
+["det","Jacarés, pássaros e pântano","A natureza do GTA 6 é absurda","Animais reagindo ao jogador, sons ambientes altos."],
+["com","Pergunta para o público","Qual detalhe vocês querem que eu teste?","Peça sugestões. As respostas viram vídeos da semana 3."],
+["gar","Mais rápido x mais feio","O carro mais rápido contra o mais feio","Corrida lado a lado, resultado com texto grande."],
+["mom","Compilado de 5 bugs engraçados","O GTA 6 tem bug? Tem sim","Cinco momentos de 4 segundos, contagem regressiva na tela."],
+["yt","Testei os mitos do GTA 6","Testei os mitos que todo mundo fala","Cada mito vira um capítulo e depois um Reel."],
+["com","Seguir um NPC por 10 minutos","O que acontece se você seguir um NPC?","Acelere a gravação e mostre só os momentos estranhos."],
+["det","Clima: tempestade, noite e calor","O clima muda tudo no GTA 6","O mesmo lugar em três climas, um corte para cada."],
+["com","Responder o comentário mais votado","Vocês pediram, eu testei","Mostre o print do comentário no começo."],
+["real","Outdoors e lojas x marcas reais","Essas marcas são paródia de quê?","Três paródias seguidas, peça palpites nos comentários."],
+["gar","Motos ou barcos","Esqueceram que dá pra fazer isso","Câmera baixa, velocidade, água espirrando."],
+["com","Fugir da polícia só nadando","Dá pra fugir da polícia nadando?","Mostre a tentativa inteira e o resultado no final."],
+["yt","24 horas vivendo como NPC","Passei 24 horas como um NPC","Vídeo longo de desafio. O mais compartilhável do mês."],
+["mom","Documentário de natureza com NPC","Aqui vemos o NPC em seu habitat","Narre com voz de documentário. Humor é o seu diferencial."],
+["det","O celular do personagem","Leia as notificações do celular no jogo","Prints dos apps e das redes sociais falsas do jogo."],
+["dica","3 coisas para fazer primeiro","Não comece o GTA 6 sem fazer isso","Lista numerada na tela, um corte por dica."],
+["real","Top 3 lugares para foto","Os 3 lugares mais bonitos do mapa","Pôr do sol, praia e cidade à noite. Bom para salvar."],
+["real","GTA 6 x GTA 5","A mesma cena em 2013 e agora","Tela dividida com a mesma ação nos dois jogos."],
+["mom","Melhor clipe da semana","Isso aconteceu de verdade","Repita o formato do vídeo que mais teve visualizações."],
+["yt","Os segredos mais escondidos de Leonida","Os segredos mais escondidos do mapa","Feche o mês com o vídeo mais caprichado."],
+["com","Um mês de canal, você na câmera","1 mês de canal: o que aprendi","Rosto, sinceridade e números. Cria vínculo."],
+["com","Retrospectiva e próximos passos","Os 5 vídeos mais vistos do mês","Mostre os 5 em 30 segundos e pergunte o que querem no mês 2."]];
+const R=[
+{n:"Apresentação",r:[["0–2 s","A cena mais bonita que você gravou","Texto: VOCÊ NÃO VIU ISSO NO GTA 6"],["2–8 s","Três detalhes em cortes rápidos","“A Rockstar escondeu muita coisa nesse jogo, e quase ninguém repara…”"],["8–15 s","Você na câmera ou mais um detalhe","“Aqui eu te mostro um detalhe novo todo dia.”"],["15–18 s","Nome do canal","“Segue pra não perder o próximo.”"]],c:"Começando do zero: todo dia um detalhe que ninguém viu no GTA 6. Qual você quer ver primeiro?\n#gta6 #gtavi #rockstargames #gamesbrasil",t:"Grave o rosto com luz de frente (janela ou ring light). Se não quiser aparecer, use só a voz."},
+{n:"Detalhe Inútil #1",r:[["0–2 s","Close numa poça refletindo luzes","Texto: A ROCKSTAR FEZ ISSO SÓ PRA ESSA CENA"],["2–10 s","Carro passando pela poça","“Repara: quando o carro passa, a água espirra e o reflexo quebra…”"],["10–18 s","Marca de pneu molhado","“…e ainda fica a marca do pneu no asfalto.”"],["18–22 s","Texto grande","DETALHE INÚTIL #1: “Vocês já tinham reparado?”"]],c:"Detalhe inútil #1: a água do GTA 6 é absurda. Comenta o próximo detalhe que eu devo testar!\n#gta6 #detalhes #easteregg",t:"Numere a série. O número faz a pessoa querer ver os outros."},
+{n:"GTA x Vida Real",r:[["0–2 s","Tela dividida: jogo em cima, foto real embaixo","Texto: ISSO EXISTE DE VERDADE"],["2–12 s","Mesmo ângulo nos dois","“Esse lugar é inspirado em (lugar real) em Miami…”"],["12–20 s","Duas diferenças destacadas","“…mas olha o que a Rockstar mudou.”"],["20–24 s","Pergunta","“Qual lugar real vocês querem que eu compare agora?”"]],c:"GTA 6 x vida real. A Rockstar copiou quase tudo! Qual eu comparo agora?\n#gta6 #vicecity #miami",t:"Use fotos suas, prints do Street View feitos por você ou bancos gratuitos. Nunca fotos de outros criadores."},
+{n:"Garagem #1",r:[["0–2 s","Carro passando em câmera lenta","Texto: BEM BONITINHO"],["2–10 s","Volta 360° no carro","“Esse é o (nome no jogo), inspirado no (carro real).”"],["10–18 s","Acelerando","“Escuta esse motor…” (som do jogo alto)"],["18–24 s","Onde encontrar","“Pra achar: (local). Salva o vídeo pra não esquecer.”"]],c:"Garagem #1: o carro mais bonito que achei até agora. Qual é o seu?\n#gta6 #carros #gtacars",t:"Pedir para salvar funciona bem em vídeos de “onde achar”. Salvamentos pesam muito no alcance."},
+{n:"Momento Aleatório",r:[["0–1 s","Já no meio da ação","Texto: EU SÓ QUERIA ATRAVESSAR A RUA"],["1–15 s","O momento sem cortes","Sua reação em voz: risada, grito ou silêncio"],["15–18 s","Imagem congelada","Texto: NPC DO GTA 6 NÃO TEM PAZ"]],c:"Ele não esperava por isso. Me manda o momento mais aleatório que já aconteceu com você!\n#gta6 #funny #gtamoments",t:"Deixe o PS5 ou Xbox gravando os últimos minutos sempre. Os melhores momentos são os que você não planejou."}];
+const H=["Pouca gente reparou nisso no GTA 6…","Você jogou horas e não viu isso","A Rockstar não precisava ter feito isso","Isso existe de verdade, e fica em (lugar)","O carro mais (bonito/rápido/feio) do jogo","Testei o que todo mundo fala do GTA 6","Não comece o GTA 6 sem fazer isso","O que acontece se você (ação)?","Eu só queria (ação simples)…","Vocês pediram, eu testei","Compara o GTA 5 com isso aqui","Ninguém lê isso, mas a Rockstar escreveu","Os NPCs do GTA 6 fazem isso quando ninguém vê","Isso aqui é o detalhe mais inútil do jogo","Espera até o final"];
+const N=[["(SeuApelido)Plays","O clássico: o nome continua seu se você mudar de jogo"],["ModoLeonida","Usa o estado do jogo e soa como um modo de jogo"],["ViceDetalhes","Diz direto o foco em curiosidades"],["CaçaEasterEgg","Já explica o conteúdo"],["Zé do GTA","Pessoal, brasileiro, fácil de falar"],["NeonPlays","Combina com o visual do jogo e serve para outros"],["SegredoDaRockstar","Gera curiosidade e combina com notícias"],["VC Files","Formato de série: os arquivos de Vice City"],["TudoSobreGTA","Bom para a busca do YouTube"],["Fofoca de Leonida","Humor e boatos, com tom de bobo da corte"]];
+const B=["Tudo que ninguém reparou no GTA 6\nDetalhes, segredos e notícias todo dia\nVídeo novo no YouTube 👇","Seu guia de Leonida\nGameplay, notícias e umas besteiras\nParcerias: (seu e-mail comercial)","Falo de games, principalmente GTA 6\nÀs vezes informo, às vezes só passo vergonha\nLinks abaixo"];
+const HL=["Comece aqui","Notícias","Segredos","Setup","Bastidores","Recebidos","Eventos"];
+const T=["#gta6 #gtavi #rockstargames #gamesbrasil","#gta6 #vicecity #easteregg #detalhes","#gta6 #gtacars #carros #gameplay","#gta6 #funny #gtamoments #games"];
+const C=["Gancho nos primeiros 2 segundos, em texto e em voz","Legenda grande e legível no centro da tela","Vertical 1080x1920","Música livre de direitos ou áudio da plataforma","Pergunta no final para gerar comentários","3 a 5 hashtags","Postado no Instagram, TikTok e YouTube Shorts","Responder comentários na primeira hora"];
+const E=["Projeto em 9:16, 30 ou 60 fps","Cortar todo silêncio e tempo parado","Legenda automática revisada à mão","Fonte condensada e grossa, amarela ou branca com contorno preto","Zoom leve nos detalhes importantes","Som do jogo alto nos momentos de impacto","Exportar em 1080p, taxa de bits alta"];
+const W=["Retenção: se caem antes de 3 s, mude o gancho","Compartilhamentos e salvamentos, mais que curtidas","Qual série foi melhor: faça mais dela","Horário dos posts com mais alcance","Comentários que viram ideia de vídeo"];
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let st={done:[],fav:[],chk:[],sel:0,tab:0};
+try{st=Object.assign(st,JSON.parse(localStorage.getItem("canal-gta6")||"{}"))}catch(e){}
+const save=()=>{try{localStorage.setItem("canal-gta6",JSON.stringify(st))}catch(e){}};
+const toast=m=>{const t=$("toast");t.textContent=m;t.classList.add("on");clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove("on"),1600)};
+const copy=(txt,msg)=>{try{navigator.clipboard.writeText(txt).then(()=>toast(msg||"Copiado"),()=>toast("Selecione e copie manualmente"))}catch(e){toast("Selecione e copie manualmente")}};
+function prog(){const n=st.done.length;$("pc").textContent=n+" de 30 postados";$("pm").style.width=(n/30*100)+"%"}
+function days(){let h="";D.forEach((d,i)=>{if(i%7==0)h+=`<div class="wk">Semana ${Math.floor(i/7)+1}</div>`;h+=`<button class="d${st.done.includes(i)?" done":""}" style="background:${S[d[0]][1]}" aria-pressed="${st.sel==i}" data-i="${i}" aria-label="Dia ${i+1}: ${esc(d[1])}"><b>${i+1}</b><small>${esc(S[d[0]][0])}</small></button>`});$("days").innerHTML=h;prog()}
+function panel(){const i=st.sel,d=D[i],s=S[d[0]],dn=st.done.includes(i);$("panel").innerHTML=`<span class="tag" style="background:${s[1]}">${esc(s[0])}</span><h3>Dia ${i+1}: ${esc(d[1])}</h3><div class="hook">${esc(d[2])}</div><p>${esc(d[3])}</p><div class="row"><button class="btn fill" id="tog">${dn?"Desmarcar":"Marcar como postado"}</button><button class="btn" id="cph">Copiar gancho</button>${d[4]?`<button class="btn" id="gor">Ver roteiro</button>`:""}</div><div class="row"><button class="btn" id="prv" ${i==0?"disabled":""}>Dia anterior</button><button class="btn" id="nxt" ${i==29?"disabled":""}>Próximo dia</button></div>`;
+$("tog").onclick=()=>{st.done=dn?st.done.filter(x=>x!=i):[...st.done,i];save();days();panel()};
+$("cph").onclick=()=>copy(d[2],"Gancho copiado");
+if(d[4])$("gor").onclick=()=>{tab(d[4]-1);$("roteiros").scrollIntoView({behavior:"smooth"})};
+$("prv").onclick=()=>pick(i-1);$("nxt").onclick=()=>pick(i+1)}
+function pick(i){if(i<0||i>29)return;st.sel=i;save();days();panel()}
+$("days").addEventListener("click",e=>{const b=e.target.closest(".d");if(b)pick(+b.dataset.i)});
+$("days").addEventListener("keydown",e=>{const m={ArrowLeft:-1,ArrowRight:1,ArrowUp:-7,ArrowDown:7}[e.key];if(m!=null){e.preventDefault();const n=Math.max(0,Math.min(29,st.sel+m));pick(n);$("days").querySelector(`[data-i="${n}"]`).focus()}});
+$("legend").innerHTML=Object.values(S).map(s=>`<li><i style="background:${s[1]}"></i>${esc(s[0])}</li>`).join("");
+function tab(k){st.tab=k;save();const r=R[k];$("tabs").innerHTML=R.map((x,j)=>`<button role="tab" aria-selected="${j==k}" data-k="${j}">${j+1}. ${esc(x.n)}</button>`).join("");$("sbody").innerHTML=r.r.map(x=>`<tr><td data-l="Tempo">${esc(x[0])}</td><td data-l="Na tela">${esc(x[1])}</td><td data-l="Fala ou texto">${esc(x[2])}</td></tr>`).join("");$("scap").textContent=r.c;$("snote").textContent=r.t}
+$("tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(b)tab(+b.dataset.k)});
+$("copycap").onclick=()=>copy(R[st.tab].c,"Legenda copiada");
+$("hooks").innerHTML=H.map(h=>`<li><button>${esc(h)}</button></li>`).join("");
+$("hooks").addEventListener("click",e=>{const b=e.target.closest("button");if(b)copy(b.textContent,"Gancho copiado")});
+function names(){$("names").innerHTML=N.map((n,i)=>`<button class="nm" data-i="${i}" aria-pressed="${st.fav.includes(i)}"><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><span><b>${esc(n[0])}</b>${esc(n[1])}</span></button>`).join("")}
+$("names").addEventListener("click",e=>{const b=e.target.closest(".nm");if(!b)return;const i=+b.dataset.i;st.fav=st.fav.includes(i)?st.fav.filter(x=>x!=i):[...st.fav,i];save();names()});
+$("bios").innerHTML=B.map((b,i)=>`<div class="cap" style="margin-bottom:10px"><pre>${esc(b)}</pre><button class="btn" data-b="${i}">Copiar bio</button></div>`).join("");
+$("bios").addEventListener("click",e=>{const b=e.target.closest("[data-b]");if(b)copy(B[+b.dataset.b],"Bio copiada")});
+$("hl").innerHTML=HL.map(h=>`<div><i>${esc(h)}</i>${esc(h)}</div>`).join("");
+$("tags").innerHTML=T.map((t,i)=>`<div class="cap" style="margin-bottom:10px"><pre>${esc(t)}</pre><button class="btn" data-t="${i}">Copiar</button></div>`).join("");
+$("tags").addEventListener("click",e=>{const b=e.target.closest("[data-t]");if(b)copy(T[+b.dataset.t],"Hashtags copiadas")});
+const list=(id,arr,key)=>{$(id).innerHTML=arr.map((c,i)=>`<li><label><input type="checkbox" id="${key}${i}" ${key=="c"&&st.chk.includes(i)?"checked":""}>${esc(c)}</label></li>`).join("")};
+list("chk",C,"c");list("edit",E,"e");list("week",W,"w");
+$("chk").addEventListener("change",e=>{const i=+e.target.id.slice(1);st.chk=e.target.checked?[...st.chk,i]:st.chk.filter(x=>x!=i);save()});
+$("reset").onclick=()=>{st.chk=[];save();list("chk",C,"c");toast("Checklist limpo")};
+days();panel();tab(st.tab||0);names();
+}
+</script>
+</body>
+</html>
