@@ -15,6 +15,7 @@ const srv = http.createServer((q, r) => {
   await page.goto(`http://localhost:${srv.address().port}/?cena=${process.env.CENA || 'teste'}`);
   await page.waitForFunction('window.ready === true', null, { timeout: 60000 });
   const dur = await page.evaluate('window.DUR');
+  const cortes = await page.evaluate('window.CORTES || []'); fs.writeFileSync(path.join(OUT, 'cortes.json'), JSON.stringify(cortes));
   const t0 = +(process.argv[3] || 0), t1 = +(process.argv[4] || dur);
   const lista = process.env.TEMPOS ? process.env.TEMPOS.split(',').map(Number) : null;
   const n = lista ? lista.length : Math.round((t1 - t0) * FPS), start = Date.now();

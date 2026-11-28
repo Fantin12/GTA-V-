@@ -17,7 +17,7 @@ const BLOQ = [86.6, 87.9, 89.2], MORTE = 93.6;
 const ganho = (t) => (t >= MORTE ? 0 : KILLS.filter((k) => t >= k).length * 25);
 
 // ---------- S0 resultado da votação ----------
-const S0 = cena([0, 5]);
+const S0 = cena([8, 13]);
 el('rect', { width: 1080, height: 1920, fill: '#06080c' }, S0);
 texto(S0, 540, 520, 64, '#5ef0d8', 'EPISÓDIO ANTERIOR');
 texto(S0, 540, 640, 84, '#fff', 'ELE LÊ O CONTRATO?');
@@ -32,7 +32,7 @@ const barras = [['A) SIM', 38, '#8a90a0'], ['B) NÃO', 62, '#ffd400']].map(([n, 
 const dec0 = texto(S0, 540, 1380, 76, '#ffd400', 'A PLATEIA DECIDIU', { opacity: 0 });
 
 // ---------- S1 gancho: a loba salta e a tela racha ----------
-const S1 = cena([5, 13]);
+const S1 = cena([0, 8]);
 const cav1 = W.caverna(S1, { fundo: true });
 const alfa1g = g({}, S1), alfa1 = W.lobo(alfa1g, { alfa: true, seed: 3 });
 const crack1 = W.rachadura(S1, 560, 880, 5);
@@ -40,7 +40,7 @@ const flash1 = el('rect', { width: 1080, height: 1920, fill: '#fff', opacity: 0 
 vinheta(S1, 0.85);
 
 // ---------- S2 título ----------
-const S2 = cena([13, 16.5]);
+const S2 = cena([13, 14.3]);
 el('rect', { width: 1080, height: 1920, fill: '#06080c' }, S2);
 const tit2 = g({}, S2);
 texto(tit2, 540, 860, 190, '#ffd400', 'HORAS', { 'paint-order': 'stroke', stroke: '#3a2a00', 'stroke-width': 14 });
@@ -50,7 +50,7 @@ const garra2 = g({ stroke: '#b01818', 'stroke-width': 26, 'stroke-linecap': 'rou
 const gs2 = [0, 1, 2].map((i) => L.traco(garra2, `M${250 + i * 110} 380 L${520 + i * 110} 1500`, '#b01818', 22));
 
 // ---------- S3 cozinha ----------
-const S3 = cena([16.5, 29]);
+const S3 = cena([14.3, 29]);
 const coz = W.cozinha(S3);
 const v3g = g({}, S3), v3 = H.vitorBusto(v3g);
 const gato3g = g({}, S3), gato3 = L.brasa(gato3g);
@@ -163,10 +163,11 @@ const opc = [['A) SIM', 1080], ['B) NÃO', 1240]].map(([t, y], i) => { const gg 
 texto(FIM, 540, 1430, 60, '#b4b4b4', 'A PLATEIA DECIDE · COMENTA AÍ');
 const hudF = H.relogioHUD(FIM), salF = H.saldoHUD(FIM);
 
+const corte = L.cortes(cenas);
 // ---------- legendas ----------
 const leg = L.legendas(L.svg, [
-  [0.6, 3.9, [['ELE NÃO LEU', 0], ['O CONTRATO.', 1]]],
-  [5.4, 9.5, [['QUANTO CUSTA', 0], ['MORRER?', 1]]],
+  [0.4, 4.5, [['QUANTO CUSTA', 0], ['MORRER?', 1]]],
+  [8.6, 11.9, [['ELE NÃO LEU', 0], ['O CONTRATO.', 1]]],
   [17.0, 19.4, [['19H. 10 HORAS', 1], ['DE FÁBRICA.', 0]]], [19.5, 22.1, [['MIOJO EM PÉ,', 0], ['NA PIA.', 1]]],
   [24.0, 26.6, [['HOJE EU VOLTO', 0], ['COM DINHEIRO.', 1]]],
   [36.0, 39.0, [['MISSÃO SOLO:', 0], ['TOCA DOS LOBOS.', 1]]], [39.1, 42.6, [['RECOMPENSA:', 0], ['R$ 400.', 1]]],
@@ -189,20 +190,20 @@ window.DUR = 150;
 window.renderAt = (t) => {
   for (const c of cenas) c.style.display = c.rs.some(([a, b]) => t >= a && t < b) ? '' : 'none';
   // S0
-  if (t < 5) { barras.forEach((b, i) => { const k = ease((t - 0.8 - i * 0.2) / 1.2); b.b.setAttribute('width', 8 * b.p * k); b.tp.textContent = Math.round(b.p * k) + '%'; }); dec0.setAttribute('opacity', ease((t - 2.4) / 0.4)); }
+  if (t >= 8 && t < 13) { const t0 = t - 8; barras.forEach((b, i) => { const k = ease((t0 - 0.4 - i * 0.2) / 1.2); b.b.setAttribute('width', 8 * b.p * k); b.tp.textContent = Math.round(b.p * k) + '%'; }); dec0.setAttribute('opacity', ease((t0 - 2.0) / 0.4)); }
   // S1
-  if (t >= 5 && t < 13) {
-    const u = t - 5, k = ease(rel(t, 7.6, 9.8));
+  if (t < 8) {
+    const u = t, k = ease(rel(t, 2.6, 4.8));
     alfa1g.setAttribute('transform', `translate(${100 + 340 * k} ${1500 - 300 * Math.sin(k * Math.PI) + 200 * k}) scale(${1.2 + 2.4 * k})`);
-    alfa1.set({ t, pulo: k > 0 && k < 1 ? 1 : 0, rosna: 1, uiva: t > 5.6 && t < 7.4 ? ease((t - 5.6) / 0.4) : 0 });
-    crack1.set(rel(t, 9.8, 10.4)); flash1.setAttribute('opacity', t > 9.8 ? 0.7 * Math.exp(-(t - 9.8) * 6) : 0);
-    S1.setAttribute('transform', t > 9.8 && t < 10.4 ? `translate(${18 * Math.sin(t * 90)} ${12 * Math.cos(t * 70)})` : '');
+    alfa1.set({ t, pulo: k > 0 && k < 1 ? 1 : 0, rosna: 1, uiva: t > 0.4 && t < 2.4 ? ease((t - 0.4) / 0.4) : 0 });
+    crack1.set(rel(t, 4.8, 5.4)); flash1.setAttribute('opacity', t > 4.8 ? 0.7 * Math.exp(-(t - 4.8) * 6) : 0);
+    S1.setAttribute('transform', t > 4.8 && t < 5.4 ? `translate(${18 * Math.sin(t * 90)} ${12 * Math.cos(t * 70)})` : '');
   }
   // S2
-  if (t >= 13 && t < 16.5) { const u = t - 13; tit2.setAttribute('opacity', ease(u / 0.4)); gs2.forEach((gg, i) => gg.set((u - 0.6 - i * 0.12) / 0.25)); }
+  if (t >= 13 && t < 14.3) { const u = t - 13; tit2.setAttribute('opacity', ease(u / 0.4)); gs2.forEach((gg, i) => gg.set((u - 0.6 - i * 0.12) / 0.25)); }
   // S3
-  if (t >= 16.5 && t < 29) {
-    const u = t - 16.5; coz.set(t); busto(v3g, 0.86, 10 * Math.sin(u * 0.7));
+  if (t >= 14.3 && t < 29) {
+    const u = t - 14.3; coz.set(t); busto(v3g, 0.86, 10 * Math.sin(u * 0.7));
     v3.set({ boca: boca('V', t), expr: t > 23.5 ? 'riso' : 'neutro', piscar: pisca(t) });
     gato3g.setAttribute('transform', `translate(${1180 - 360 * ease((t - 21.2) / 1.2)} 1840) scale(0.9)`); gato3.set({ t });
     miau.setAttribute('opacity', t > 22.4 && t < 24 ? 1 : 0);
@@ -291,6 +292,7 @@ window.renderAt = (t) => {
   }
   // FIM
   if (t >= 139) { opc.forEach((o, i) => o.setAttribute('opacity', ease((t - 140 - i * 0.4) / 0.4))); hudF.set({ texto: '55a 04m 12d', show: 1, cor2: '#ff4040' }); salF.set({ valor: SALDO, show: 1 }); }
+  corte.set(t);
   leg.set(t);
   return true;
 };

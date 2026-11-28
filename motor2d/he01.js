@@ -26,7 +26,7 @@ const red1 = el('rect', { width: 1080, height: 1920, fill: '#c01010', opacity: 0
 const hud1 = H.relogioHUD(S1), sal1 = H.saldoHUD(S1);
 
 // ---------- S2 título ----------
-const S2 = cena([6.8, 10.5]);
+const S2 = cena([6.8, 8.0]);
 el('rect', { width: 1080, height: 1920, fill: '#06080c' }, S2);
 const dig2 = g({ fill: 'rgba(94,240,216,0.10)', 'font-family': 'Anton', 'font-size': 60 }, S2);
 for (let i = 0; i < 40; i++) { const e = el('text', { x: R() * 1080, y: R() * 1920 }, dig2); e.textContent = ['00:00', '56a', '+20min', '-1 ANO', '04:40'][i % 5]; }
@@ -40,7 +40,7 @@ const pont2 = el('line', { x1: 0, y1: 0, x2: 0, y2: -95, stroke: '#ffd400', 'str
 const pont2b = el('line', { x1: 0, y1: 0, x2: 60, y2: 0, stroke: '#fff', 'stroke-width': 12, 'stroke-linecap': 'round' }, rel2);
 
 // ---------- S3 ônibus ----------
-const S3 = cena([10.5, 14]);
+const S3 = cena([8.0, 14]);
 const bus = H.onibus(S3);
 const v3g = g({}, S3), v3 = H.vitorBusto(v3g);
 const relogio3 = texto(S3, 860, 330, 70, '#ffd400', '05:00', { 'paint-order': 'stroke', stroke: '#000', 'stroke-width': 10 });
@@ -195,6 +195,7 @@ const opc = [['A) SIM', 1180, '#ffd400'], ['B) NÃO, ESTÁ CANSADO DEMAIS', 1340
 texto(FIM, 540, 1530, 60, '#b4b4b4', 'A PLATEIA DECIDE · COMENTA AÍ');
 const hudF = H.relogioHUD(FIM), salF = H.saldoHUD(FIM);
 
+const corte = L.cortes(cenas);
 // ---------- legendas ----------
 const leg = L.legendas(L.svg, [
   [0.5, 2.6, [['ELE DORME PRA', 0], ['TRABALHAR.', 1]]], [2.7, 6.3, [['CADA MORTE CUSTA', 0], ['VIDA DE VERDADE.', 1]]],
@@ -231,9 +232,9 @@ window.renderAt = (t) => {
     sal1.set({ valor: SALDO0, show: ease((u - 0.3) / 0.5) * (d > 0 && d < 2.5 ? 0 : 1) });
   }
   // S2
-  if (t >= 6.8 && t < 10.5) { const u = t - 6.8, k = ease(u / 0.5); tit2.setAttribute('transform', `translate(540 960) scale(${0.85 + 0.15 * k + 0.01 * u}) translate(-540 -960)`); tit2.setAttribute('opacity', k); pont2.setAttribute('transform', `rotate(${u * 360})`); pont2b.setAttribute('transform', `rotate(${u * 30 - 90})`); dig2.setAttribute('transform', `translate(0 ${-u * 40})`); }
+  if (t >= 6.8 && t < 8.0) { const u = t - 6.8, k = ease(u / 0.5); tit2.setAttribute('transform', `translate(540 960) scale(${0.85 + 0.15 * k + 0.01 * u}) translate(-540 -960)`); tit2.setAttribute('opacity', k); pont2.setAttribute('transform', `rotate(${u * 360})`); pont2b.setAttribute('transform', `rotate(${u * 30 - 90})`); dig2.setAttribute('transform', `translate(0 ${-u * 40})`); }
   // S3
-  if (t >= 10.5 && t < 14) { const u = t - 10.5; bus.set(u); busto(v3g, 0.78, 12 * Math.sin(t * 13) * Math.sin(t * 3)); v3.set({ piscar: (Math.sin(u * 1.2) > 0.4) ? 1 : 0, expr: 'neutro' }); }
+  if (t >= 8.0 && t < 14) { const u = t - 8.0; bus.set(u); busto(v3g, 0.78, 12 * Math.sin(t * 13) * Math.sin(t * 3)); v3.set({ piscar: (Math.sin(u * 1.2) > 0.4) ? 1 : 0, expr: 'neutro' }); }
   // S4
   if (t >= 14 && t < 25) {
     const u = t - 14; fab.set(u); fabPoeira.set(t);
@@ -336,6 +337,7 @@ window.renderAt = (t) => {
   }
   // FIM
   if (t >= 139) { opc.forEach((o, i) => o.setAttribute('opacity', ease((t - 140 - i * 0.4) / 0.4))); hudF.set({ texto: '56a 04m 12d', show: 1 }); salF.set({ valor: SALDO1, show: 1 }); }
+  corte.set(t);
   leg.set(t);
   return true;
 };

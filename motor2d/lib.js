@@ -326,8 +326,28 @@ export function legendas(parent, lista, y = 1560) {
     const n = parts.reduce((a, [txt]) => a + txt.length + 1, 0), fs = Math.min(96, Math.floor(1000 / (n * 0.5)));
     const t = el('text', { x: 540, y: yy || y, 'text-anchor': 'middle', 'font-family': 'Anton', 'font-size': fs, 'paint-order': 'stroke', stroke: '#000', 'stroke-width': 16, 'stroke-linejoin': 'round' }, gg);
     parts.forEach(([txt, yel], i) => { const s = el('tspan', { fill: yel ? '#ffd400' : '#fff' }, t); s.textContent = (i ? ' ' : '') + txt; });
-    return { t, a, b };
+    return { t, a, b, y: yy || y };
   });
-  return { g: gg, set: (t) => items.forEach((L) => (L.t.style.display = t >= L.a && t < L.b ? '' : 'none')) };
+  // retenção: cada legenda entra com "pop" (antecipação + exagero + assentamento, princípios Disney)
+  const pop = (k) => (k < 0.07 ? 0.55 + 0.65 * (k / 0.07) : k < 0.16 ? 1.2 - 0.2 * ((k - 0.07) / 0.09) : 1);
+  return { g: gg, set: (t) => items.forEach((L) => { const on = t >= L.a && t < L.b; L.t.style.display = on ? '' : 'none'; if (on) { const s = pop(t - L.a); L.t.setAttribute('transform', `translate(540 ${L.y}) scale(${s}) translate(-540 ${-L.y})`); } }) };
 }
 export async function pronto() { await document.fonts.load('96px Anton'); window.ready = true; }
+
+// retenção: "cortes" visíveis — flash curto + leve empurrão de câmera em toda troca de cena; exporta os tempos para o som (whoosh)
+export function cortes(cenas, { cor = '#ffffff' } = {}) {
+  const ts = [...new Set(cenas.flatMap((c) => c.rs.map(([a]) => a)).filter((a) => a > 0.2))].sort((x, y) => x - y);
+  window.CORTES = ts;
+  const fl = el('rect', { width: 1080, height: 1920, fill: cor, opacity: 0 });
+  return { set: (t) => {
+    const d = Math.min(...ts.map((a) => (t >= a ? t - a : 99)));
+    fl.setAttribute('opacity', d < 0.12 ? 0.55 * (1 - d / 0.12) : 0);
+    const k = d < 0.35 ? 1 - d / 0.35 : 0;        // punch-in: a cena nova entra 6% maior e assenta
+    for (const c of cenas) {
+      let cur = c.getAttribute('transform') || '';
+      if (c._pfx && cur.startsWith(c._pfx)) cur = cur.slice(c._pfx.length);
+      c._pfx = c.style.display !== 'none' && k > 0 ? `translate(540 960) scale(${(1 + 0.06 * k * k).toFixed(4)}) translate(-540 -960) ` : '';
+      c.setAttribute('transform', c._pfx + cur);
+    }
+  } };
+}
